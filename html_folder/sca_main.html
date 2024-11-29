@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>SupportiveCare Access</title>
+        <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <h1>
+            <span id="scblue">Support</span><span id="scgreen">i</span><span id="scblue">ve </span><span id="scgreen">Care</span>
+        </h1>
+        <h2 id="scorange">Helpdesk Portal</h2>
+        <div class="flexMainContainer">
+            <form action="http://localhost:5000/dash1/">
+                <input class="flexMainChild" type="submit" method="GET" value="Facility Query">
+            </form>
+            <form action="http://localhost:5000/dash2/">
+                <input class="flexMainChild" type="submit" method="GET" value="Facility Statistics">
+            </form>
+        </div>
+        <tbody>
+            <iframe src="http://localhost:5000/facStats/" frameborder="0" style="width: 100%; height: 800px;"></iframe>
+        </tbody>
+    </body>
+</html>

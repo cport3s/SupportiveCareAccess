@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    font-family: Calibri;
+}
+
+.flexMainContainer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100px;
+}
+
+.flexMainChild {
+    height: 2rem;
+    width: 10rem;
+    align-content: center;
+    font-family: Calibri;
+    font-size: 1rem;
+}
+
+#scblue {
+    color: #0070C0; 
+    font-style: italic; 
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+#scgreen {
+    color: #00B050; 
+    font-style: italic; 
+    font-weight: bold;
+    font-size: 2.4rem;
+}
+
+#scorange {
+    color:#E36C0A; 
+    font-size:2rem; 
+    font-style:italic; 
+    font-weight:bold;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    font-family: Calibri;
+}
+
+a {
+    text-decoration: none;
+}
+
+#div_id_requestor, #div_id_facility_name, #div_id_facility_street, #div_id_facility_zip, #div_id_facility_state {
+    display: flex;
+    margin-left: 20rem;
+    margin-right: 20rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    justify-content: space-evenly;
+}
+
+.control-label, .textinput, .numberinput {
+    font-size: 1.5rem;
+}
+
+.flexMainChild {
+    align-content: center;
+}
+
+.tableFormat {
+    border: 2px solid #000000;
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.tableFormat td, .tableFormat th {
+    border: 1px solid #000000;
+    padding: 3px 4px;
+}
