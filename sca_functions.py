@@ -31,7 +31,7 @@ def get_layout(pathname):
                             style = SuppCareBanner.banner_style
                         )
                     ],
-                    href='http://websvr:8000/',
+                    #href='http://websvr:8000/',
                     style = SuppCareBanner.a_element_style
                 ),
                 html.H2(
