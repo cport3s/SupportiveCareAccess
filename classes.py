@@ -40,13 +40,13 @@ class schemaList():
         'TSC_VT':['ctr@thesupportivecare.com','https://supportivecarehub.com/', '                                    ', 'VT', 'Vermont']
     }
 
-    def db_connect(self, db_address, state):
+    def db_connect(db_address, state):
         # Instantiate engine class
         engine_instance = sqlalchemy.create_engine(db_address.format(state))
         db_connection = engine_instance.connect()
         return db_connection
     
-    def db_close(self, db_connection):
+    def db_close(db_connection):
         return db_connection.close()
         
     

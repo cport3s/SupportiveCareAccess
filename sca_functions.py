@@ -2,12 +2,9 @@ from dash import html, dcc
 from dash_styles import SuppCareBanner
 from classes import schemaList
 
-def get_layout(pathname):
-    layout_return = html.P('filler')
-    if pathname == '/fac_stats':
-        layout_return = html.Div(
-            children = [
-                html.A(
+# Header code function, to avoid code repetion
+def suppcare_header():
+    header = html.A(
                     children = [
                         html.H1(
                             children = [
@@ -33,7 +30,15 @@ def get_layout(pathname):
                     ],
                     #href='http://websvr:8000/',
                     style = SuppCareBanner.a_element_style
-                ),
+                )
+    return header
+
+def get_layout(pathname):
+    layout_return = html.P('filler')
+    if pathname == '/fac_stats':
+        layout_return = html.Div(
+            children = [
+                suppcare_header(),
                 html.H2(
                     children = ['Facility Statistics'],
                     style = SuppCareBanner.orange_style
@@ -43,8 +48,8 @@ def get_layout(pathname):
                     children = [
                         dcc.Dropdown(
                             id = 'state_dropdown',
-                            options = [{'label': v[-2], 'value': k} for k,v in schemaList.schemaDict.items()],
-                            value = 'All'
+                            #options = [{'label': v[-2], 'value': k} for k,v in schemaList.schemaDict.items()],
+                            #value = 'All'
                         ),
                         dcc.Dropdown(
                             id = 'facility_dropdown'
@@ -97,3 +102,6 @@ def get_layout(pathname):
             ]
         )
     return layout_return
+
+def run_all_schemas():
+    pass
