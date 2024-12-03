@@ -35,9 +35,10 @@ class toggleInfo():
 
 class SuppCareBanner():
     banner_style = {
-        'text-align':'center',
+        'text-align':'left',
         'margin-top': '0',
         'margin-bottom': '0.5rem',
+        'margin-left': '1rem',
         'font-weight': '500',
         'line-height': '1.2',
         'font-family': 'Calibri'
@@ -77,7 +78,7 @@ class SuppCareBanner():
 class nav_bar():
     SIDEBAR_STYLE = {
         "position": "fixed",
-        "top": 0,
+        "top": '3rem',
         "left": 0,
         "bottom": 0,
         "width": "16rem",
@@ -85,8 +86,17 @@ class nav_bar():
         "background-color": "#f8f9fa",
     }
 
-    CONTENT_STYLE = {
+class content():
+    FAC_STATS_STYLE = {
         "margin-left": "18rem",
         "margin-right": "2rem",
         "padding": "2rem 1rem",
+        'display': 'block'
+    }
+
+    PATIENT_STYLE = {
+        "margin-left": "18rem",
+        "margin-right": "2rem",
+        "padding": "2rem 1rem",
+        'display': 'hidden'
     }
