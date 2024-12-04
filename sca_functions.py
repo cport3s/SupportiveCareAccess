@@ -28,7 +28,7 @@ def suppcare_header():
                             style = SuppCareBanner.banner_style
                         )
                     ],
-                    #href='http://websvr:8000/',
+                    href='http://localhost:7000/',
                     style = SuppCareBanner.a_element_style
                 )
     return header
