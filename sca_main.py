@@ -12,8 +12,7 @@ from datetime import datetime, timedelta
 from dash_styles import nav_bar, content
 from sca_functions import suppcare_header
 from classes import schemaList, dbCredentials
-from dash_styles import SuppCareBanner
-import logging
+from dash_styles import searchBarStyles, dataTableStyles, toggleInfo
 
 db_address = dbCredentials.db_address
 
@@ -38,7 +37,8 @@ main_app.layout = html.Div(
             pills=True,
             style=nav_bar.SIDEBAR_STYLE
         ),
-        # App container, will be updated based on url
+        # App container, will be displayed based on url
+        # Facility stats
         html.Div(
             id='fac_stats_container',
             style=content.FAC_STATS_STYLE,
@@ -97,11 +97,174 @@ main_app.layout = html.Div(
                 )
         ]
         ),
+        # Facility query
+        html.Div(
+            id='fac_qry_container',
+            style=content.FAC_QRY_STYLE,
+            children = [
+                html.Div(
+                    id='searchBarDiv',
+                    style = searchBarStyles.searchBarFlexContainer,
+                    children=[
+                        dcc.Input(
+                            id = 'searchBar',
+                            style = searchBarStyles.searchBarFlexChildren,
+                            type = 'text',
+                            debounce = True,
+                            placeholder = 'Ex.: Centennial Health Care'
+                        ),
+                        dbc.Spinner(
+                            id = 'searchBarLoadingSpinner',
+                            spinner_style = searchBarStyles.searchBarSpinner,
+                            color = 'green',
+                            show_initially = False,
+                            children = []
+                        )
+                    ]
+                ),
+                html.Div(
+                    dash_table.DataTable(
+                        id = 'simpleSearchResultsTable',
+                        style_header = dataTableStyles.style_header,
+                        style_cell = dataTableStyles.style_cell,
+                        style_cell_conditional = [
+                            {
+                                'if':{'column_id':'Name'},
+                                'textAlign':'center'
+                            },
+                            {
+                                'if':{'column_id':'State'},
+                                'textAlign':'center'
+                            },
+                            {
+                                'if':{'column_id':'Active'},
+                                'textAlign':'center'
+                            },
+                            {
+                                'if':{'column_id':'Start Date'},
+                                'textAlign':'center'
+                            },
+                            {
+                                'if':{'column_id':'PCC Request'},
+                                'textAlign':'center'
+                            },
+                            {
+                                'if':{'column_id':'Doc Types'},
+                                'textAlign':'center'
+                            },
+                            {
+                                'if':{'column_id':'Complete Data'},
+                                'textAlign':'center'
+                            }
+                        ],
+                        style_data_conditional = [
+                            {
+                                'if':{
+                                    'column_id':'Active', 
+                                    'filter_query':'{Active} = Yes'
+                                },
+                                'backgroundColor':'green'
+                            },
+                            {
+                                'if':{
+                                    'column_id':'Active', 
+                                    'filter_query':'{Active} = No'
+                                },
+                                'backgroundColor':'red'
+                            },
+                            {
+                                'if':{
+                                    'column_id':'PCC Request', 
+                                    'filter_query':'{PCC Request} = Yes'
+                                },
+                                'backgroundColor':'green'
+                            },
+                            {
+                                'if':{
+                                    'column_id':'PCC Request', 
+                                    'filter_query':'{PCC Request} = No'
+                                },
+                                'backgroundColor':'red'
+                            },
+                            {
+                                'if':{
+                                    'column_id':'Doc Types', 
+                                    'filter_query':'{Doc Types} = Yes'
+                                },
+                                'backgroundColor':'green'
+                            },
+                            {
+                                'if':{
+                                    'column_id':'Doc Types', 
+                                    'filter_query':'{Doc Types} = No'
+                                },
+                                'backgroundColor':'red'
+                            },
+                            {
+                                'if':{
+                                    'column_id':'Complete Data', 
+                                    'filter_query':'{Complete Data} = Complete'
+                                },
+                                'backgroundColor':'green'
+                            }
+                        ]
+                    )
+                ),
+                dbc.Button(
+                    'Technical Information',
+                    id = 'technicalInfoCollapseButton',
+                    color = 'primary',
+                    n_clicks = 0,
+                    style = toggleInfo.toggleTechnicalInfo
+                ),
+                dbc.Collapse(
+                    dash_table.DataTable(
+                        id = 'searchResultsTable',
+                        style_header = dataTableStyles.style_header,
+                        style_cell = dataTableStyles.style_cell,
+                    ),
+                    id = 'techincalInfoCollapsedDiv',
+                    is_open = False
+                )
+            ]
+        ),
+        # Patient Info
         html.Div(
             id='patient_container',
             style=content.PATIENT_STYLE,
             children = [
-                html.P('This is a test')
+
+            ]
+        ),
+        html.Div(
+            id='provider_container',
+            style=content.PROV_QRY_STYLE,
+            children = [
+                html.Div(
+                    id='prov_search_div',
+                    style = searchBarStyles.searchBarFlexContainer,
+                    children=[
+                        dcc.Input(
+                            id = 'prov_search_bar',
+                            style = searchBarStyles.searchBarFlexChildren,
+                            type = 'text',
+                            debounce = True,
+                            placeholder = 'Provider Name'
+                        ),
+                        dbc.Spinner(
+                            id = 'prov_load_spinner',
+                            spinner_style = searchBarStyles.searchBarSpinner,
+                            color = 'green',
+                            show_initially = False,
+                            children = []
+                        )
+                    ]
+                ),
+                html.Div(
+                    dash_table.DataTable(
+                        id = 'prov_search_result_datatable'
+                    )
+                )
             ]
         ),
         dcc.Interval(
@@ -116,7 +279,9 @@ main_app.layout = html.Div(
 @main_app.callback(
     [
         Output('fac_stats_container', 'style'),
-        Output('patient_container', 'style')
+        Output('fac_qry_container', 'style'),
+        Output('patient_container', 'style'),
+        Output('provider_container', 'style')
     ],
     Input('current_url', 'pathname')
 )
@@ -124,16 +289,34 @@ def render_container(pathname):
     # Change containers display properties depending on URL
     fac_stats_style_dic = content.FAC_STATS_STYLE
     patient_style_dic = content.PATIENT_STYLE
+    fac_qry_style_dic = content.FAC_QRY_STYLE
+    prov_qry_style_dic = content.PROV_QRY_STYLE
     if pathname == '/fac_stats':
         fac_stats_style_dic['display']='block'
         patient_style_dic['display']='none'
+        fac_qry_style_dic['display']='none'
+        prov_qry_style_dic['display']='none'
     elif pathname == '/patients_info':
         fac_stats_style_dic['display']='none'
         patient_style_dic['display']='block'
+        fac_qry_style_dic['display']='none'
+        prov_qry_style_dic['display']='none'
+    elif pathname == '/fac_info':
+        fac_stats_style_dic['display']='none'
+        patient_style_dic['display']='none'
+        fac_qry_style_dic['display']='block'
+        prov_qry_style_dic['display']='none'
+    elif pathname == '/prov_info':
+        fac_stats_style_dic['display']='none'
+        patient_style_dic['display']='none'
+        fac_qry_style_dic['display']='none'
+        prov_qry_style_dic['display']='block'
     else:
         fac_stats_style_dic['display']='none'
         patient_style_dic['display']='none'
-    return fac_stats_style_dic, patient_style_dic
+        fac_qry_style_dic['display']='none'
+        prov_qry_style_dic['display']='none'
+    return fac_stats_style_dic, fac_qry_style_dic, patient_style_dic, prov_qry_style_dic
 
 # Callback to populate the state dropdown
 @main_app.callback(
@@ -392,6 +575,176 @@ def pending_logs_chart(n_intervals):
         margin = dict(t=3, b=3, r=3, l=3)
         )
     return pending_logs_pie
+
+# Facility Query Collapse/Expand Datatable
+@main_app.callback(
+    Output('techincalInfoCollapsedDiv', 'is_open'),
+    Input('technicalInfoCollapseButton', 'n_clicks'),
+    State('techincalInfoCollapsedDiv', 'is_open')
+)
+def showTechnicalInfo(n, is_open):
+    if n:
+        return not is_open
+    return is_open
+
+# Facility Query Results
+@main_app.callback(
+    [
+        Output('searchResultsTable', 'columns'),
+        Output('searchResultsTable', 'data'),
+        Output('simpleSearchResultsTable', 'columns'),
+        Output('simpleSearchResultsTable', 'data'),
+        Output('searchBarLoadingSpinner', 'children')
+    ],
+    [
+        Input('searchBar', 'value')
+    ]
+    )
+def searchQueryResult(facName):
+    tmp_fac_dict = schemaList.schemaDict
+    pccFactTblDataframe = pd.DataFrame()
+    simplePccFactTblDataframe = pd.DataFrame(columns = ['Name', 'State', 'Active', 'Start Date', 'PCC Request', 'Doc Types', 'Complete Data'])
+    fac_query = '''SELECT 
+    	facility.facility_id, 
+    	facility.facility_name, 
+    	facility.facility_street, 
+    	facility.facility_city, 
+    	facility.facility_state,
+    	sessiondata.First_session,
+    	pccFacility.st_dte,
+    	pccFacility.pcc_orgUid,
+    	pccFacility.pcc_facID,
+    	pccFacility.pcc_active,
+    	pccFacility.pickListID,
+    	pccFacility.aimsDocID,
+    	pccFacility.phqDocID,
+    	pccFacility.bimsDocID,
+    	pccFacility.psychDocID,
+    	pccFacility.evalDocID,
+    	pccFacility.progDocID,
+    	pccFacility.pcc_docs
+    FROM
+    	dbo.tbl_facility facility
+    FULL JOIN 
+    	dbo.vw_ys_fac_first_ses_dte sessiondata ON facility.facility_id = sessiondata.facility_id
+    FULL JOIN
+    	dbo.tbl_pcc_fac pccFacility ON facility.facility_id = pccFacility.fac_id
+    WHERE
+    	facility.facility_name LIKE '%{}%';
+    '''.format(facName)
+    for schema,payload in tmp_fac_dict.items():
+        # Instantiate engine class
+        engineInstance = sqlalchemy.create_engine('mssql+pyodbc://sqlsvr:61433/{}?trusted_connection=yes&driver=SQL Server Native Client 11.0'.format(schema))
+        #engine_instance = sqlalchemy.create_engine('mssql+pyodbc://sqlsvr:61433/{}?trusted_connection=yes&driver=ODBC Driver 17 for SQL Server'.format(schema))
+        # Establish connection
+        try:
+            connectionInstance = engineInstance.connect()
+            #logging.info('Connected to {}'.format(schema))
+            tmpDataframe = pd.read_sql(fac_query, connectionInstance)
+            # Fill missing data with 0 or blank
+            tmpDataframe['aimsDocID'] = tmpDataframe['aimsDocID'].fillna(0)
+            tmpDataframe['phqDocID'] = tmpDataframe['phqDocID'].fillna(0)
+            tmpDataframe['bimsDocID'] = tmpDataframe['bimsDocID'].fillna(0)
+            tmpDataframe['psychDocID'] = tmpDataframe['psychDocID'].fillna(0)
+            tmpDataframe['evalDocID'] = tmpDataframe['evalDocID'].fillna(0)
+            tmpDataframe['progDocID'] = tmpDataframe['progDocID'].fillna(0)
+            tmpDataframe['pcc_orgUid'] = tmpDataframe['pcc_orgUid'].fillna("")
+            # If dataframe is empty, then create columns and fill with the data from the first schema
+            if pccFactTblDataframe.empty:
+                pccFactTblDataframe = tmpDataframe.copy()
+            else:
+                # Append the temporal DF to the pccFactTblDataframe
+                pccFactTblDataframe = pd.concat([pccFactTblDataframe, tmpDataframe], ignore_index=True)
+            # Loop through tmpDataframe and append data to tmpList
+            for i in range(len(tmpDataframe['facility_name'])):
+                tmpList = []
+                tmpList.append(tmpDataframe['facility_name'][i])
+                # Append current schema's state
+                tmpList.append(payload[3])
+                # Append "Yes" if facility is active on db
+                tmpList.append('Yes') if tmpDataframe['pcc_active'][i] == 1 else tmpList.append('No')
+                tmpList.append(tmpDataframe['st_dte'][i])
+                # Check if pcc_orgUid exists
+                tmpList.append('Yes') if len(tmpDataframe['pcc_orgUid'][i]) > 0 else tmpList.append('No')
+                # Check if Doc Types are in
+                tmpList.append('Yes') if tmpDataframe['aimsDocID'][i]+tmpDataframe['phqDocID'][i]+tmpDataframe['bimsDocID'][i]+tmpDataframe['psychDocID'][i]+tmpDataframe['evalDocID'][i]+tmpDataframe['progDocID'][i] > 0 else tmpList.append('No')
+                # Check if there's any data missing to enable the button
+                if tmpDataframe['aimsDocID'][i] != 0 and tmpDataframe['phqDocID'][i] != 0 and tmpDataframe['bimsDocID'][i] != 0 and tmpDataframe['psychDocID'][i] != 0 and tmpDataframe['evalDocID'][i] != 0 and tmpDataframe['progDocID'][i] != 0 and len(tmpDataframe['pcc_orgUid'][i]) > 0 and tmpDataframe['pcc_active'][i] == 1:
+                    tmpList.append('Complete')
+                else:
+                    tmpList.append('Missing')
+                simplePccFactTblDataframe.loc[len(simplePccFactTblDataframe['Name'])] = tmpList
+        except SQLAlchemyError as errorMessage:
+            #logging.debug(errorMessage)
+            pass
+        try:
+            # Must close connection prior to dropping the table, to avoid simultaneous connections
+            connectionInstance.close()
+            #logging.info('Closing connection to {}'.format(schema))
+        except:
+            pass
+    columnsReturnValue = [{'name':i, 'id':i} for i in pccFactTblDataframe.columns]
+    simpleColumnsReturnValue = [{'name':i, 'id':i} for i in simplePccFactTblDataframe.columns]
+    return columnsReturnValue, pccFactTblDataframe.to_dict('records'), simpleColumnsReturnValue, simplePccFactTblDataframe.to_dict('records'), 'Ready to Search'
+
+# Query provider's info
+@main_app.callback(
+    [
+        Output('prov_search_result_datatable', 'columns'),
+        Output('prov_search_result_datatable', 'data'),
+        Output('prov_load_spinner', 'children')
+    ],
+    Input('prov_search_bar', 'value')
+)
+def search_provider(prov_nme):
+    # Connect to DB and get all states
+    db_conn = schemaList.db_connect(dbCredentials.db_address, 'Provider_App')
+    query = 'SELECT st_state,back_office_email_address FROM dbo.tbl_state ORDER BY st_state;'
+    query_result_df = pd.read_sql(query, db_conn)
+    # Cast 2 column df into dictionary
+    query_result_dict = pd.Series(query_result_df['back_office_email_address'].values, index=query_result_df['st_state']).to_dict()
+    # Close db connection
+    db_conn.close()
+    provider_info_dataframe = pd.DataFrame()
+    query = '''SELECT     
+			localprov.ProviderID, 
+			localprov.ProviderName, 
+			localprov.ProviderEmail, 
+			hub_user.PhoneNumber,
+			hub_user.UserName AS HubUsername,
+			localprov.prov_inactive AS ProviderInactive,
+			provtype.provider_type AS ProviderLicense,
+			servicetype.svce_type AS ProviderType
+		FROM            
+			dbo.ProviderTable localprov
+		FULL JOIN
+			dbo.tbl_provider_type provtype ON localprov.provider_type = provtype.provider_type_id
+		FULL JOIN
+			dbo.tbl_svce_type servicetype ON provtype.svce_type_id = servicetype.svce_type_id
+		FULL JOIN
+			Provider_App.dbo.AspNetUsers hub_user ON hub_user.Email = localprov.ProviderEmail
+		WHERE        
+			(ProviderName LIKE '%{}%');
+    	'''.format(prov_nme)
+    print(query_result_dict)
+    for state,referral_inbox in query_result_dict.items():
+        db_conn = schemaList.db_connect(dbCredentials.db_address, "TSC_"+state)
+        # Execute query
+        tmp_dataframe = pd.read_sql(query, db_conn)
+        tmp_dataframe['State'] = state
+        tmp_dataframe['Referral'] = referral_inbox
+        # If final DF is empty, then copy tmp to final
+        if provider_info_dataframe.empty:
+            provider_info_dataframe['State'] = ""
+            provider_info_dataframe['Referral'] = ""
+            provider_info_dataframe = tmp_dataframe.copy()
+        else:
+            # Append the temporal DF to the final DF
+        	provider_info_dataframe = pd.concat([provider_info_dataframe, tmp_dataframe], ignore_index=True)
+        # Close connetion
+        schemaList.db_close(db_conn)
+    columnsReturnValue = [{'name':i, 'id':i} for i in provider_info_dataframe.columns]
+    return columnsReturnValue, provider_info_dataframe.to_dict('records'), 'Ready to Search'
 
 if __name__ == '__main__':
     main_app.run_server(debug=True, host='0.0.0.0', port='7000', dev_tools_silence_routes_logging=False)

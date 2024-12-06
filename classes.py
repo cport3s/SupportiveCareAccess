@@ -1,6 +1,7 @@
 from flask import Flask
 from dash import dash
 import sqlalchemy
+import pandas as pd
 
 # Classes
 class server_class():
@@ -48,6 +49,17 @@ class schemaList():
     
     def db_close(db_connection):
         return db_connection.close()
+    
+    def get_states():
+        # Get all states from Provider App db
+        # Connect to DB and get all states
+        db_conn = schemaList.db_connect(dbCredentials.db_address, 'Provider_App')
+        query = 'SELECT st_state FROM dbo.tbl_state ORDER BY st_state;'
+        query_result_df = pd.read_sql(query, db_conn)
+        state_list = ['TSC_'+state for state in query_result_df['st_state']]
+        # Close db connection
+        db_conn.close()
+        return state_list
         
     
 class dbCredentials():

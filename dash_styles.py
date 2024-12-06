@@ -100,3 +100,17 @@ class content():
         "padding": "2rem 1rem",
         'display': 'hidden'
     }
+
+    FAC_QRY_STYLE = {
+        "margin-left": "18rem",
+        "margin-right": "2rem",
+        "padding": "2rem 1rem",
+        'display': 'hidden'
+    }
+
+    PROV_QRY_STYLE = {
+        "margin-left": "18rem",
+        "margin-right": "2rem",
+        "padding": "2rem 1rem",
+        'display': 'hidden'
+    }
