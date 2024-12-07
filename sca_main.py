@@ -233,9 +233,13 @@ main_app.layout = html.Div(
             id='patient_container',
             style=content.PATIENT_STYLE,
             children = [
-
+                dcc.Dropdown(
+                    id = 'ptnt_dropdown',
+                    placeholder='Start typing patient name...'
+                )
             ]
         ),
+        # Provider Info
         html.Div(
             id='provider_container',
             style=content.PROV_QRY_STYLE,
@@ -745,6 +749,47 @@ def search_provider(prov_nme):
         schemaList.db_close(db_conn)
     columnsReturnValue = [{'name':i, 'id':i} for i in provider_info_dataframe.columns]
     return columnsReturnValue, provider_info_dataframe.to_dict('records'), 'Ready to Search'
+
+# Poplate patient list
+@main_app.callback(
+    Output('ptnt_dropdown', 'options'),
+    Input('current_url', 'pathname')
+    )
+def populate_ptnt_dropdown(pathname):
+    if pathname == '/patients_info':
+        # Get state lists
+        st_list = schemaList.get_states()
+        ptnt_info_df = pd.DataFrame()
+        # Get all patient's list
+        for state in st_list:
+            db_conn = schemaList.db_connect(dbCredentials.db_address, state)
+            query = '''
+                SELECT
+                	ClientID,
+                	CONCAT(LastName, ', ', FirstName) AS ProviderName
+                FROM            
+                	dbo.ClientInfoTable
+                ORDER BY
+                    LastName;
+            '''
+            tmp_df=pd.read_sql(query, db_conn)
+            # If dataframe is empty, then create columns and fill with the data from the first schema
+            if ptnt_info_df.empty:
+                ptnt_info_df = tmp_df.copy()
+            else:
+                # Append the temporal DF to the ptnt_info_df
+                ptnt_info_df = pd.concat([ptnt_info_df, tmp_df], ignore_index=True)
+            ptnt_info_df['state'] = state
+            # Close DB connection
+            schemaList.db_close(db_conn)
+        # Give format for dash dropdowns
+        query_result_dict = dict(zip(list(ptnt_info_df['ClientID']), list(ptnt_info_df['ProviderName'])))
+        return_dict = [{'label':[name+' | ID: ',id], 'value': id} for id,name in query_result_dict.items()]
+        # Close db connection
+        db_conn.close()
+        return return_dict
+    else:
+        raise PreventUpdate
 
 if __name__ == '__main__':
     main_app.run_server(debug=True, host='0.0.0.0', port='7000', dev_tools_silence_routes_logging=False)

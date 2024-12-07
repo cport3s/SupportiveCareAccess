@@ -42,6 +42,9 @@ class schemaList():
     }
 
     def db_connect(db_address, state):
+        # Check if schema name comes complete
+        if len(state) == 2:
+            state = 'TSC_'+state
         # Instantiate engine class
         engine_instance = sqlalchemy.create_engine(db_address.format(state))
         db_connection = engine_instance.connect()
