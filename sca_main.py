@@ -236,7 +236,14 @@ main_app.layout = html.Div(
                 dcc.Dropdown(
                     id = 'ptnt_dropdown',
                     placeholder='Start typing patient name...'
-                )
+                ),
+                dbc.Spinner(
+                            id = 'ptnt_load_spinner',
+                            spinner_style = searchBarStyles.searchBarSpinner,
+                            color = 'green',
+                            show_initially = False,
+                            children = []
+                        )
             ]
         ),
         # Provider Info
@@ -752,7 +759,10 @@ def search_provider(prov_nme):
 
 # Poplate patient list
 @main_app.callback(
-    Output('ptnt_dropdown', 'options'),
+    [
+        Output('ptnt_dropdown', 'options'),
+        Output('ptnt_load_spinner', 'children')
+    ],
     Input('current_url', 'pathname')
     )
 def populate_ptnt_dropdown(pathname):
@@ -770,7 +780,7 @@ def populate_ptnt_dropdown(pathname):
                 FROM            
                 	dbo.ClientInfoTable
                 ORDER BY
-                    LastName;
+                    ProviderName;
             '''
             tmp_df=pd.read_sql(query, db_conn)
             # If dataframe is empty, then create columns and fill with the data from the first schema
@@ -787,7 +797,7 @@ def populate_ptnt_dropdown(pathname):
         return_dict = [{'label':[name+' | ID: ',id], 'value': id} for id,name in query_result_dict.items()]
         # Close db connection
         db_conn.close()
-        return return_dict
+        return return_dict, 'Ready to Search'
     else:
         raise PreventUpdate
 
