@@ -233,22 +233,83 @@ main_app.layout = html.Div(
             id='patient_container',
             style=content.PATIENT_STYLE,
             children = [
-                dcc.Dropdown(
-                    id = 'ptnt_state_dropdown',
-                    placeholder='Select State'
-                ),
-                dcc.Dropdown(
-                    id = 'ptnt_dropdown',
-                    placeholder='Start typing patient name...',
-                    disabled=True
-                ),
-                dbc.Spinner(
+                html.Div(
+                    id='patient_search_container',
+                    style=content.PATIENT_SEARCH_FLEX_STYLE,
+                    children=[
+                        dcc.Dropdown(
+                            id = 'ptnt_state_dropdown',
+                            placeholder='Select State',
+                            style=content.PATIENT_STYLE_CHILD
+                        ),
+                        dcc.Dropdown(
+                            id = 'ptnt_dropdown',
+                            placeholder='Start typing patient name...',
+                            disabled=True,
+                            style=content.PATIENT_STYLE_CHILD
+                        ),
+                        dbc.Spinner(
                             id = 'ptnt_load_spinner',
                             spinner_style = searchBarStyles.searchBarSpinner,
                             color = 'green',
-                            show_initially = False,
-                            children = []
+                            children=['Select State']
                         )
+                    ]
+                ),
+                html.Div(
+                    id='patient_result_container',
+                    style=content.PATIENT_RESULT_GRID_STYLE,
+                    children=[
+                        dbc.Card(
+                            dbc.Label('Client ID: '),
+                            style=content.PATIENT_GRID_CHILD_1
+                        ),
+                        dbc.Card(
+                            id='ptnt_id',
+                            style=content.PATIENT_GRID_CHILD_7
+                        ),
+                        dbc.Card(
+                            dbc.Label('First Name: '),
+                            style=content.PATIENT_GRID_CHILD_2
+                        ),
+                        dbc.Card(
+                            id='ptnt_first_name',
+                            style=content.PATIENT_GRID_CHILD_8
+                        ),
+                        dbc.Card(
+                            dbc.Label('Last Name: '),
+                            style=content.PATIENT_GRID_CHILD_3
+                        ),
+                        dbc.Card(
+                            id='ptnt_last_name',
+                            style=content.PATIENT_GRID_CHILD_9
+                        ),
+                        dbc.Card(
+                            dbc.Label('Facility: '),
+                            style=content.PATIENT_GRID_CHILD_4
+                        ),
+                        dbc.Card(
+                            id='ptnt_fac',
+                            style=content.PATIENT_GRID_CHILD_10
+                        ),
+                        dbc.Card(
+                            dbc.Label('Date Of Birth: '),
+                            style=content.PATIENT_GRID_CHILD_5
+                        ),
+                        dbc.Card(
+                            id='ptnt_dob',
+                            style=content.PATIENT_GRID_CHILD_11
+                        ),
+                        dbc.Card(
+                            dbc.Label('PCC Match: '),
+                            style=content.PATIENT_GRID_CHILD_6
+                        ),
+                        dbc.Card(
+                            id='ptnt_pcc_match',
+                            style=content.PATIENT_GRID_CHILD_12
+                        ),
+                    ]
+                )
             ]
         ),
         # Provider Info
@@ -761,7 +822,7 @@ def search_provider(prov_nme):
     columnsReturnValue = [{'name':i, 'id':i} for i in provider_info_dataframe.columns]
     return columnsReturnValue, provider_info_dataframe.to_dict('records'), 'Ready to Search'
 
-# Poplate patient list
+# Poplate patient state list
 @main_app.callback(
     Output('ptnt_state_dropdown', 'options'),
     Input('current_url', 'pathname')
@@ -774,7 +835,7 @@ def populate_ptnt_st_dropdown(pathname):
         query_result_df = pd.read_sql(query, db_conn)
         query_result_dict = dict(zip(list(query_result_df['st_id']), list(query_result_df['st_state'])))
         # Give format for dash dropdowns
-        return_dict = [{'label':[state+' | ID: ',id], 'value': 'TSC_'+state} for id,state in query_result_dict.items()]
+        return_dict = [{'label':[state+' | State ID: ',id], 'value': 'TSC_'+state} for id,state in query_result_dict.items()]
         # Close db connection
         db_conn.close()
         return return_dict
@@ -798,13 +859,13 @@ def populate_ptnt_dropdown(state):
     query = '''
         SELECT
         	ClientID,
-        	CONCAT(LastName, ', ', FirstName) AS ProviderName
+        	CONCAT(LastName, ', ', FirstName) AS ClientName,
+            CASE WHEN Status = 187 THEN 'Active' ELSE 'Inactive' END AS Status
         FROM            
-        	dbo.ClientInfoTable;
+        	dbo.ClientInfoTable
+        ORDER BY ClientName;
     '''
     tmp_df=pd.read_sql(query, db_conn)
-    # Append current state to tmp df
-    tmp_df['state'] = state
     # If dataframe is empty, then create columns and fill with the data from the first schema
     if ptnt_info_df.empty:
         ptnt_info_df = tmp_df.copy()
@@ -815,12 +876,48 @@ def populate_ptnt_dropdown(state):
     schemaList.db_close(db_conn)
     # Close db connection
     db_conn.close()
-    # Sort by name
-    ptnt_info_df.sort_values(by=['ProviderName'])
-    #ptnt_info_df.to_csv('client.csv')
     # Give format for dash dropdowns
-    return_dict = [{'label':[ptnt_info_df['ProviderName'][i]+' | ClientID: '+str(ptnt_info_df['ClientID'][i])+' | State: '+ptnt_info_df['state'][i]], 'value': ptnt_info_df['ClientID'][i]} for i in range(len(ptnt_info_df['ClientID']))]
-    return return_dict, False, 'Ready to Search'
+    return_dict = [{'label':[ptnt_info_df['ClientName'][i]+' | ClientID: '+str(ptnt_info_df['ClientID'][i])+' | Status: '+ptnt_info_df['Status'][i]], 'value': ptnt_info_df['ClientID'][i]} for i in range(len(ptnt_info_df['ClientID']))]
+    return return_dict, False, 'Select Patient'
+
+# Query patient's info
+@main_app.callback(
+        [
+            Output('ptnt_first_name', 'children'),
+            Output('ptnt_last_name', 'children'),
+            Output('ptnt_id', 'children'),
+            Output('ptnt_dob', 'children'),
+            Output('ptnt_fac', 'children'),
+            Output('ptnt_pcc_match', 'children')
+        ],
+    Input('ptnt_dropdown', 'value'),
+    State('ptnt_state_dropdown', 'value'),
+    prevent_initial_call=True
+)
+def query_ptnt_info(ptnt_id, state):
+    # Connect to State DB
+    db_conn = schemaList.db_connect(dbCredentials.db_address, state)
+    query = '''
+        SELECT        
+        	clientinfo.ClientID AS ClientID, 
+        	clientinfo.LastName AS LastName, 
+        	clientinfo.FirstName AS FirstName, 
+        	clientinfo.DateOfBirth AS DateOfBirth, 
+        	localfac.facility_name AS facility_name,
+        	pccclientinfo.pcc_id AS matched
+        FROM            
+        	dbo.ClientInfoTable clientinfo
+        INNER JOIN
+        	dbo.tbl_facility localfac ON clientinfo.facility_id = localfac.facility_id
+        FULL OUTER JOIN
+        	dbo.tbl_pcc_patients_client pccclientinfo ON clientinfo.ClientID = pccclientinfo.cl_id
+        WHERE
+        	ClientID = {}
+    '''.format(ptnt_id)
+    ptnt_info_df=pd.read_sql(query, db_conn)
+    # Close DB connection
+    schemaList.db_close(db_conn)
+    return ptnt_info_df['FirstName'][0], ptnt_info_df['LastName'][0], ptnt_info_df['ClientID'][0], ptnt_info_df['DateOfBirth'][0], ptnt_info_df['facility_name'][0], 'PCC ID '+str(ptnt_info_df['matched'][0]) if ptnt_info_df['matched'][0] != None else 'No'
 
 if __name__ == '__main__':
     main_app.run_server(debug=True, host='0.0.0.0', port='7000', dev_tools_silence_routes_logging=False)

@@ -98,7 +98,112 @@ class content():
         "margin-left": "18rem",
         "margin-right": "2rem",
         "padding": "2rem 1rem",
-        'display': 'hidden'
+        'display': 'hidden',
+    }
+
+    PATIENT_SEARCH_FLEX_STYLE = {
+        'display': 'flex',
+        'justify-content': 'space-around'
+    }
+
+    PATIENT_STYLE_CHILD = {
+        'width':'40%'
+    }
+
+    PATIENT_RESULT_GRID_STYLE = {
+        'display':'grid',
+        'grid-template-columns':'auto auto',
+        'grid-template-rows':'auto auto'
+    }
+
+    PATIENT_GRID_CHILD_1 ={
+        'font-weight': 'bold',
+        'grid-column-start': '1', 
+        'grid-column-end': '2',
+        'grid-row-start': '1',
+        'grid-row-start': '2'
+    }
+
+    PATIENT_GRID_CHILD_2 ={
+        'font-weight': 'bold',
+        'grid-column-start': '1', 
+        'grid-column-end': '2',
+        'grid-row-start': '2',
+        'grid-row-start': '3'
+    }
+
+    PATIENT_GRID_CHILD_3 ={
+        'font-weight': 'bold',
+        'grid-column-start': '1', 
+        'grid-column-end': '2',
+        'grid-row-start': '3',
+        'grid-row-start': '4'
+    }
+
+    PATIENT_GRID_CHILD_4 ={
+        'font-weight': 'bold',
+        'grid-column-start': '3', 
+        'grid-column-end': '4',
+        'grid-row-start': '1',
+        'grid-row-start': '2'
+    }
+
+    PATIENT_GRID_CHILD_5 ={
+        'font-weight': 'bold',
+        'grid-column-start': '3', 
+        'grid-column-end': '4',
+        'grid-row-start': '2',
+        'grid-row-start': '3'
+    }
+
+    PATIENT_GRID_CHILD_6 ={
+        'font-weight': 'bold',
+        'grid-column-start': '3', 
+        'grid-column-end': '4',
+        'grid-row-start': '3',
+        'grid-row-start': '4'
+    }
+
+    PATIENT_GRID_CHILD_7 ={
+        'grid-column-start': '2', 
+        'grid-column-end': '3',
+        'grid-row-start': '1',
+        'grid-row-start': '2'
+    }
+
+    PATIENT_GRID_CHILD_8 ={
+        'grid-column-start': '2', 
+        'grid-column-end': '3',
+        'grid-row-start': '2',
+        'grid-row-start': '3'
+    }
+
+    PATIENT_GRID_CHILD_9 ={
+        'grid-column-start': '2', 
+        'grid-column-end': '3',
+        'grid-row-start': '3',
+        'grid-row-start': '4'
+    }
+
+    PATIENT_GRID_CHILD_10 ={
+        'grid-column-start': '4', 
+        'grid-column-end': '5',
+        'grid-row-start': '1',
+        'grid-row-start': '2'
+    }
+
+    PATIENT_GRID_CHILD_11 ={
+        'grid-column-start': '4', 
+        'grid-column-end': '5',
+        'grid-row-start': '2',
+        'grid-row-start': '3'
+    }
+
+    PATIENT_GRID_CHILD_12 ={
+        'grid-column-start': '4', 
+        'grid-column-end': '5',
+        'grid-row-start': '3',
+        'grid-row-start': '4'
     }
 
     FAC_QRY_STYLE = {
