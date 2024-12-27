@@ -309,6 +309,14 @@ main_app.layout = html.Div(
                             style=content.PATIENT_GRID_CHILD_12
                         ),
                     ]
+                ),
+                html.Div(
+                    id='ptnt_notes_container',
+                    children=[
+                        dash_table.DataTable(
+                            id = 'ptnt_notes_table'
+                        )
+                    ]
                 )
             ]
         ),
@@ -888,7 +896,9 @@ def populate_ptnt_dropdown(state):
             Output('ptnt_id', 'children'),
             Output('ptnt_dob', 'children'),
             Output('ptnt_fac', 'children'),
-            Output('ptnt_pcc_match', 'children')
+            Output('ptnt_pcc_match', 'children'),
+            Output('ptnt_notes_table', 'columns'),
+            Output('ptnt_notes_table', 'data')
         ],
     Input('ptnt_dropdown', 'value'),
     State('ptnt_state_dropdown', 'value'),
@@ -917,7 +927,40 @@ def query_ptnt_info(ptnt_id, state):
     ptnt_info_df=pd.read_sql(query, db_conn)
     # Close DB connection
     schemaList.db_close(db_conn)
-    return ptnt_info_df['FirstName'][0], ptnt_info_df['LastName'][0], ptnt_info_df['ClientID'][0], ptnt_info_df['DateOfBirth'][0], ptnt_info_df['facility_name'][0], 'PCC ID '+str(ptnt_info_df['matched'][0]) if ptnt_info_df['matched'][0] != None else 'No'
+    # Connect to Provider_App DB
+    db_conn = schemaList.db_connect(dbCredentials.db_address, 'Provider_App')
+    # Query patient's notes
+    query = '''
+        SELECT
+        	note_id, 
+        	note_tbl_name,  
+        	prov_id, 
+        	cl_id, 
+        	svce_type, 
+        	note_type, 
+        	cpt_code, 
+        	note_dte, 
+        	note_del, 
+        	create_dte, 
+        	mod_dte, 
+        	prov_sig_dte, 
+        	prov_nme, 
+        	cl_nme, 
+        	st_time, 
+        	end_time
+        FROM
+        	dbo.tbl_notes_log
+        WHERE
+        	cl_id = {} AND note_dte >= (GETDATE() - 30)
+        ORDER BY note_dte DESC
+    '''.format(ptnt_id)
+    ptnt_notes_df = pd.read_sql(query, db_conn)
+    # Format patient's notes df for dash datatable
+    ptnt_notes_columns = [{'name':i, 'id':i} for i in ptnt_notes_df.columns]
+    ptnt_notes_data = ptnt_notes_df.to_dict('records')
+    # Close DB connection
+    schemaList.db_close(db_conn)
+    return ptnt_info_df['FirstName'][0], ptnt_info_df['LastName'][0], ptnt_info_df['ClientID'][0], ptnt_info_df['DateOfBirth'][0], ptnt_info_df['facility_name'][0], 'PCC ID '+str(ptnt_info_df['matched'][0]) if ptnt_info_df['matched'][0] != None else 'No', ptnt_notes_columns, ptnt_notes_data
 
 if __name__ == '__main__':
     main_app.run_server(debug=True, host='0.0.0.0', port='7000', dev_tools_silence_routes_logging=False)
