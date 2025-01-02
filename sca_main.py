@@ -929,31 +929,33 @@ def query_ptnt_info(ptnt_id, state):
     schemaList.db_close(db_conn)
     # Connect to Provider_App DB
     db_conn = schemaList.db_connect(dbCredentials.db_address, 'Provider_App')
+    # Get state ID
+    query = '''SELECT st_id FROM dbo.tbl_state WHERE st_state = '{}';'''.format(state[-2:])
+    state_id = pd.read_sql(query, db_conn)['st_id'][0]
     # Query patient's notes
     query = '''
         SELECT
-        	note_id, 
-        	note_tbl_name,  
-        	prov_id, 
-        	cl_id, 
-        	svce_type, 
-        	note_type, 
-        	cpt_code, 
-        	note_dte, 
-        	note_del, 
-        	create_dte, 
-        	mod_dte, 
-        	prov_sig_dte, 
-        	prov_nme, 
-        	cl_nme, 
-        	st_time, 
-        	end_time
+        	notes_log.note_id, 
+        	notes_log.note_tbl_name, 
+            notes_log.prov_nme, 
+        	notes_log.svce_type, 
+        	notes_log.note_type, 
+        	notes_log.cpt_code, 
+        	notes_log.note_dte, 
+        	notes_log.note_del, 
+        	notes_log.create_dte, 
+        	notes_log.mod_dte, 
+        	notes_log.prov_sig_dte, 
+        	pcc_log.cr_dte,
+        	pcc_log.done_dte
         FROM
-        	dbo.tbl_notes_log
+        	Provider_App.dbo.tbl_notes_log notes_log
+        FULL JOIN
+        	{}.dbo.tbl_pcc_upl_log pcc_log ON pcc_log.uniqueID = notes_log.note_id
         WHERE
-        	cl_id = {} AND note_dte >= (GETDATE() - 30)
+        	notes_log.cl_id = {} AND notes_log.note_dte >= (GETDATE() - 30) AND notes_log.st_id = {}
         ORDER BY note_dte DESC
-    '''.format(ptnt_id)
+    '''.format(state, ptnt_id, state_id)
     ptnt_notes_df = pd.read_sql(query, db_conn)
     # Format patient's notes df for dash datatable
     ptnt_notes_columns = [{'name':i, 'id':i} for i in ptnt_notes_df.columns]
