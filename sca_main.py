@@ -313,8 +313,13 @@ main_app.layout = html.Div(
                 html.Div(
                     id='ptnt_notes_container',
                     children=[
+                        html.H3('Patient Notes'),
                         dash_table.DataTable(
                             id = 'ptnt_notes_table'
+                        ),
+                        html.H3('Assigned Providers'),
+                        dash_table.DataTable(
+                            id = 'ptnt_prov_table'
                         )
                     ]
                 )
@@ -898,7 +903,9 @@ def populate_ptnt_dropdown(state):
             Output('ptnt_fac', 'children'),
             Output('ptnt_pcc_match', 'children'),
             Output('ptnt_notes_table', 'columns'),
-            Output('ptnt_notes_table', 'data')
+            Output('ptnt_notes_table', 'data'),
+            Output('ptnt_prov_table', 'columns'),
+            Output('ptnt_prov_table', 'data')
         ],
     Input('ptnt_dropdown', 'value'),
     State('ptnt_state_dropdown', 'value'),
@@ -925,6 +932,26 @@ def query_ptnt_info(ptnt_id, state):
         	ClientID = {}
     '''.format(ptnt_id)
     ptnt_info_df=pd.read_sql(query, db_conn)
+    # Query patient's providers
+    query  = '''
+        SELECT
+        	prov_table.ProviderName,
+        	prov_table.ProviderEmail, 
+        	prov_roster.roster_st_date, 
+        	prov_roster.roster_end_date, 
+        	prov_roster.roster_not_covered, 
+        	service_type.svce_type
+        FROM
+        	dbo.tbl_roster prov_roster
+        INNER JOIN
+        	dbo.ProviderTable prov_table ON prov_table.ProviderID = prov_roster.prov_id
+        INNER JOIN
+        	dbo.tbl_svce_type service_type ON service_type.svce_type_id = prov_roster.svce_type_id
+        WHERE
+        	prov_roster.cl_id = {}
+        ORDER BY prov_table.ProviderName;
+    '''.format(ptnt_id)
+    ptnt_prov_df = pd.read_sql(query, db_conn)
     # Close DB connection
     schemaList.db_close(db_conn)
     # Connect to Provider_App DB
@@ -935,26 +962,26 @@ def query_ptnt_info(ptnt_id, state):
     # Query patient's notes
     query = '''
         SELECT
-        	notes_log.note_id, 
-        	notes_log.note_tbl_name, 
-            notes_log.prov_nme, 
-        	notes_log.svce_type, 
-        	notes_log.note_type, 
-        	notes_log.cpt_code, 
-        	notes_log.note_dte, 
-        	notes_log.note_del, 
-        	notes_log.create_dte, 
-        	notes_log.mod_dte, 
-        	notes_log.prov_sig_dte, 
-        	pcc_log.cr_dte,
-        	pcc_log.done_dte
+        	notes_log.note_id AS 'Note ID', 
+        	notes_log.note_tbl_name AS 'State Table', 
+            notes_log.prov_nme AS Provider, 
+        	notes_log.svce_type AS 'Service Type', 
+        	notes_log.note_type AS 'Note Type', 
+        	notes_log.cpt_code AS 'CPT Code', 
+        	notes_log.note_dte AS 'Service Date', 
+        	notes_log.note_del AS 'Delete Flag', 
+        	notes_log.create_dte AS 'Create Date', 
+        	notes_log.mod_dte AS 'Modify Date', 
+        	notes_log.prov_sig_dte AS 'Provider Signature Date', 
+        	pcc_log.cr_dte AS 'Upload Create Date',
+        	pcc_log.done_dte AS 'Upload Done Date'
         FROM
         	Provider_App.dbo.tbl_notes_log notes_log
         FULL JOIN
         	{}.dbo.tbl_pcc_upl_log pcc_log ON pcc_log.uniqueID = notes_log.note_id
         WHERE
         	notes_log.cl_id = {} AND notes_log.note_dte >= (GETDATE() - 30) AND notes_log.st_id = {}
-        ORDER BY note_dte DESC
+        ORDER BY notes_log.note_dte DESC
     '''.format(state, ptnt_id, state_id)
     ptnt_notes_df = pd.read_sql(query, db_conn)
     # Format patient's notes df for dash datatable
@@ -962,7 +989,7 @@ def query_ptnt_info(ptnt_id, state):
     ptnt_notes_data = ptnt_notes_df.to_dict('records')
     # Close DB connection
     schemaList.db_close(db_conn)
-    return ptnt_info_df['FirstName'][0], ptnt_info_df['LastName'][0], ptnt_info_df['ClientID'][0], ptnt_info_df['DateOfBirth'][0], ptnt_info_df['facility_name'][0], 'PCC ID '+str(ptnt_info_df['matched'][0]) if ptnt_info_df['matched'][0] != None else 'No', ptnt_notes_columns, ptnt_notes_data
+    return ptnt_info_df['FirstName'][0], ptnt_info_df['LastName'][0], ptnt_info_df['ClientID'][0], ptnt_info_df['DateOfBirth'][0], ptnt_info_df['facility_name'][0], 'PCC ID '+str(ptnt_info_df['matched'][0]) if ptnt_info_df['matched'][0] != None else 'No', ptnt_notes_columns, ptnt_notes_data, [{'name':i, 'id':i} for i in ptnt_prov_df.columns], ptnt_prov_df.to_dict('records')
 
 if __name__ == '__main__':
     main_app.run_server(debug=True, host='0.0.0.0', port='7000', dev_tools_silence_routes_logging=False)
