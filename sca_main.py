@@ -919,7 +919,7 @@ def query_ptnt_info(ptnt_id, state):
         	clientinfo.ClientID AS ClientID, 
         	clientinfo.LastName AS LastName, 
         	clientinfo.FirstName AS FirstName, 
-        	clientinfo.DateOfBirth AS DateOfBirth, 
+        	FORMAT(clientinfo.DateOfBirth, 'yyyy-MM-dd') AS DateOfBirth, 
         	localfac.facility_name AS facility_name,
         	pccclientinfo.pcc_id AS matched
         FROM            
@@ -937,8 +937,8 @@ def query_ptnt_info(ptnt_id, state):
         SELECT
         	prov_table.ProviderName,
         	prov_table.ProviderEmail, 
-        	prov_roster.roster_st_date, 
-        	prov_roster.roster_end_date, 
+        	FORMAT(prov_roster.roster_st_date, 'yyyy-MM-dd') AS 'Start Date',
+        	FORMAT(prov_roster.roster_end_date, 'yyyy-MM-dd') AS 'End Date',
         	prov_roster.roster_not_covered, 
         	service_type.svce_type
         FROM
@@ -949,7 +949,7 @@ def query_ptnt_info(ptnt_id, state):
         	dbo.tbl_svce_type service_type ON service_type.svce_type_id = prov_roster.svce_type_id
         WHERE
         	prov_roster.cl_id = {}
-        ORDER BY prov_table.ProviderName;
+        ORDER BY prov_table.ProviderName, prov_roster.roster_st_date;
     '''.format(ptnt_id)
     ptnt_prov_df = pd.read_sql(query, db_conn)
     # Close DB connection
@@ -968,13 +968,13 @@ def query_ptnt_info(ptnt_id, state):
         	notes_log.svce_type AS 'Service Type', 
         	notes_log.note_type AS 'Note Type', 
         	notes_log.cpt_code AS 'CPT Code', 
-        	notes_log.note_dte AS 'Service Date', 
+        	FORMAT(notes_log.note_dte, 'yyyy-MM-dd')  AS 'Service Date', 
         	notes_log.note_del AS 'Delete Flag', 
-        	notes_log.create_dte AS 'Create Date', 
-        	notes_log.mod_dte AS 'Modify Date', 
-        	notes_log.prov_sig_dte AS 'Provider Signature Date', 
-        	pcc_log.cr_dte AS 'Upload Create Date',
-        	pcc_log.done_dte AS 'Upload Done Date'
+        	FORMAT(notes_log.create_dte, 'yyyy-MM-dd hh:mm') AS 'Create Date', 
+        	FORMAT(notes_log.mod_dte, 'yyyy-MM-dd hh:mm') AS 'Modify Date', 
+        	FORMAT(notes_log.prov_sig_dte, 'yyyy-MM-dd hh:mm') AS 'Signature Date', 
+        	FORMAT(pcc_log.cr_dte, 'yyyy-MM-dd hh:mm') AS 'Log Create Date',
+        	FORMAT(pcc_log.done_dte, 'yyyy-MM-dd hh:mm') AS 'Log Done Date'
         FROM
         	Provider_App.dbo.tbl_notes_log notes_log
         FULL JOIN
