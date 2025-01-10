@@ -10,7 +10,7 @@ import plotly.express as px
 from plotly.subplots import make_subplots
 from datetime import datetime, timedelta
 from dash_styles import nav_bar, content
-from sca_functions import suppcare_header
+import sca_functions
 from classes import schemaList, dbCredentials
 from dash_styles import searchBarStyles, dataTableStyles, toggleInfo
 
@@ -24,7 +24,7 @@ main_app.layout = html.Div(
     children = [
         # Works in conjunction with "active=exact" in the navlink item. Marks active items in the nav menu
         dcc.Location(id='current_url'),
-        suppcare_header(),
+        sca_functions.suppcare_header(),
         dbc.Nav(
             id='nav_menu_container',
             children=[
@@ -293,20 +293,28 @@ main_app.layout = html.Div(
                             style=content.PATIENT_GRID_CHILD_10
                         ),
                         dbc.Card(
-                            dbc.Label('Date Of Birth: '),
+                            dbc.Label('Facility PCC Bridge: '),
                             style=content.PATIENT_GRID_CHILD_5
                         ),
                         dbc.Card(
-                            id='ptnt_dob',
+                            id='ptnt_pcc_fac_bridge',
                             style=content.PATIENT_GRID_CHILD_11
                         ),
                         dbc.Card(
-                            dbc.Label('PCC Match: '),
+                            dbc.Label('Date Of Birth: '),
                             style=content.PATIENT_GRID_CHILD_6
                         ),
                         dbc.Card(
-                            id='ptnt_pcc_match',
+                            id='ptnt_dob',
                             style=content.PATIENT_GRID_CHILD_12
+                        ),
+                        dbc.Card(
+                            dbc.Label('PCC Match: '),
+                            style=content.PATIENT_GRID_CHILD_13
+                        ),
+                        dbc.Card(
+                            id='ptnt_pcc_match',
+                            style=content.PATIENT_GRID_CHILD_14
                         ),
                     ]
                 ),
@@ -315,11 +323,19 @@ main_app.layout = html.Div(
                     children=[
                         html.H3('Patient Notes'),
                         dash_table.DataTable(
-                            id = 'ptnt_notes_table'
+                            id = 'ptnt_notes_table',
+                            style_data={
+                                'whiteSpace': 'normal',
+                                'height': 'auto'
+                            }
                         ),
                         html.H3('Assigned Providers'),
                         dash_table.DataTable(
-                            id = 'ptnt_prov_table'
+                            id = 'ptnt_prov_table',
+                            style_data={
+                                'whiteSpace': 'normal',
+                                'height': 'auto'
+                            }
                         )
                     ]
                 )
@@ -377,35 +393,7 @@ main_app.layout = html.Div(
 )
 def render_container(pathname):
     # Change containers display properties depending on URL
-    fac_stats_style_dic = content.FAC_STATS_STYLE
-    patient_style_dic = content.PATIENT_STYLE
-    fac_qry_style_dic = content.FAC_QRY_STYLE
-    prov_qry_style_dic = content.PROV_QRY_STYLE
-    if pathname == '/fac_stats':
-        fac_stats_style_dic['display']='block'
-        patient_style_dic['display']='none'
-        fac_qry_style_dic['display']='none'
-        prov_qry_style_dic['display']='none'
-    elif pathname == '/patients_info':
-        fac_stats_style_dic['display']='none'
-        patient_style_dic['display']='block'
-        fac_qry_style_dic['display']='none'
-        prov_qry_style_dic['display']='none'
-    elif pathname == '/fac_info':
-        fac_stats_style_dic['display']='none'
-        patient_style_dic['display']='none'
-        fac_qry_style_dic['display']='block'
-        prov_qry_style_dic['display']='none'
-    elif pathname == '/prov_info':
-        fac_stats_style_dic['display']='none'
-        patient_style_dic['display']='none'
-        fac_qry_style_dic['display']='none'
-        prov_qry_style_dic['display']='block'
-    else:
-        fac_stats_style_dic['display']='none'
-        patient_style_dic['display']='none'
-        fac_qry_style_dic['display']='none'
-        prov_qry_style_dic['display']='none'
+    fac_stats_style_dic, fac_qry_style_dic, patient_style_dic, prov_qry_style_dic = sca_functions.render_container_sub(pathname)
     return fac_stats_style_dic, fac_qry_style_dic, patient_style_dic, prov_qry_style_dic
 
 # Callback to populate the state dropdown
@@ -414,16 +402,8 @@ def render_container(pathname):
     Input('current_url', 'pathname')
     )
 def populate_facility_dropdown(pathname):
-    if pathname == '/fac_stats':
-        # Connect to DB and get all states
-        db_conn = schemaList.db_connect(db_address, 'Provider_App')
-        query = 'SELECT st_id,st_state FROM dbo.tbl_state ORDER BY st_state;'
-        query_result_df = pd.read_sql(query, db_conn)
-        query_result_dict = dict(zip(list(query_result_df['st_id']), list(query_result_df['st_state'])))
-        # Give format for dash dropdowns
-        return_dict = [{'label':[state+' | ID: ',id], 'value': 'TSC_'+state} for id,state in query_result_dict.items()]
-        # Close db connection
-        db_conn.close()
+    return_dict = sca_functions.populate_facility_dropdown_sub(pathname)
+    if return_dict:
         return return_dict
     else:
         raise PreventUpdate
@@ -438,29 +418,8 @@ def populate_facility_dropdown(pathname):
     prevent_initial_call=True
     )
 def populate_facility_dropdown(fac_state):
-    fac_query = '''
-        SELECT
-
-        	local_fac.facility_id AS fac_id,
-        	local_fac.facility_name AS fac_nme
-        FROM
-        	dbo.tbl_facility local_fac
-        FULL JOIN
-        	dbo.tbl_pcc_fac pcc_fac ON pcc_fac.fac_id = local_fac.facility_id
-        WHERE
-        	facility_name IS NOT NULL AND pcc_fac.pcc_active = 1
-        ORDER BY
-        	facility_name
-	'''
-    # Connect to DB
-    db_conn = schemaList.db_connect(db_address, fac_state)
-    fac_df = pd.read_sql(fac_query, db_conn)
-    # Close DB connection
-    db_conn.close()
-    # Merge lists and cast into dictionary
-    fac_name_dict = dict(zip(list(fac_df['fac_id']), list(fac_df['fac_nme'])))
-    # Format dictionary for dash output
-    return_dict = [{'label':[nme+' | ID: ', id], 'value':id} for id,nme in fac_name_dict.items()]
+    return_dict = sca_functions.populate_fac_dropdown_sub(fac_state)
+    # Return a false to enable the dropdown
     return return_dict, False
 
 # Callback to generate facility graph
@@ -479,64 +438,7 @@ def populate_facility_dropdown(fac_state):
     prevent_initial_call=True
     )
 def generate_fac_graph(local_fac_id, date_range, state):
-    fac_query = '''
-        SELECT
-        	local_fac.facility_id,
-        	local_fac.facility_name,
-        	pcc_fac.pcc_facID,
-        	pcc_fac.pcc_orgUid
-        FROM
-        	dbo.tbl_facility local_fac
-        FULL JOIN
-        	dbo.tbl_pcc_fac pcc_fac ON local_fac.facility_id = pcc_fac.fac_id
-        WHERE
-        	local_fac.facility_id = {}
-    '''.format(local_fac_id)
-    if date_range != '':
-        date_range = (datetime.now() - timedelta(days=date_range)).strftime("%Y/%m/%d %H:%M:%S")
-    # Connect to DB and get all states
-    db_conn = schemaList.db_connect(db_address, state)
-    # Execute query to get pcc_fac_id and pcc_orguid
-    tmp_pcc_fac_dataframe = pd.read_sql(fac_query, db_conn)
-    pcc_facid = tmp_pcc_fac_dataframe['pcc_facID'][0]
-    pcc_orguid = tmp_pcc_fac_dataframe['pcc_orgUid'][0]
-    log_query = '''
-        SELECT
-        	cr_dte,
-            COUNT(pcc_upl_id) AS log_qty
-        FROM
-        	dbo.tbl_pcc_upl_log
-        WHERE
-        	facID = {} AND orgUuid = '{}' AND cr_dte > '{}' AND done_dte IS NOT NULL
-        GROUP BY
-        	cr_dte
-        ORDER BY
-        	cr_dte
-    '''.format(pcc_facid, pcc_orguid, date_range)
-    # Get all logs for the facility
-    tmp_pcc_log_dataframe = pd.read_sql(log_query, db_conn)
-    # Create plot
-    facility_upload_log_graph = make_subplots(rows = 1, cols = 1, shared_xaxes = True, shared_yaxes = True)
-    # Add traces
-    facility_upload_log_graph.add_trace(go.Bar(x = tmp_pcc_log_dataframe['cr_dte'], y = tmp_pcc_log_dataframe['log_qty'], name = 'Uploaded'))
-    # Now query all pending logs for the facility
-    pending_log_query = '''
-        SELECT
-        	cr_dte,
-            COUNT(pcc_upl_id) AS log_qty
-        FROM
-        	dbo.tbl_pcc_upl_log
-        WHERE
-        	facID = {} AND orgUuid = '{}' AND cr_dte > '{}' AND done_dte IS NULL
-        GROUP BY
-        	cr_dte
-        ORDER BY
-        	cr_dte
-    '''.format(pcc_facid, pcc_orguid, date_range)
-    tmp_pending_pcc_log_dataframe = pd.read_sql(pending_log_query, db_conn)
-    facility_upload_log_graph.add_trace(go.Bar(x = tmp_pending_pcc_log_dataframe['cr_dte'], y = tmp_pending_pcc_log_dataframe['log_qty'], name = 'Pending'))
-    # Close db connection
-    db_conn.close()
+    facility_upload_log_graph = sca_functions.generate_fac_graph_sub(local_fac_id, date_range, state)
     return facility_upload_log_graph, {'display': 'block'}, {'display': 'none'}
 
 # Callback to generate global upload statistics
@@ -902,6 +804,7 @@ def populate_ptnt_dropdown(state):
             Output('ptnt_dob', 'children'),
             Output('ptnt_fac', 'children'),
             Output('ptnt_pcc_match', 'children'),
+            Output('ptnt_pcc_fac_bridge', 'children'),
             Output('ptnt_notes_table', 'columns'),
             Output('ptnt_notes_table', 'data'),
             Output('ptnt_prov_table', 'columns'),
@@ -921,11 +824,14 @@ def query_ptnt_info(ptnt_id, state):
         	clientinfo.FirstName AS FirstName, 
         	FORMAT(clientinfo.DateOfBirth, 'yyyy-MM-dd') AS DateOfBirth, 
         	localfac.facility_name AS facility_name,
+            pccfac.fac_id AS pcc_fac_id,
         	pccclientinfo.pcc_id AS matched
         FROM            
         	dbo.ClientInfoTable clientinfo
         INNER JOIN
         	dbo.tbl_facility localfac ON clientinfo.facility_id = localfac.facility_id
+        FULL OUTER JOIN
+            dbo.tbl_pcc_fac pccfac ON clientinfo.facility_id = pccfac.fac_id
         FULL OUTER JOIN
         	dbo.tbl_pcc_patients_client pccclientinfo ON clientinfo.ClientID = pccclientinfo.cl_id
         WHERE
@@ -989,7 +895,7 @@ def query_ptnt_info(ptnt_id, state):
     ptnt_notes_data = ptnt_notes_df.to_dict('records')
     # Close DB connection
     schemaList.db_close(db_conn)
-    return ptnt_info_df['FirstName'][0], ptnt_info_df['LastName'][0], ptnt_info_df['ClientID'][0], ptnt_info_df['DateOfBirth'][0], ptnt_info_df['facility_name'][0], 'PCC ID '+str(ptnt_info_df['matched'][0]) if ptnt_info_df['matched'][0] != None else 'No', ptnt_notes_columns, ptnt_notes_data, [{'name':i, 'id':i} for i in ptnt_prov_df.columns], ptnt_prov_df.to_dict('records')
+    return ptnt_info_df['FirstName'][0], ptnt_info_df['LastName'][0], ptnt_info_df['ClientID'][0], ptnt_info_df['DateOfBirth'][0], ptnt_info_df['facility_name'][0], 'PCC ID '+str(ptnt_info_df['matched'][0]) if ptnt_info_df['matched'][0] != None else 'No', ptnt_info_df['pcc_fac_id'], ptnt_notes_columns, ptnt_notes_data, [{'name':i, 'id':i} for i in ptnt_prov_df.columns], ptnt_prov_df.to_dict('records')
 
 if __name__ == '__main__':
     main_app.run_server(debug=True, host='0.0.0.0', port='7000', dev_tools_silence_routes_logging=False)

@@ -206,6 +206,21 @@ class content():
         'grid-row-start': '4'
     }
 
+    PATIENT_GRID_CHILD_13 ={
+        'font-weight': 'bold',
+        'grid-column-start': '1', 
+        'grid-column-end': '2',
+        'grid-row-start': '4',
+        'grid-row-start': '5'
+    }
+
+    PATIENT_GRID_CHILD_14 ={
+        'grid-column-start': '2', 
+        'grid-column-end': '3',
+        'grid-row-start': '4',
+        'grid-row-start': '5'
+    }
+
     FAC_QRY_STYLE = {
         "margin-left": "18rem",
         "margin-right": "2rem",
