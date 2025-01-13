@@ -886,7 +886,7 @@ def query_ptnt_info(ptnt_id, state):
         FULL JOIN
         	{}.dbo.tbl_pcc_upl_log pcc_log ON pcc_log.uniqueID = notes_log.note_id
         WHERE
-        	notes_log.cl_id = {} AND notes_log.note_dte >= (GETDATE() - 30) AND notes_log.st_id = {}
+        	notes_log.cl_id = {} AND notes_log.note_dte >= (GETDATE() - 90) AND notes_log.st_id = {}
         ORDER BY notes_log.note_dte DESC
     '''.format(state, ptnt_id, state_id)
     ptnt_notes_df = pd.read_sql(query, db_conn)
