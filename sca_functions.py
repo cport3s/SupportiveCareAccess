@@ -178,3 +178,40 @@ def generate_fac_graph_sub(local_fac_id, date_range, state):
     # Close db connection
     db_conn.close()
     return facility_upload_log_graph
+
+def populate_fac_info_dropdown(pathname):
+    if pathname == '/fac_info':
+        # Create an empty dataframe to store all data
+        pcc_fac_dataframe = pd.DataFrame()
+        # Connect to DB and get all states
+        db_conn = schemaList.db_connect(db_address, 'Provider_App')
+        query = 'SELECT st_state FROM dbo.tbl_state ORDER BY st_state;'
+        query_result_df = pd.read_sql(query, db_conn)
+        # Close db connection
+        db_conn.close()
+        # Loop through all states and get all facilities
+        for state in query_result_df['st_state']:
+            # Connect to each state's DB
+            db_conn = schemaList.db_connect(db_address, state)
+            query = '''
+                SELECT
+                	facility_id, 
+                	facility_name,
+                    db_name() AS state
+                FROM            
+                	dbo.tbl_facility
+            '''
+            # Check if dataframe is empty
+            if pcc_fac_dataframe.empty:
+                pcc_fac_dataframe = pd.read_sql(query, db_conn)
+            else:
+                pcc_fac_dataframe = pd.concat([pcc_fac_dataframe, pd.read_sql(query, db_conn)], ignore_index=True)
+            # Close db connection
+            db_conn.close()
+        # Sort dataframe by facility name
+        pcc_fac_dataframe = pcc_fac_dataframe.sort_values(by='facility_name', ignore_index=True)
+        # Give format for dash dropdowns
+        return_dict = [{'label':[pcc_fac_dataframe['facility_name'][i]+' | State: '+pcc_fac_dataframe['state'][i]], 'value': pcc_fac_dataframe['facility_id'][i]} for i in range(len(pcc_fac_dataframe['facility_id']))]
+        return return_dict
+    else:
+        return False

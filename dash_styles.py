@@ -5,7 +5,7 @@ class searchBarStyles():
     }
 
     searchBarFlexChildren = {
-        'width':'20%'
+        'width':'70%'
     }
 
     searchBarSpinner = {
