@@ -211,7 +211,62 @@ def populate_fac_info_dropdown(pathname):
         # Sort dataframe by facility name
         pcc_fac_dataframe = pcc_fac_dataframe.sort_values(by='facility_name', ignore_index=True)
         # Give format for dash dropdowns
-        return_dict = [{'label':[pcc_fac_dataframe['facility_name'][i]+' | State: '+pcc_fac_dataframe['state'][i]], 'value': pcc_fac_dataframe['facility_id'][i]} for i in range(len(pcc_fac_dataframe['facility_id']))]
+        return_dict = [{'label':[pcc_fac_dataframe['facility_name'][i]+' | State: '+pcc_fac_dataframe['state'][i]], 'value': str(pcc_fac_dataframe['facility_id'][i])+'|'+pcc_fac_dataframe['state'][i]} for i in range(len(pcc_fac_dataframe['facility_id']))]
         return return_dict
     else:
         return False
+    
+def query_fac_info_sub(fac_dropdown_value):
+    state = fac_dropdown_value.split('|')[1].strip()
+    fac_id = fac_dropdown_value.split('|')[0].strip()
+    # Connect to DB
+    db_conn = schemaList.db_connect(db_address, state)
+    # Query facility's PCC bridge status
+    query = '''
+        SELECT 
+        	facility.facility_id AS 'Local ID', 
+	        facility.facility_street AS Street, 
+	        facility.facility_city AS City, 
+	        sessiondata.First_session AS 'First Session Date',
+	        pccFacility.st_dte AS 'PCC Start Date',
+	        pccFacility.pcc_orgUid AS 'Org ID',
+	        pccFacility.pcc_facID AS 'PCC ID',
+	        pccFacility.pcc_active AS 'PCC Active',
+            pccFacility.pickListID,
+	        CONCAT(CAST(pccFacility.aimsDocID AS VARCHAR(4)), '|', CAST(pccFacility.phqDocID AS VARCHAR(4)), '|', CAST(pccFacility.bimsDocID AS VARCHAR(4)), '|', CAST(pccFacility.psychDocID AS VARCHAR(4)), '|', CAST(pccFacility.evalDocID AS VARCHAR(4)), '|', CAST(pccFacility.progDocID AS VARCHAR(4))) AS 'DocID'
+        FROM
+        	dbo.tbl_facility facility
+        FULL JOIN 
+        	dbo.vw_ys_fac_first_ses_dte sessiondata ON facility.facility_id = sessiondata.facility_id
+        FULL JOIN
+        	dbo.tbl_pcc_fac pccFacility ON facility.facility_id = pccFacility.fac_id
+        WHERE
+        	facility.facility_id = {};
+    '''.format(fac_id)
+    # Execute query
+    pcc_status_df = pd.read_sql(query, db_conn)
+    # Get all facility notes
+    query = '''
+        SELECT       
+        	prov_fac.prov_id AS 'Provider ID', 
+        	provider.ProviderName AS 'Provider Name',
+        	provider.ProviderEmail AS 'Email',
+        	prov_type.provider_type AS 'License',
+        	service_type.svce_type AS 'Service Type'
+        FROM            
+        	dbo.tbl_provider_fac prov_fac
+        INNER JOIN
+        	dbo.tbl_svce_type service_type ON service_type.svce_type_id = prov_fac.svce_id
+        FULL OUTER JOIN
+        	dbo.ProviderTable provider ON provider.ProviderID = prov_fac.prov_id
+        FULL OUTER JOIN
+        	dbo.tbl_provider_type prov_type ON prov_type.provider_type_id = provider.provider_type
+        WHERE
+        	prov_fac.facility_id = {}
+        ORDER BY service_type.svce_type, provider.ProviderName;
+    '''.format(fac_id)
+    # Execute query
+    pcc_prov_df = pd.read_sql(query, db_conn)
+    # Close db connection
+    db_conn.close()
+    return pcc_status_df, pcc_prov_df
