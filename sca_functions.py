@@ -252,7 +252,8 @@ def query_fac_info_sub(fac_dropdown_value):
         	provider.ProviderName AS 'Provider Name',
         	provider.ProviderEmail AS 'Email',
         	prov_type.provider_type AS 'License',
-        	service_type.svce_type AS 'Service Type'
+        	service_type.svce_type AS 'Service Type',
+            CASE WHEN provider.prov_inactive = 1 THEN 'Inactive' ELSE 'Active' END AS Status
         FROM            
         	dbo.tbl_provider_fac prov_fac
         INNER JOIN
@@ -274,22 +275,26 @@ def query_fac_info_sub(fac_dropdown_value):
     # Get all facility notes
     query = '''
         SELECT 
-        	note_id AS 'Session ID', 
-        	svce_type AS 'Service Type', 
-        	note_type AS 'Session Type', 
-        	cpt_code AS 'CPT Code', 
-        	note_dte AS 'Session Date', 
-        	prov_nme AS 'Provider', 
-        	cl_id AS 'Client ID',
-        	cl_nme AS 'Patient Name'
+            note_log.cl_id AS 'Client ID',
+        	note_log.cl_nme AS 'Patient Name',
+            note_log.prov_nme AS 'Provider',
+            FORMAT(note_log.note_dte, 'yyyy-MM-dd') AS 'Session Date',
+        	note_log.svce_type AS 'Service Type', 
+        	note_log.note_type AS 'Session Type', 
+        	note_log.cpt_code AS 'CPT Code', 
+        	note_log.note_id AS 'Session ID',
+        	FORMAT(upl_log.cr_dte, 'yyyy-MM-dd hh:mm') AS 'Upload Entry',
+        	FORMAT(upl_log.done_dte, 'yyyy-MM-dd hh:mm') AS 'Upload Date'
         FROM            
-        	dbo.tbl_notes_log
+        	dbo.tbl_notes_log note_log
         INNER JOIN 
-        	dbo.tbl_state ON dbo.tbl_state.st_id = dbo.tbl_notes_log.st_id
+        	dbo.tbl_state statetable ON statetable.st_id = note_log.st_id
+        FULL OUTER JOIN
+        	{}.dbo.tbl_pcc_upl_log upl_log ON upl_log.uniqueID = note_log.note_id
         WHERE        
-        	dbo.tbl_notes_log.fac_id = {} AND dbo.tbl_state.st_state = '{}' AND dbo.tbl_notes_log.note_dte >= (GETDATE() - 30)
+        	note_log.fac_id = {} AND statetable.st_state = '{}' AND note_log.note_dte >= (GETDATE() - 30)
         ORDER BY note_dte DESC;
-    '''.format(fac_id, state[-2:])
+    '''.format(state, fac_id, state[-2:])
     # Execute query
     pcc_notes_df = pd.read_sql(query, db_conn)
     # Close db connection
