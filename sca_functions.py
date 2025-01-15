@@ -269,4 +269,29 @@ def query_fac_info_sub(fac_dropdown_value):
     pcc_prov_df = pd.read_sql(query, db_conn)
     # Close db connection
     db_conn.close()
-    return pcc_status_df, pcc_prov_df
+    # Connect to DB
+    db_conn = schemaList.db_connect(db_address, 'Provider_App')
+    # Get all facility notes
+    query = '''
+        SELECT 
+        	note_id AS 'Session ID', 
+        	svce_type AS 'Service Type', 
+        	note_type AS 'Session Type', 
+        	cpt_code AS 'CPT Code', 
+        	note_dte AS 'Session Date', 
+        	prov_nme AS 'Provider', 
+        	cl_id AS 'Client ID',
+        	cl_nme AS 'Patient Name'
+        FROM            
+        	dbo.tbl_notes_log
+        INNER JOIN 
+        	dbo.tbl_state ON dbo.tbl_state.st_id = dbo.tbl_notes_log.st_id
+        WHERE        
+        	dbo.tbl_notes_log.fac_id = {} AND dbo.tbl_state.st_state = '{}' AND dbo.tbl_notes_log.note_dte >= (GETDATE() - 30)
+        ORDER BY note_dte DESC;
+    '''.format(fac_id, state[-2:])
+    # Execute query
+    pcc_notes_df = pd.read_sql(query, db_conn)
+    # Close db connection
+    db_conn.close()
+    return pcc_status_df, pcc_prov_df, pcc_notes_df

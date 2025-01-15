@@ -508,18 +508,18 @@ def populate_fac_dropdown(pathname):
         [
             Output('fac_pcc_status_table', 'columns'),
             Output('fac_pcc_status_table', 'data'),
-            #Output('fac_notes_table', 'columns'),
-            #Output('fac_notes_table', 'data'),
             Output('fac_prov_table', 'columns'),
-            Output('fac_prov_table', 'data')
+            Output('fac_prov_table', 'data'),
+            Output('fac_notes_table', 'columns'),
+            Output('fac_notes_table', 'data')
         ],
         Input('fac_dropdown', 'value'),
         prevent_initial_call=True
 )
 def query_fac_info(fac_dropdown_value):
     if fac_dropdown_value:
-        pcc_status_df, pcc_prov_df = sca_functions.query_fac_info_sub(fac_dropdown_value)
-        return [{'name':i, 'id':i} for i in pcc_status_df.columns], pcc_status_df.to_dict('records'), [{'name':i, 'id':i} for i in pcc_prov_df.columns], pcc_prov_df.to_dict('records')
+        pcc_status_df, pcc_prov_df, pcc_notes_df = sca_functions.query_fac_info_sub(fac_dropdown_value)
+        return [{'name':i, 'id':i} for i in pcc_status_df.columns], pcc_status_df.to_dict('records'), [{'name':i, 'id':i} for i in pcc_prov_df.columns], pcc_prov_df.to_dict('records'), [{'name':i, 'id':i} for i in pcc_notes_df.columns], pcc_notes_df.to_dict('records')
     else:
         raise PreventUpdate
 
