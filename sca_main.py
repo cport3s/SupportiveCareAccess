@@ -370,125 +370,16 @@ def generate_fac_graph(local_fac_id, date_range, state):
     Input('update_interval', 'n_intervals')
 )
 def global_fac_statistics(n_intervals):
-    # Connect to DB and get all states
-    db_conn = schemaList.db_connect(db_address, 'Provider_App')
-    query = 'SELECT st_state FROM dbo.tbl_state ORDER BY st_state;'
-    query_result_df = pd.read_sql(query, db_conn)
-    # Close db connection
-    db_conn.close()
-    tmp_st_list = ['TSC_'+state for state in query_result_df['st_state']]
-    all_sts_dataframe = pd.DataFrame()
-    all_sts_pending_dataframe = pd.DataFrame()
-    # First, query all completed logs
-    query = '''
-    SELECT
-    	cr_dte,
-        COUNT(pcc_upl_id) AS log_qty
-    FROM
-    	dbo.tbl_pcc_upl_log
-    WHERE
-    	done_dte IS NOT NULL AND cr_dte > '{}'
-    GROUP BY
-    	cr_dte
-    ORDER BY
-    	cr_dte
-    '''.format((datetime.now() - timedelta(days=30)).strftime("%Y/%m/%d %H:%M:%S"))
-    for state in tmp_st_list:
-        # Connect to DB and get all states
-        db_conn = schemaList.db_connect(db_address, state)
-        tmp_log_dataframe = pd.read_sql(query, db_conn)
-        if all_sts_dataframe.empty:
-            all_sts_dataframe = tmp_log_dataframe.copy()
-        else:
-            all_sts_dataframe = pd.concat([all_sts_dataframe, tmp_log_dataframe], ignore_index = True)
-        # Close db connection
-        db_conn.close()
-    # Now, query all pending logs
-    query = '''
-    SELECT
-    	cr_dte,
-        COUNT(pcc_upl_id) AS log_qty
-    FROM
-    	dbo.tbl_pcc_upl_log
-    WHERE
-    	done_dte IS NULL AND cr_dte > '{}'
-    GROUP BY
-    	cr_dte
-    ORDER BY
-    	cr_dte
-    '''.format((datetime.now() - timedelta(days=30)).strftime("%Y/%m/%d %H:%M:%S"))
-    for state in tmp_st_list:
-        # Connect to DB and get all states
-        db_conn = schemaList.db_connect(db_address, state)
-        tmp_log_dataframe = pd.read_sql(query, db_conn)
-        if all_sts_pending_dataframe.empty:
-            all_sts_pending_dataframe = tmp_log_dataframe.copy()
-        else:
-            all_sts_pending_dataframe = pd.concat([all_sts_pending_dataframe, tmp_log_dataframe], ignore_index = True)
-        # Close db connection
-        db_conn.close()
-    all_sts_dataframe = all_sts_dataframe.groupby('cr_dte').sum().reset_index()
-    all_sts_pending_dataframe = all_sts_pending_dataframe.groupby('cr_dte').sum().reset_index()
-    # Create plot
-    global_fac_log_graph = make_subplots(rows = 1, cols = 1, shared_xaxes = True, shared_yaxes = True)
-    # Add traces
-    global_fac_log_graph.add_trace(go.Bar(x = all_sts_dataframe['cr_dte'], y = all_sts_dataframe['log_qty'], name = 'Uploaded'))
-    global_fac_log_graph.add_trace(go.Bar(x = all_sts_pending_dataframe['cr_dte'], y = all_sts_pending_dataframe['log_qty'], name = 'Pending'))
+    global_fac_log_graph = sca_functions.global_fac_statistics_sub()
     return global_fac_log_graph
 
-# Callback to generate pending logs pie chart
+# Callback to generate pending logs sunburst chart
 @main_app.callback(
     Output('pending_logs_sunburst_chart', 'figure'),
     Input('update_interval', 'n_intervals')
 )
 def pending_logs_chart(n_intervals):
-    # Initialize DF
-    pending_logs_dataframe = pd.DataFrame()
-    # Connect to DB and get all states
-    db_conn = schemaList.db_connect(db_address, 'Provider_App')
-    query = 'SELECT st_state FROM dbo.tbl_state ORDER BY st_state;'
-    query_result_df = pd.read_sql(query, db_conn)
-    # Close db connection
-    db_conn.close()
-    # Get db schema list
-    tmp_fac_list = ['TSC_'+state for state in query_result_df['st_state']]
-    for state in tmp_fac_list:
-        query = '''
-            SELECT 
-            	dbo.tbl_facility.facility_name AS facility_name,
-            	COUNT(dbo.tbl_pcc_upl_log.cl_id) AS log_qty
-            FROM 
-            	dbo.tbl_pcc_upl_log 
-            INNER JOIN
-                dbo.ClientInfoTable ON dbo.tbl_pcc_upl_log.cl_id = dbo.ClientInfoTable.ClientID 
-            INNER JOIN
-                dbo.tbl_pcc_fac ON dbo.tbl_pcc_upl_log.orgUuid = dbo.tbl_pcc_fac.pcc_orgUid AND dbo.tbl_pcc_upl_log.facID = dbo.tbl_pcc_fac.pcc_facID 
-            INNER JOIN
-                dbo.tbl_facility ON dbo.tbl_pcc_fac.fac_id = dbo.tbl_facility.facility_id
-            WHERE
-            	(dbo.tbl_pcc_upl_log.done_dte IS NULL) AND (dbo.tbl_pcc_upl_log.cr_dte <= CAST(DATEADD(day, -2, GETDATE()) AS Date))
-            GROUP BY
-            	dbo.tbl_facility.facility_name;
-        '''
-        # Connect to DB and get all states
-        db_conn = schemaList.db_connect(db_address, state)
-        tmp_log_dataframe = pd.read_sql(query, db_conn)
-        tmp_log_dataframe['state'] = state
-        if pending_logs_dataframe.empty:
-            pending_logs_dataframe = tmp_log_dataframe.copy()
-        else:
-            pending_logs_dataframe = pd.concat([pending_logs_dataframe, tmp_log_dataframe], ignore_index = True)
-        # Close db connection
-        db_conn.close()
-    # Create sunburst graph
-    pending_logs_pie = px.sunburst(
-        pending_logs_dataframe,
-        path = ['state', 'facility_name'],
-        values = 'log_qty'
-        )
-    pending_logs_pie.update_layout(
-        margin = dict(t=3, b=3, r=3, l=3)
-        )
+    pending_logs_pie = sca_functions.pending_logs_chart_sub()
     return pending_logs_pie
 
 # Populate Facility Dropdown
