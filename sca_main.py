@@ -273,26 +273,49 @@ main_app.layout = html.Div(
                     id='prov_search_div',
                     style = searchBarStyles.searchBarFlexContainer,
                     children=[
-                        dcc.Input(
-                            id = 'prov_search_bar',
+                        dcc.Dropdown(
+                            id = 'prov_dropdown',
                             style = searchBarStyles.searchBarFlexChildren,
-                            type = 'text',
-                            debounce = True,
                             placeholder = 'Provider Name'
-                        ),
-                        dbc.Spinner(
-                            id = 'prov_load_spinner',
-                            spinner_style = searchBarStyles.searchBarSpinner,
-                            color = 'green',
-                            show_initially = False,
-                            children = []
                         )
                     ]
                 ),
                 html.Div(
-                    dash_table.DataTable(
-                        id = 'prov_search_result_datatable'
-                    )
+                    id='prov_search_result_container',
+                    children=[
+                        html.H3('Provider Info'),
+                        dash_table.DataTable(
+                            id = 'prov_info_table',
+                            style_data={
+                                'whiteSpace': 'normal',
+                                'height': 'auto'
+                            }
+                        ),
+                        html.H3('Facilities'),
+                        dash_table.DataTable(
+                            id = 'prov_fac_table',
+                            style_data={
+                                'whiteSpace': 'normal',
+                                'height': 'auto'
+                            }
+                        ),
+                        html.H3('Notes'),
+                        dash_table.DataTable(
+                            id = 'prov_notes_table',
+                            style_data={
+                                'whiteSpace': 'normal',
+                                'height': 'auto'
+                            }
+                        ),
+                        html.H3('Patients'),
+                        dash_table.DataTable(
+                            id = 'prov_ptnt_table',
+                            style_data={
+                                'whiteSpace': 'normal',
+                                'height': 'auto'
+                            }
+                        )
+                    ]
                 )
             ]
         ),
@@ -414,63 +437,106 @@ def query_fac_info(fac_dropdown_value):
     else:
         raise PreventUpdate
 
-# Query provider's info
+# Callback to populate provider dropdown
 @main_app.callback(
-    [
-        Output('prov_search_result_datatable', 'columns'),
-        Output('prov_search_result_datatable', 'data'),
-        Output('prov_load_spinner', 'children')
-    ],
-    Input('prov_search_bar', 'value')
-)
-def search_provider(prov_nme):
-    # Connect to DB and get all states
-    db_conn = schemaList.db_connect(dbCredentials.db_address, 'Provider_App')
-    query = 'SELECT st_state,back_office_email_address FROM dbo.tbl_state ORDER BY st_state;'
-    query_result_df = pd.read_sql(query, db_conn)
-    # Cast 2 column df into dictionary
-    query_result_dict = pd.Series(query_result_df['back_office_email_address'].values, index=query_result_df['st_state']).to_dict()
-    # Close db connection
-    db_conn.close()
-    provider_info_dataframe = pd.DataFrame()
-    query = '''SELECT     
-			localprov.ProviderID, 
-			localprov.ProviderName, 
-			localprov.ProviderEmail, 
-			hub_user.PhoneNumber,
-			hub_user.UserName AS HubUsername,
-			localprov.prov_inactive AS ProviderInactive,
-			provtype.provider_type AS ProviderLicense,
-			servicetype.svce_type AS ProviderType
-		FROM            
-			dbo.ProviderTable localprov
-		FULL JOIN
-			dbo.tbl_provider_type provtype ON localprov.provider_type = provtype.provider_type_id
-		FULL JOIN
-			dbo.tbl_svce_type servicetype ON provtype.svce_type_id = servicetype.svce_type_id
-		FULL JOIN
-			Provider_App.dbo.AspNetUsers hub_user ON hub_user.Email = localprov.ProviderEmail
-		WHERE        
-			(ProviderName LIKE '%{}%');
-    	'''.format(prov_nme)
-    for state,referral_inbox in query_result_dict.items():
-        db_conn = schemaList.db_connect(dbCredentials.db_address, "TSC_"+state)
-        # Execute query
-        tmp_dataframe = pd.read_sql(query, db_conn)
-        tmp_dataframe['State'] = state
-        tmp_dataframe['Referral'] = referral_inbox
-        # If final DF is empty, then copy tmp to final
-        if provider_info_dataframe.empty:
-            provider_info_dataframe['State'] = ""
-            provider_info_dataframe['Referral'] = ""
-            provider_info_dataframe = tmp_dataframe.copy()
-        else:
-            # Append the temporal DF to the final DF
-        	provider_info_dataframe = pd.concat([provider_info_dataframe, tmp_dataframe], ignore_index=True)
-        # Close connetion
-        schemaList.db_close(db_conn)
-    columnsReturnValue = [{'name':i, 'id':i} for i in provider_info_dataframe.columns]
-    return columnsReturnValue, provider_info_dataframe.to_dict('records'), 'Ready to Search'
+    Output('prov_dropdown', 'options'),
+    Input('current_url', 'pathname')
+    )
+def populate_prov_dropdown(pathname):
+    if pathname == '/prov_info':
+        # Create an empty dataframe to store all data
+        prov_dropdown_df = pd.DataFrame()
+        # Connect to DB and get all states
+        db_conn = schemaList.db_connect(db_address, 'Provider_App')
+        query = 'SELECT st_state FROM dbo.tbl_state ORDER BY st_state;'
+        all_state_df = pd.read_sql(query, db_conn)
+        # Close db connection
+        db_conn.close()
+        # Loop through all states and get all providers
+        for state in all_state_df['st_state']:
+            db_conn = schemaList.db_connect(db_address, state)
+            query = '''
+            SELECT 
+                ProviderID,
+                ProviderName,
+                db_name() AS state
+            FROM 
+                dbo.ProviderTable
+            WHERE ProviderName IS NOT NULL;
+            '''
+            # If dataframe is empty, then create columns and fill with the data from the first schema
+            if prov_dropdown_df.empty:
+                prov_dropdown_df = pd.read_sql(query, db_conn)
+            else:
+                # Append the temporal DF to the final DF
+                prov_dropdown_df = pd.concat([prov_dropdown_df, pd.read_sql(query, db_conn)], ignore_index=True)
+            # Close db connection
+            db_conn.close()
+        # Sort values by ProviderName
+        prov_dropdown_df = prov_dropdown_df.sort_values(by='ProviderName', ignore_index=True)
+        # Give format for dash dropdowns
+        return_dict = [{'label':prov_dropdown_df['ProviderID'][i]+' | '+prov_dropdown_df['state'][i]+' | '+prov_dropdown_df['ProviderName'][i], 'value': prov_dropdown_df['ProviderID'][i]} for i in range(len(prov_dropdown_df['ProviderID']))]
+        return return_dict
+    else:
+        raise PreventUpdate
+
+# Query provider's info
+#@main_app.callback(
+#    [
+#        Output('prov_search_result_datatable', 'columns'),
+#        Output('prov_search_result_datatable', 'data'),
+#        Output('prov_load_spinner', 'children')
+#    ],
+#    Input('prov_search_bar', 'value')
+#)
+#def search_provider(prov_nme):
+#    # Connect to DB and get all states
+#    db_conn = schemaList.db_connect(dbCredentials.db_address, 'Provider_App')
+#    query = 'SELECT st_state,back_office_email_address FROM dbo.tbl_state ORDER BY st_state;'
+#    query_result_df = pd.read_sql(query, db_conn)
+#    # Cast 2 column df into dictionary
+#    query_result_dict = pd.Series(query_result_df['back_office_email_address'].values, index=query_result_df['st_state']).to_dict()
+#    # Close db connection
+#    db_conn.close()
+#    provider_info_dataframe = pd.DataFrame()
+#    query = '''SELECT     
+#			localprov.ProviderID, 
+#			localprov.ProviderName, 
+#			localprov.ProviderEmail, 
+#			hub_user.PhoneNumber,
+#			hub_user.UserName AS HubUsername,
+#			localprov.prov_inactive AS ProviderInactive,
+#			provtype.provider_type AS ProviderLicense,
+#			servicetype.svce_type AS ProviderType
+#		FROM            
+#			dbo.ProviderTable localprov
+#		FULL JOIN
+#			dbo.tbl_provider_type provtype ON localprov.provider_type = provtype.provider_type_id
+#		FULL JOIN
+#			dbo.tbl_svce_type servicetype ON provtype.svce_type_id = servicetype.svce_type_id
+#		FULL JOIN
+#			Provider_App.dbo.AspNetUsers hub_user ON hub_user.Email = localprov.ProviderEmail
+#		WHERE        
+#			(ProviderName LIKE '%{}%');
+#    	'''.format(prov_nme)
+#    for state,referral_inbox in query_result_dict.items():
+#        db_conn = schemaList.db_connect(dbCredentials.db_address, "TSC_"+state)
+#        # Execute query
+#        tmp_dataframe = pd.read_sql(query, db_conn)
+#        tmp_dataframe['State'] = state
+#        tmp_dataframe['Referral'] = referral_inbox
+#        # If final DF is empty, then copy tmp to final
+#        if provider_info_dataframe.empty:
+#            provider_info_dataframe['State'] = ""
+#            provider_info_dataframe['Referral'] = ""
+#            provider_info_dataframe = tmp_dataframe.copy()
+#        else:
+#            # Append the temporal DF to the final DF
+#        	provider_info_dataframe = pd.concat([provider_info_dataframe, tmp_dataframe], ignore_index=True)
+#        # Close connetion
+#        schemaList.db_close(db_conn)
+#    columnsReturnValue = [{'name':i, 'id':i} for i in provider_info_dataframe.columns]
+#    return columnsReturnValue, provider_info_dataframe.to_dict('records'), 'Ready to Search'
 
 # Poplate patient state list
 @main_app.callback(

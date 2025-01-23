@@ -227,8 +227,8 @@ def query_fac_info_sub(fac_dropdown_value):
         	facility.facility_id AS 'Local ID', 
 	        facility.facility_street AS Street, 
 	        facility.facility_city AS City, 
-	        sessiondata.First_session AS 'First Session Date',
-	        pccFacility.st_dte AS 'PCC Start Date',
+	        FORMAT(sessiondata.First_session, 'yyyy-MM-dd') AS 'First Session Date',
+	        FORMAT(pccFacility.st_dte, 'yyyy-MM-dd') AS 'PCC Start Date',
 	        pccFacility.pcc_orgUid AS 'Org ID',
 	        pccFacility.pcc_facID AS 'PCC ID',
 	        pccFacility.pcc_active AS 'PCC Active',
@@ -417,3 +417,4 @@ def pending_logs_chart_sub():
         margin = dict(t=3, b=3, r=3, l=3)
         )
     return pending_logs_pie
+
