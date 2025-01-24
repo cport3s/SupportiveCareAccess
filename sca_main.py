@@ -137,7 +137,9 @@ main_app.layout = html.Div(
                             style_data={
                                 'whiteSpace': 'normal',
                                 'height': 'auto'
-                            }
+                            },
+                            page_size=5,
+                            filter_action='native'
                         ),
                         html.H3('Providers'),
                         dash_table.DataTable(
@@ -145,7 +147,9 @@ main_app.layout = html.Div(
                             style_data={
                                 'whiteSpace': 'normal',
                                 'height': 'auto'
-                            }
+                            },
+                            page_size=5,
+                            filter_action='native'
                         )
                     ]
                 )
@@ -313,7 +317,9 @@ main_app.layout = html.Div(
                             style_data={
                                 'whiteSpace': 'normal',
                                 'height': 'auto'
-                            }
+                            },
+                            page_size=10,
+                            filter_action='native'
                         )
                     ]
                 )
@@ -444,43 +450,93 @@ def query_fac_info(fac_dropdown_value):
     )
 def populate_prov_dropdown(pathname):
     if pathname == '/prov_info':
-        # Create an empty dataframe to store all data
-        prov_dropdown_df = pd.DataFrame()
-        # Connect to DB and get all states
-        db_conn = schemaList.db_connect(db_address, 'Provider_App')
-        query = 'SELECT st_state FROM dbo.tbl_state ORDER BY st_state;'
-        all_state_df = pd.read_sql(query, db_conn)
-        # Close db connection
-        db_conn.close()
-        # Loop through all states and get all providers
-        for state in all_state_df['st_state']:
-            db_conn = schemaList.db_connect(db_address, state)
-            query = '''
-            SELECT 
-                ProviderID,
-                ProviderName,
-                db_name() AS state
-            FROM 
-                dbo.ProviderTable
-            WHERE ProviderName IS NOT NULL;
-            '''
-            # If dataframe is empty, then create columns and fill with the data from the first schema
-            if prov_dropdown_df.empty:
-                prov_dropdown_df = pd.read_sql(query, db_conn)
-            else:
-                # Append the temporal DF to the final DF
-                prov_dropdown_df = pd.concat([prov_dropdown_df, pd.read_sql(query, db_conn)], ignore_index=True)
-            # Close db connection
-            db_conn.close()
-        # Sort values by ProviderName
-        prov_dropdown_df = prov_dropdown_df.sort_values(by='ProviderName', ignore_index=True)
-        # Give format for dash dropdowns
-        return_dict = [{'label':prov_dropdown_df['ProviderID'][i]+' | '+prov_dropdown_df['state'][i]+' | '+prov_dropdown_df['ProviderName'][i], 'value': prov_dropdown_df['ProviderID'][i]} for i in range(len(prov_dropdown_df['ProviderID']))]
+        return_dict = sca_functions.populate_prov_dropdown_sub(pathname)
         return return_dict
     else:
         raise PreventUpdate
 
 # Query provider's info
+@main_app.callback(
+    [
+        Output('prov_info_table', 'columns'),
+        Output('prov_info_table', 'data'),
+        Output('prov_fac_table', 'columns'),
+        Output('prov_fac_table', 'data'),
+        Output('prov_ptnt_table', 'columns'),
+        Output('prov_ptnt_table', 'data'),
+        #Output('prov_notes_table', 'columns'),
+        #Output('prov_notes_table', 'data'),
+    ],
+    Input('prov_dropdown', 'value'),
+    prevent_initial_call=True
+)
+def query_prov_info(prov_info):
+    # Get provider ID and state
+    prov_id, state = prov_info.split('|')
+    # Connect to DB
+    db_conn = schemaList.db_connect(dbCredentials.db_address, state)
+    # Query provider's info
+    query = '''
+        SELECT        
+        	prov_info.ProviderEmail AS 'Email', 
+            hub_user.UserName AS 'Username',
+            hub_user.PhoneNumber AS 'Phone Number',
+            prov_info.prov_enter_days AS 'Submit Date Limit', 
+        	prov_info.prov_edit_days AS 'Edit Date Limit', 
+            CASE WHEN prov_info.prov_inactive = 1 THEN 'Inactive' ELSE 'Active' END AS Status,
+        	prov_type.provider_type AS 'License',
+        	service_type.svce_type AS 'Type'
+        FROM            
+        	{curr_state}.dbo.ProviderTable prov_info
+        FULL OUTER JOIN
+            {curr_state}.dbo.tbl_provider_type prov_type ON prov_type.provider_type_id = prov_info.provider_type
+        INNER JOIN
+            {curr_state}.dbo.tbl_svce_type service_type ON service_type.svce_type_id = prov_type.svce_type_id
+        FULL OUTER JOIN
+            Provider_App.dbo.AspNetUsers hub_user ON hub_user.Email = prov_info.ProviderEmail
+        WHERE
+        	prov_info.ProviderID = '{id}'
+    '''.format(id=prov_id, curr_state=state)
+    prov_info_df = pd.read_sql(query, db_conn)
+    # Query provider's facilities
+    query = '''
+        SELECT
+        	local_fac.facility_name AS 'Name',
+        	service_type.svce_type AS 'Service Type',
+        	CASE WHEN pcc_fac.pcc_active = 1 THEN 'Online' ELSE 'Offline' END AS 'PCC Bridge Status'
+        FROM            
+        	dbo.tbl_provider_fac prov_fac
+        INNER JOIN
+        	dbo.tbl_svce_type service_type ON prov_fac.svce_id = service_type.svce_type_id
+        INNER JOIN
+        	dbo.tbl_facility local_fac ON prov_fac.facility_id = local_fac.facility_id
+        FULL OUTER JOIN
+        	dbo.tbl_pcc_fac pcc_fac ON local_fac.facility_id = pcc_fac.fac_id
+        WHERE
+        	prov_fac.prov_id = '{}'
+    '''.format(prov_id)
+    prov_fac_df = pd.read_sql(query, db_conn)
+    # Query provider's patients
+    query = '''
+        SELECT
+        	CONCAT(patient.lastname, ', ', patient.firstname) AS 'Name',
+        	local_fac.facility_name AS 'Facility',
+        	FORMAT(roster.roster_st_date, 'yyyy-MM-dd') AS 'Start Date',
+        	FORMAT(roster.roster_end_date, 'yyyy-MM-dd') AS 'End Date',
+        	svce_type.svce_type AS 'Service Type'
+        FROM            
+        	dbo.tbl_roster roster
+        INNER JOIN
+        	dbo.ClientInfoTable patient ON roster.cl_id = patient.clientid
+        INNER JOIN
+        	dbo.tbl_svce_type svce_type ON roster.svce_type_id = svce_type.svce_type_id
+        INNER JOIN
+        	dbo.tbl_facility local_fac ON patient.facility_id = local_fac.facility_id
+        WHERE
+        	roster.prov_id = '{}'
+    '''.format(prov_id)
+    prov_ptnt_df = pd.read_sql(query, db_conn)
+    return [{'name':i, 'id':i} for i in prov_info_df.columns], prov_info_df.to_dict('records'), [{'name':i, 'id':i} for i in prov_fac_df.columns], prov_fac_df.to_dict('records'), [{'name':i, 'id':i} for i in prov_ptnt_df.columns], prov_ptnt_df.to_dict('records')
 #@main_app.callback(
 #    [
 #        Output('prov_search_result_datatable', 'columns'),

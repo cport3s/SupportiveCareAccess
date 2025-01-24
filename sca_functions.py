@@ -245,7 +245,7 @@ def query_fac_info_sub(fac_dropdown_value):
     '''.format(fac_id)
     # Execute query
     pcc_status_df = pd.read_sql(query, db_conn)
-    # Get all facility notes
+    # Get all facility providers
     query = '''
         SELECT       
         	prov_fac.prov_id AS 'Provider ID', 
@@ -418,3 +418,40 @@ def pending_logs_chart_sub():
         )
     return pending_logs_pie
 
+def populate_prov_dropdown_sub(pathname):
+    # Create an empty dataframe to store all data
+    prov_dropdown_df = pd.DataFrame()
+    # Connect to DB and get all states
+    db_conn = schemaList.db_connect(db_address, 'Provider_App')
+    query = 'SELECT st_state FROM dbo.tbl_state ORDER BY st_state;'
+    all_state_df = pd.read_sql(query, db_conn)
+    # Close db connection
+    db_conn.close()
+    # Loop through all states and get all providers
+    for state in all_state_df['st_state']:
+        db_conn = schemaList.db_connect(db_address, state)
+        query = '''
+        SELECT 
+            ProviderID,
+            ProviderName,
+            db_name() AS state
+        FROM 
+            dbo.ProviderTable
+        WHERE ProviderName IS NOT NULL;
+        '''
+        # If dataframe is empty, then create columns and fill with the data from the first schema
+        if prov_dropdown_df.empty:
+            prov_dropdown_df = pd.read_sql(query, db_conn)
+        else:
+            # Append the temporal DF to the final DF
+            prov_dropdown_df = pd.concat([prov_dropdown_df, pd.read_sql(query, db_conn)], ignore_index=True)
+        # Close db connection
+        db_conn.close()
+    # Sort values by ProviderName
+    prov_dropdown_df = prov_dropdown_df.sort_values(by='ProviderName', ignore_index=True)
+    # Give format for dash dropdowns
+    return_dict = [{'label':prov_dropdown_df['ProviderID'][i]+' | '+prov_dropdown_df['state'][i]+' | '+prov_dropdown_df['ProviderName'][i], 'value': prov_dropdown_df['ProviderID'][i]+'|'+prov_dropdown_df['state'][i]} for i in range(len(prov_dropdown_df['ProviderID']))]
+    return return_dict
+
+def query_prov_info_sub(prov_dropdown_value):
+    pass
