@@ -292,7 +292,7 @@ def query_fac_info_sub(fac_dropdown_value):
         FULL OUTER JOIN
         	{}.dbo.tbl_pcc_upl_log upl_log ON upl_log.uniqueID = note_log.note_id
         WHERE        
-        	note_log.fac_id = {} AND statetable.st_state = '{}' AND note_log.note_dte >= (GETDATE() - 30)
+        	note_log.fac_id = {} AND statetable.st_state = '{}'
         ORDER BY note_dte DESC;
     '''.format(state, fac_id, state[-2:])
     # Execute query
@@ -453,5 +453,100 @@ def populate_prov_dropdown_sub(pathname):
     return_dict = [{'label':prov_dropdown_df['ProviderID'][i]+' | '+prov_dropdown_df['state'][i]+' | '+prov_dropdown_df['ProviderName'][i], 'value': prov_dropdown_df['ProviderID'][i]+'|'+prov_dropdown_df['state'][i]} for i in range(len(prov_dropdown_df['ProviderID']))]
     return return_dict
 
-def query_prov_info_sub(prov_dropdown_value):
-    pass
+def query_prov_info_sub(prov_info):
+    # Get provider ID and state
+    prov_id, state = prov_info.split('|')
+    # Connect to DB
+    db_conn = schemaList.db_connect(dbCredentials.db_address, state)
+    # Query provider's info
+    query = '''
+        SELECT        
+        	prov_info.ProviderEmail AS 'Email', 
+            hub_user.UserName AS 'Username',
+            hub_user.PhoneNumber AS 'Phone Number',
+            prov_info.prov_enter_days AS 'Submit Date Limit', 
+        	prov_info.prov_edit_days AS 'Edit Date Limit', 
+            CASE WHEN prov_info.prov_inactive = 1 THEN 'Inactive' ELSE 'Active' END AS Status,
+        	prov_type.provider_type AS 'License',
+        	service_type.svce_type AS 'Type'
+        FROM            
+        	{curr_state}.dbo.ProviderTable prov_info
+        FULL OUTER JOIN
+            {curr_state}.dbo.tbl_provider_type prov_type ON prov_type.provider_type_id = prov_info.provider_type
+        INNER JOIN
+            {curr_state}.dbo.tbl_svce_type service_type ON service_type.svce_type_id = prov_type.svce_type_id
+        FULL OUTER JOIN
+            Provider_App.dbo.AspNetUsers hub_user ON hub_user.Email = prov_info.ProviderEmail
+        WHERE
+        	prov_info.ProviderID = '{id}'
+    '''.format(id=prov_id, curr_state=state)
+    prov_info_df = pd.read_sql(query, db_conn)
+    # Query provider's facilities
+    query = '''
+        SELECT
+        	local_fac.facility_name AS 'Name',
+        	service_type.svce_type AS 'Service Type',
+        	CASE WHEN pcc_fac.pcc_active = 1 THEN 'Online' ELSE 'Offline' END AS 'PCC Bridge Status'
+        FROM            
+        	dbo.tbl_provider_fac prov_fac
+        INNER JOIN
+        	dbo.tbl_svce_type service_type ON prov_fac.svce_id = service_type.svce_type_id
+        INNER JOIN
+        	dbo.tbl_facility local_fac ON prov_fac.facility_id = local_fac.facility_id
+        FULL OUTER JOIN
+        	dbo.tbl_pcc_fac pcc_fac ON local_fac.facility_id = pcc_fac.fac_id
+        WHERE
+        	prov_fac.prov_id = '{}'
+    '''.format(prov_id)
+    prov_fac_df = pd.read_sql(query, db_conn)
+    # Query provider's patients
+    query = '''
+        SELECT
+        	CONCAT(patient.lastname, ', ', patient.firstname) AS 'Name',
+        	local_fac.facility_name AS 'Facility',
+        	FORMAT(roster.roster_st_date, 'yyyy-MM-dd') AS 'Start Date',
+        	FORMAT(roster.roster_end_date, 'yyyy-MM-dd') AS 'End Date',
+        	svce_type.svce_type AS 'Service Type'
+        FROM            
+        	dbo.tbl_roster roster
+        INNER JOIN
+        	dbo.ClientInfoTable patient ON roster.cl_id = patient.clientid
+        INNER JOIN
+        	dbo.tbl_svce_type svce_type ON roster.svce_type_id = svce_type.svce_type_id
+        INNER JOIN
+        	dbo.tbl_facility local_fac ON patient.facility_id = local_fac.facility_id
+        WHERE
+        	roster.prov_id = '{}'
+    '''.format(prov_id)
+    prov_ptnt_df = pd.read_sql(query, db_conn)
+    # Close db connection
+    db_conn.close()
+    # Connect to Provider_App db and get all provider's notes
+    db_conn = schemaList.db_connect(dbCredentials.db_address, 'Provider_App')
+    query = '''
+        SELECT
+            note_log.cl_id AS 'Client ID',
+        	note_log.cl_nme AS 'Patient Name',
+            note_log.prov_nme AS 'Provider',
+            FORMAT(note_log.note_dte, 'yyyy-MM-dd') AS 'Session Date',
+        	note_log.svce_type AS 'Service Type', 
+        	note_log.note_type AS 'Session Type', 
+        	note_log.cpt_code AS 'CPT Code', 
+        	note_log.note_id AS 'Session ID',
+        	FORMAT(upl_log.cr_dte, 'yyyy-MM-dd hh:mm') AS 'Upload Entry',
+        	FORMAT(upl_log.done_dte, 'yyyy-MM-dd hh:mm') AS 'Upload Date'
+        FROM            
+        	dbo.tbl_notes_log note_log
+        INNER JOIN 
+        	dbo.tbl_state statetable ON statetable.st_id = note_log.st_id
+        FULL OUTER JOIN
+        	TSC_{st}.dbo.tbl_pcc_upl_log upl_log ON upl_log.uniqueID = note_log.note_id
+        WHERE        
+        	note_log.prov_id = '{id}' AND statetable.st_state = '{st}'
+        ORDER BY note_dte DESC;
+    '''.format(id=prov_id, st=state[-2:])
+    prov_notes_df = pd.read_sql(query, db_conn)
+    # Close db connection
+    db_conn.close()
+    return prov_info_df, prov_fac_df, prov_ptnt_df, prov_notes_df
+

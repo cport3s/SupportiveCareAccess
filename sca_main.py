@@ -254,7 +254,9 @@ main_app.layout = html.Div(
                             style_data={
                                 'whiteSpace': 'normal',
                                 'height': 'auto'
-                            }
+                            },
+                            page_size=10,
+                            filter_action='native'
                         ),
                         html.H3('Assigned Providers'),
                         dash_table.DataTable(
@@ -262,7 +264,9 @@ main_app.layout = html.Div(
                             style_data={
                                 'whiteSpace': 'normal',
                                 'height': 'auto'
-                            }
+                            },
+                            page_size=10,
+                            filter_action='native'
                         )
                     ]
                 )
@@ -309,7 +313,9 @@ main_app.layout = html.Div(
                             style_data={
                                 'whiteSpace': 'normal',
                                 'height': 'auto'
-                            }
+                            },
+                            page_size=10,
+                            filter_action='native'
                         ),
                         html.H3('Patients'),
                         dash_table.DataTable(
@@ -464,135 +470,15 @@ def populate_prov_dropdown(pathname):
         Output('prov_fac_table', 'data'),
         Output('prov_ptnt_table', 'columns'),
         Output('prov_ptnt_table', 'data'),
-        #Output('prov_notes_table', 'columns'),
-        #Output('prov_notes_table', 'data'),
+        Output('prov_notes_table', 'columns'),
+        Output('prov_notes_table', 'data'),
     ],
     Input('prov_dropdown', 'value'),
     prevent_initial_call=True
 )
 def query_prov_info(prov_info):
-    # Get provider ID and state
-    prov_id, state = prov_info.split('|')
-    # Connect to DB
-    db_conn = schemaList.db_connect(dbCredentials.db_address, state)
-    # Query provider's info
-    query = '''
-        SELECT        
-        	prov_info.ProviderEmail AS 'Email', 
-            hub_user.UserName AS 'Username',
-            hub_user.PhoneNumber AS 'Phone Number',
-            prov_info.prov_enter_days AS 'Submit Date Limit', 
-        	prov_info.prov_edit_days AS 'Edit Date Limit', 
-            CASE WHEN prov_info.prov_inactive = 1 THEN 'Inactive' ELSE 'Active' END AS Status,
-        	prov_type.provider_type AS 'License',
-        	service_type.svce_type AS 'Type'
-        FROM            
-        	{curr_state}.dbo.ProviderTable prov_info
-        FULL OUTER JOIN
-            {curr_state}.dbo.tbl_provider_type prov_type ON prov_type.provider_type_id = prov_info.provider_type
-        INNER JOIN
-            {curr_state}.dbo.tbl_svce_type service_type ON service_type.svce_type_id = prov_type.svce_type_id
-        FULL OUTER JOIN
-            Provider_App.dbo.AspNetUsers hub_user ON hub_user.Email = prov_info.ProviderEmail
-        WHERE
-        	prov_info.ProviderID = '{id}'
-    '''.format(id=prov_id, curr_state=state)
-    prov_info_df = pd.read_sql(query, db_conn)
-    # Query provider's facilities
-    query = '''
-        SELECT
-        	local_fac.facility_name AS 'Name',
-        	service_type.svce_type AS 'Service Type',
-        	CASE WHEN pcc_fac.pcc_active = 1 THEN 'Online' ELSE 'Offline' END AS 'PCC Bridge Status'
-        FROM            
-        	dbo.tbl_provider_fac prov_fac
-        INNER JOIN
-        	dbo.tbl_svce_type service_type ON prov_fac.svce_id = service_type.svce_type_id
-        INNER JOIN
-        	dbo.tbl_facility local_fac ON prov_fac.facility_id = local_fac.facility_id
-        FULL OUTER JOIN
-        	dbo.tbl_pcc_fac pcc_fac ON local_fac.facility_id = pcc_fac.fac_id
-        WHERE
-        	prov_fac.prov_id = '{}'
-    '''.format(prov_id)
-    prov_fac_df = pd.read_sql(query, db_conn)
-    # Query provider's patients
-    query = '''
-        SELECT
-        	CONCAT(patient.lastname, ', ', patient.firstname) AS 'Name',
-        	local_fac.facility_name AS 'Facility',
-        	FORMAT(roster.roster_st_date, 'yyyy-MM-dd') AS 'Start Date',
-        	FORMAT(roster.roster_end_date, 'yyyy-MM-dd') AS 'End Date',
-        	svce_type.svce_type AS 'Service Type'
-        FROM            
-        	dbo.tbl_roster roster
-        INNER JOIN
-        	dbo.ClientInfoTable patient ON roster.cl_id = patient.clientid
-        INNER JOIN
-        	dbo.tbl_svce_type svce_type ON roster.svce_type_id = svce_type.svce_type_id
-        INNER JOIN
-        	dbo.tbl_facility local_fac ON patient.facility_id = local_fac.facility_id
-        WHERE
-        	roster.prov_id = '{}'
-    '''.format(prov_id)
-    prov_ptnt_df = pd.read_sql(query, db_conn)
-    return [{'name':i, 'id':i} for i in prov_info_df.columns], prov_info_df.to_dict('records'), [{'name':i, 'id':i} for i in prov_fac_df.columns], prov_fac_df.to_dict('records'), [{'name':i, 'id':i} for i in prov_ptnt_df.columns], prov_ptnt_df.to_dict('records')
-#@main_app.callback(
-#    [
-#        Output('prov_search_result_datatable', 'columns'),
-#        Output('prov_search_result_datatable', 'data'),
-#        Output('prov_load_spinner', 'children')
-#    ],
-#    Input('prov_search_bar', 'value')
-#)
-#def search_provider(prov_nme):
-#    # Connect to DB and get all states
-#    db_conn = schemaList.db_connect(dbCredentials.db_address, 'Provider_App')
-#    query = 'SELECT st_state,back_office_email_address FROM dbo.tbl_state ORDER BY st_state;'
-#    query_result_df = pd.read_sql(query, db_conn)
-#    # Cast 2 column df into dictionary
-#    query_result_dict = pd.Series(query_result_df['back_office_email_address'].values, index=query_result_df['st_state']).to_dict()
-#    # Close db connection
-#    db_conn.close()
-#    provider_info_dataframe = pd.DataFrame()
-#    query = '''SELECT     
-#			localprov.ProviderID, 
-#			localprov.ProviderName, 
-#			localprov.ProviderEmail, 
-#			hub_user.PhoneNumber,
-#			hub_user.UserName AS HubUsername,
-#			localprov.prov_inactive AS ProviderInactive,
-#			provtype.provider_type AS ProviderLicense,
-#			servicetype.svce_type AS ProviderType
-#		FROM            
-#			dbo.ProviderTable localprov
-#		FULL JOIN
-#			dbo.tbl_provider_type provtype ON localprov.provider_type = provtype.provider_type_id
-#		FULL JOIN
-#			dbo.tbl_svce_type servicetype ON provtype.svce_type_id = servicetype.svce_type_id
-#		FULL JOIN
-#			Provider_App.dbo.AspNetUsers hub_user ON hub_user.Email = localprov.ProviderEmail
-#		WHERE        
-#			(ProviderName LIKE '%{}%');
-#    	'''.format(prov_nme)
-#    for state,referral_inbox in query_result_dict.items():
-#        db_conn = schemaList.db_connect(dbCredentials.db_address, "TSC_"+state)
-#        # Execute query
-#        tmp_dataframe = pd.read_sql(query, db_conn)
-#        tmp_dataframe['State'] = state
-#        tmp_dataframe['Referral'] = referral_inbox
-#        # If final DF is empty, then copy tmp to final
-#        if provider_info_dataframe.empty:
-#            provider_info_dataframe['State'] = ""
-#            provider_info_dataframe['Referral'] = ""
-#            provider_info_dataframe = tmp_dataframe.copy()
-#        else:
-#            # Append the temporal DF to the final DF
-#        	provider_info_dataframe = pd.concat([provider_info_dataframe, tmp_dataframe], ignore_index=True)
-#        # Close connetion
-#        schemaList.db_close(db_conn)
-#    columnsReturnValue = [{'name':i, 'id':i} for i in provider_info_dataframe.columns]
-#    return columnsReturnValue, provider_info_dataframe.to_dict('records'), 'Ready to Search'
+    prov_info_df, prov_fac_df, prov_ptnt_df, prov_notes_df = sca_functions.query_prov_info_sub(prov_info)
+    return [{'name':i, 'id':i} for i in prov_info_df.columns], prov_info_df.to_dict('records'), [{'name':i, 'id':i} for i in prov_fac_df.columns], prov_fac_df.to_dict('records'), [{'name':i, 'id':i} for i in prov_ptnt_df.columns], prov_ptnt_df.to_dict('records'), [{'name':i, 'id':i} for i in prov_notes_df.columns], prov_notes_df.to_dict('records')
 
 # Poplate patient state list
 @main_app.callback(
