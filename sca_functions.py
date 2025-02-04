@@ -95,7 +95,6 @@ def populate_facility_dropdown_sub(pathname):
 def populate_fac_dropdown_sub(fac_state):
     fac_query = '''
         SELECT
-
         	local_fac.facility_id AS fac_id,
         	local_fac.facility_name AS fac_nme
         FROM
@@ -206,6 +205,7 @@ def populate_fac_info_dropdown(pathname):
                 pcc_fac_dataframe = pd.read_sql(query, db_conn)
             else:
                 pcc_fac_dataframe = pd.concat([pcc_fac_dataframe, pd.read_sql(query, db_conn)], ignore_index=True)
+            print(pcc_fac_dataframe)
             # Close db connection
             db_conn.close()
         # Sort dataframe by facility name
@@ -484,6 +484,7 @@ def query_prov_info_sub(prov_info):
     # Query provider's facilities
     query = '''
         SELECT
+            local_fac.facility_id AS 'ID',
         	local_fac.facility_name AS 'Name',
         	service_type.svce_type AS 'Service Type',
         	CASE WHEN pcc_fac.pcc_active = 1 THEN 'Online' ELSE 'Offline' END AS 'PCC Bridge Status'
@@ -497,11 +498,14 @@ def query_prov_info_sub(prov_info):
         	dbo.tbl_pcc_fac pcc_fac ON local_fac.facility_id = pcc_fac.fac_id
         WHERE
         	prov_fac.prov_id = '{}'
+        ORDER BY
+            local_fac.facility_name
     '''.format(prov_id)
     prov_fac_df = pd.read_sql(query, db_conn)
     # Query provider's patients
     query = '''
         SELECT
+            patient.clientid AS 'ID',
         	CONCAT(patient.lastname, ', ', patient.firstname) AS 'Name',
         	local_fac.facility_name AS 'Facility',
         	FORMAT(roster.roster_st_date, 'yyyy-MM-dd') AS 'Start Date',
@@ -527,7 +531,7 @@ def query_prov_info_sub(prov_info):
         SELECT
             note_log.cl_id AS 'Client ID',
         	note_log.cl_nme AS 'Patient Name',
-            note_log.prov_nme AS 'Provider',
+            note_log.fac_id AS 'Facility ID',
             FORMAT(note_log.note_dte, 'yyyy-MM-dd') AS 'Session Date',
         	note_log.svce_type AS 'Service Type', 
         	note_log.note_type AS 'Session Type', 
@@ -540,7 +544,7 @@ def query_prov_info_sub(prov_info):
         INNER JOIN 
         	dbo.tbl_state statetable ON statetable.st_id = note_log.st_id
         FULL OUTER JOIN
-        	TSC_{st}.dbo.tbl_pcc_upl_log upl_log ON upl_log.uniqueID = note_log.note_id
+        	TSC_{st}.dbo.tbl_pcc_upl_log upl_log ON note_log.note_id = upl_log.uniqueID
         WHERE        
         	note_log.prov_id = '{id}' AND statetable.st_state = '{st}'
         ORDER BY note_dte DESC;
