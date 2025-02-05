@@ -326,6 +326,16 @@ main_app.layout = html.Div(
                             },
                             page_size=10,
                             filter_action='native'
+                        ),
+                        html.H3('Paystub'),
+                        dash_table.DataTable(
+                            id = 'prov_paystub_table',
+                            style_data={
+                                'whiteSpace': 'normal',
+                                'height': 'auto'
+                            },
+                            page_size=10,
+                            filter_action='native'
                         )
                     ]
                 )
@@ -472,13 +482,15 @@ def populate_prov_dropdown(pathname):
         Output('prov_ptnt_table', 'data'),
         Output('prov_notes_table', 'columns'),
         Output('prov_notes_table', 'data'),
+        Output('prov_paystub_table', 'columns'),
+        Output('prov_paystub_table', 'data')
     ],
     Input('prov_dropdown', 'value'),
     prevent_initial_call=True
 )
 def query_prov_info(prov_info):
-    prov_info_df, prov_fac_df, prov_ptnt_df, prov_notes_df = sca_functions.query_prov_info_sub(prov_info)
-    return [{'name':i, 'id':i} for i in prov_info_df.columns], prov_info_df.to_dict('records'), [{'name':i, 'id':i} for i in prov_fac_df.columns], prov_fac_df.to_dict('records'), [{'name':i, 'id':i} for i in prov_ptnt_df.columns], prov_ptnt_df.to_dict('records'), [{'name':i, 'id':i} for i in prov_notes_df.columns], prov_notes_df.to_dict('records')
+    prov_info_df, prov_fac_df, prov_ptnt_df, prov_notes_df, prov_paystub_df = sca_functions.query_prov_info_sub(prov_info)
+    return [{'name':i, 'id':i} for i in prov_info_df.columns], prov_info_df.to_dict('records'), [{'name':i, 'id':i} for i in prov_fac_df.columns], prov_fac_df.to_dict('records'), [{'name':i, 'id':i} for i in prov_ptnt_df.columns], prov_ptnt_df.to_dict('records'), [{'name':i, 'id':i} for i in prov_notes_df.columns], prov_notes_df.to_dict('records'), [{'name':i, 'id':i} for i in prov_paystub_df.columns], prov_paystub_df.to_dict('records')
 
 # Poplate patient state list
 @main_app.callback(

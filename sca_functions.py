@@ -523,6 +523,37 @@ def query_prov_info_sub(prov_info):
         	roster.prov_id = '{}'
     '''.format(prov_id)
     prov_ptnt_df = pd.read_sql(query, db_conn)
+    # Query provider's paystub
+    query = '''
+        SELECT
+        	dbo.{table}.Client_Name AS 'Patient', 
+        	dbo.{table}.ses_abs AS 'Assistance', 
+        	dbo.{table}.CPT_Code AS 'CPT Code', 
+            FORMAT(dbo.{table}.ses_date, 'yyyy-MM-dd') AS 'Session Date', 
+        	FORMAT(dbo.tbl_app_Timesheets.rec_date, 'yyyy-MM-dd') AS 'Record Date', 
+        	dbo.{table}.covered AS 'Insurance', 
+        	dbo.tbl_provider_pay.amt AS 'Payment Rate', 
+        	FORMAT(dbo.tbl_prov_check.prov_check_date, 'yyyy-MM-dd') AS 'Check Date', 
+            dbo.tbl_prov_check_det.ses_amt AS 'Session AMT'
+        FROM            
+        	dbo.tbl_provider_pay 
+        RIGHT OUTER JOIN
+            dbo.{table} ON dbo.tbl_provider_pay.prov_id = dbo.{table}.Provider_ID 
+        	AND 
+            dbo.tbl_provider_pay.session_type = dbo.{table}.CPT_Code 
+        LEFT OUTER JOIN
+            dbo.tbl_app_Timesheets 
+        LEFT OUTER JOIN
+            dbo.SessionsTable 
+        INNER JOIN
+            dbo.tbl_prov_check 
+        INNER JOIN
+            dbo.tbl_prov_check_det ON dbo.tbl_prov_check.prov_check_id = dbo.tbl_prov_check_det.prov_check_id ON dbo.SessionsTable.ID = dbo.tbl_prov_check_det.ses_id ON dbo.tbl_app_Timesheets.ID = dbo.SessionsTable.app_timesheet_ID ON dbo.{table}.UniqueID = dbo.tbl_app_Timesheets.UniqueID
+        WHERE        
+        	dbo.{table}.Provider_ID = '{prov_id}'
+        ORDER BY 
+        	dbo.{table}.ses_date DESC'''.format(table='tbl_app_Timesheets_raw_2', prov_id=prov_id)
+    prov_paystub_df = pd.read_sql(query, db_conn)
     # Close db connection
     db_conn.close()
     # Connect to Provider_App db and get all provider's notes
@@ -552,5 +583,5 @@ def query_prov_info_sub(prov_info):
     prov_notes_df = pd.read_sql(query, db_conn)
     # Close db connection
     db_conn.close()
-    return prov_info_df, prov_fac_df, prov_ptnt_df, prov_notes_df
+    return prov_info_df, prov_fac_df, prov_ptnt_df, prov_notes_df, prov_paystub_df
 
