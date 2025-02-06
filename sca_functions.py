@@ -524,6 +524,11 @@ def query_prov_info_sub(prov_info):
     '''.format(prov_id)
     prov_ptnt_df = pd.read_sql(query, db_conn)
     # Query provider's paystub
+    # Select table depending on provider type
+    if prov_info_df['Type'][0] == 'Psychology':
+        curr_table = 'tbl_app_Timesheets_raw_2'
+    else:
+        curr_table = 'tbl_app_Timesheets_psych_raw_3'
     query = '''
         SELECT
         	dbo.{table}.Client_Name AS 'Patient', 
@@ -552,7 +557,7 @@ def query_prov_info_sub(prov_info):
         WHERE        
         	dbo.{table}.Provider_ID = '{prov_id}'
         ORDER BY 
-        	dbo.{table}.ses_date DESC'''.format(table='tbl_app_Timesheets_raw_2', prov_id=prov_id)
+        	dbo.{table}.ses_date DESC'''.format(table=curr_table, prov_id=prov_id)
     prov_paystub_df = pd.read_sql(query, db_conn)
     # Close db connection
     db_conn.close()
