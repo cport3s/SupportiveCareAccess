@@ -499,15 +499,7 @@ def query_prov_info(prov_info):
     )
 def populate_ptnt_st_dropdown(pathname):
     if pathname == '/patients_info':
-        # Connect to DB and get all states
-        db_conn = schemaList.db_connect(db_address, 'Provider_App')
-        query = 'SELECT st_id,st_state FROM dbo.tbl_state ORDER BY st_state;'
-        query_result_df = pd.read_sql(query, db_conn)
-        query_result_dict = dict(zip(list(query_result_df['st_id']), list(query_result_df['st_state'])))
-        # Give format for dash dropdowns
-        return_dict = [{'label':[state+' | State ID: ',id], 'value': 'TSC_'+state} for id,state in query_result_dict.items()]
-        # Close db connection
-        db_conn.close()
+        return_dict = sca_functions.populate_ptnt_st_dropdown_sub()
         return return_dict
     else:
         raise PreventUpdate
@@ -523,31 +515,7 @@ def populate_ptnt_st_dropdown(pathname):
     prevent_initial_call=True
     )
 def populate_ptnt_dropdown(state):
-    ptnt_info_df = pd.DataFrame()
-    # Get all patient's list
-    db_conn = schemaList.db_connect(dbCredentials.db_address, state)
-    query = '''
-        SELECT
-        	ClientID,
-        	CONCAT(LastName, ', ', FirstName) AS ClientName,
-            CASE WHEN Status = 187 THEN 'Active' ELSE 'Inactive' END AS Status
-        FROM            
-        	dbo.ClientInfoTable
-        ORDER BY ClientName;
-    '''
-    tmp_df=pd.read_sql(query, db_conn)
-    # If dataframe is empty, then create columns and fill with the data from the first schema
-    if ptnt_info_df.empty:
-        ptnt_info_df = tmp_df.copy()
-    else:
-        # Append the temporal DF to the ptnt_info_df
-        ptnt_info_df = pd.concat([ptnt_info_df, tmp_df], ignore_index=True)
-    # Close DB connection
-    schemaList.db_close(db_conn)
-    # Close db connection
-    db_conn.close()
-    # Give format for dash dropdowns
-    return_dict = [{'label':[ptnt_info_df['ClientName'][i]+' | ClientID: '+str(ptnt_info_df['ClientID'][i])+' | Status: '+ptnt_info_df['Status'][i]], 'value': ptnt_info_df['ClientID'][i]} for i in range(len(ptnt_info_df['ClientID']))]
+    return_dict = sca_functions.populate_ptnt_dropdown_sub(state)
     return return_dict, False, 'Select Patient'
 
 # Query patient's info
@@ -614,7 +582,7 @@ def query_ptnt_info(ptnt_id, state):
     '''.format(ptnt_id)
     ptnt_prov_df = pd.read_sql(query, db_conn)
     # Close DB connection
-    schemaList.db_close(db_conn)
+    db_conn.close()
     # Connect to Provider_App DB
     db_conn = schemaList.db_connect(dbCredentials.db_address, 'Provider_App')
     # Get state ID
@@ -649,7 +617,7 @@ def query_ptnt_info(ptnt_id, state):
     ptnt_notes_columns = [{'name':i, 'id':i} for i in ptnt_notes_df.columns]
     ptnt_notes_data = ptnt_notes_df.to_dict('records')
     # Close DB connection
-    schemaList.db_close(db_conn)
+    db_conn.close()
     return ptnt_info_df['FirstName'][0], ptnt_info_df['LastName'][0], ptnt_info_df['ClientID'][0], ptnt_info_df['DateOfBirth'][0], ptnt_info_df['facility_name'][0], 'PCC ID '+str(ptnt_info_df['matched'][0]) if ptnt_info_df['matched'][0] != None else 'No', ptnt_info_df['pcc_fac_id'], ptnt_notes_columns, ptnt_notes_data, [{'name':i, 'id':i} for i in ptnt_prov_df.columns], ptnt_prov_df.to_dict('records')
 
 if __name__ == '__main__':

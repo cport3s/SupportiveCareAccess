@@ -590,3 +590,39 @@ def query_prov_info_sub(prov_info):
     db_conn.close()
     return prov_info_df, prov_fac_df, prov_ptnt_df, prov_notes_df, prov_paystub_df
 
+def populate_ptnt_dropdown_sub(state):
+    ptnt_info_df = pd.DataFrame()
+    # Get all patient's list
+    db_conn = schemaList.db_connect(dbCredentials.db_address, state)
+    query = '''
+        SELECT
+        	ClientID,
+        	CONCAT(LastName, ', ', FirstName) AS ClientName,
+            CASE WHEN Status = 187 THEN 'Active' ELSE 'Inactive' END AS Status
+        FROM            
+        	dbo.ClientInfoTable
+        ORDER BY ClientName;
+    '''
+    tmp_df=pd.read_sql(query, db_conn)
+    # If dataframe is empty, then create columns and fill with the data from the first schema
+    if ptnt_info_df.empty:
+        ptnt_info_df = tmp_df.copy()
+    else:
+        # Append the temporal DF to the ptnt_info_df
+        ptnt_info_df = pd.concat([ptnt_info_df, tmp_df], ignore_index=True)
+    # Close db connection
+    db_conn.close()
+    # Give format for dash dropdowns
+    return [{'label':[ptnt_info_df['ClientName'][i]+' | ClientID: '+str(ptnt_info_df['ClientID'][i])+' | Status: '+ptnt_info_df['Status'][i]], 'value': ptnt_info_df['ClientID'][i]} for i in range(len(ptnt_info_df['ClientID']))]
+
+def populate_ptnt_st_dropdown_sub():
+    # Connect to DB and get all states
+    db_conn = schemaList.db_connect(db_address, 'Provider_App')
+    query = 'SELECT st_id,st_state FROM dbo.tbl_state ORDER BY st_state;'
+    query_result_df = pd.read_sql(query, db_conn)
+    query_result_dict = dict(zip(list(query_result_df['st_id']), list(query_result_df['st_state'])))
+    # Close db connection
+    db_conn.close()
+    # Give format for dash dropdowns
+    return [{'label':[state+' | State ID: ',id], 'value': 'TSC_'+state} for id,state in query_result_dict.items()]
+    
