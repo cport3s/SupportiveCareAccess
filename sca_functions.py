@@ -47,31 +47,43 @@ def render_container_sub(pathname):
     fac_stats_style_dic = content.FAC_STATS_STYLE
     patient_style_dic = content.PATIENT_STYLE
     fac_qry_style_dic = content.FAC_QRY_STYLE
+    fac_map_style_dic = content.FAC_MAP_STYLE
     prov_qry_style_dic = content.PROV_QRY_STYLE
     if pathname == '/fac_stats':
         fac_stats_style_dic['display']='block'
         patient_style_dic['display']='none'
         fac_qry_style_dic['display']='none'
+        fac_map_style_dic['display']='none'
         prov_qry_style_dic['display']='none'
     elif pathname == '/patients_info':
         fac_stats_style_dic['display']='none'
         patient_style_dic['display']='block'
         fac_qry_style_dic['display']='none'
+        fac_map_style_dic['display']='none'
         prov_qry_style_dic['display']='none'
     elif pathname == '/fac_info':
         fac_stats_style_dic['display']='none'
         patient_style_dic['display']='none'
         fac_qry_style_dic['display']='block'
+        fac_map_style_dic['display']='none'
+        prov_qry_style_dic['display']='none'
+    elif pathname == '/fac_map':
+        fac_stats_style_dic['display']='none'
+        patient_style_dic['display']='none'
+        fac_qry_style_dic['display']='none'
+        fac_map_style_dic['display']='block'
         prov_qry_style_dic['display']='none'
     elif pathname == '/prov_info':
         fac_stats_style_dic['display']='none'
         patient_style_dic['display']='none'
         fac_qry_style_dic['display']='none'
+        fac_map_style_dic['display']='none'
         prov_qry_style_dic['display']='block'
     else:
         fac_stats_style_dic['display']='none'
         patient_style_dic['display']='none'
         fac_qry_style_dic['display']='none'
+        fac_map_style_dic['display']='none'
         prov_qry_style_dic['display']='none'
     return fac_stats_style_dic, fac_qry_style_dic, patient_style_dic, prov_qry_style_dic
 

@@ -31,6 +31,7 @@ main_app.layout = html.Div(
                 dbc.NavLink('Patient Info', href='/patients_info', active='exact'),
                 dbc.NavLink('Provider Info', href='/prov_info', active='exact'),
                 dbc.NavLink('Facility Info', href='/fac_info', active='exact'),
+                dbc.NavLink('Facility Map', href='/fac_map', active='exact'),
                 dbc.NavLink('Facility Statistics', href='/fac_stats', active='exact')
             ],
             vertical=True,
