@@ -38,8 +38,8 @@ class schemaList():
         # Declare empty dataframe
         query_global_df = pd.DataFrame()
         # Get all states from Provider App db
-        state_list_df = schemaList.get_states()
-        for state in state_list_df['st_state']:
+        state_list = schemaList.get_states()
+        for state in state_list:
             # Connect to DB and get all states
             db_conn = schemaList.db_connect(dbCredentials.db_address, state)
             # Run query

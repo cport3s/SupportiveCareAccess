@@ -11,6 +11,7 @@ from plotly.subplots import make_subplots
 from datetime import datetime, timedelta
 from dash_styles import nav_bar, content
 import sca_functions
+import location_function
 from classes import schemaList, dbCredentials
 from dash_styles import searchBarStyles, dataTableStyles, toggleInfo
 
@@ -153,6 +154,16 @@ main_app.layout = html.Div(
                             filter_action='native'
                         )
                     ]
+                )
+            ]
+        ),
+        # Facility Map
+        html.Div(
+            id='facility_map_container',
+            style=content.FAC_MAP_STYLE,
+            children = [
+                dcc.Graph(
+                    id='facility_map'
                 )
             ]
         ),
@@ -620,6 +631,20 @@ def query_ptnt_info(ptnt_id, state):
     # Close DB connection
     db_conn.close()
     return ptnt_info_df['FirstName'][0], ptnt_info_df['LastName'][0], ptnt_info_df['ClientID'][0], ptnt_info_df['DateOfBirth'][0], ptnt_info_df['facility_name'][0], 'PCC ID '+str(ptnt_info_df['matched'][0]) if ptnt_info_df['matched'][0] != None else 'No', ptnt_info_df['pcc_fac_id'], ptnt_notes_columns, ptnt_notes_data, [{'name':i, 'id':i} for i in ptnt_prov_df.columns], ptnt_prov_df.to_dict('records')
+
+# Callback to query facilities address and generate map
+@main_app.callback(
+    Output('facility_map', 'figure'),
+    Input('current_url', 'pathname')
+)
+def generate_fac_map(pathname):
+    if pathname == '/fac_map':
+        fac_map_df = location_function.get_fac_address()
+        #fac_map_fig = px.scatter_map(fac_map_df, lat='Latitude', lon='Longitude', hover_name='facility_name')
+        #return fac_map_fig
+        pass
+    else:
+        raise PreventUpdate
 
 if __name__ == '__main__':
     main_app.run_server(debug=True, host='0.0.0.0', port='7000', dev_tools_silence_routes_logging=False)
