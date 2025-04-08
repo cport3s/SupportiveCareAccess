@@ -317,7 +317,9 @@ main_app.layout = html.Div(
                             style_data={
                                 'whiteSpace': 'normal',
                                 'height': 'auto'
-                            }
+                            },
+                            page_size=10,
+                            filter_action='native'
                         ),
                         html.H3('Notes'),
                         dash_table.DataTable(

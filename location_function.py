@@ -22,11 +22,11 @@ def get_coordinates(facility_df):
         else:
             facility_df['Latitude'][i] = None
             facility_df['Longitude'][i] = None
-        with open('facility_coordinates.json', 'w') as j:
+        with open('facility_coordinates.json', 'a') as j:
             json.dump({facility_df['facility_name'][i], address, facility_df['Latitude'][i], facility_df['Longitude'][i], current_date}, j)
+            print(i, facility_df['facility_name'][i], address, facility_df['Latitude'][i], facility_df['Longitude'][i], current_date)
         # Insert 1 second timer due to geopy usage policy
         time.sleep(60)
-        print(i)
     # Save dataframe to json file
     facility_df.to_json('facility_coordinates.json', orient='records')
     return facility_df
@@ -42,6 +42,9 @@ def get_fac_address():
     '''
     # Run query
     facility_df = schemaList.run_query_all_states(query)
+    # Save facility df as a csv file with the current date as filename
+    current_date = datetime.now().strftime('%Y-%m-%d')
+    facility_df.to_csv(f'facility_addresses_{current_date}.csv', index=False)
     facility_df = get_coordinates(facility_df)
     return facility_df
 
