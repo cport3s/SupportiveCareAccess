@@ -620,15 +620,18 @@ def ptnt_match_query(last_name, first_name):
 	        pcc_client.pcc_id AS 'PCC Client ID', 
 	        CONCAT(pcc_client.last_name, ', ', pcc_client.first_name) AS 'PCC Name', 
 	        CONCAT(local_client.LastName, ', ', local_client.FirstName) AS 'Local Name',
-	        pcc_client.facID AS 'PCC Fac ID', 
-	        pcc_client.orgUuId AS 'OrgID',  
+	        local_fac.facility_name AS 'Facility', 
 	        pcc_client.pcc_dob AS 'PCC DOB',
-	        FORMAT(local_client.DateOfBirth, 'yyyy-MM-dd') AS 'LOCAL DOB',
+	        FORMAT(local_client.DateOfBirth, 'yyyy-MM-dd') AS 'Local DOB',
             db_name() AS State
         FROM
         	dbo.tbl_pcc_patients_client pcc_client
         FULL JOIN
         	dbo.ClientInfoTable local_client ON local_client.ClientID = pcc_client.cl_id
+		FULL JOIN
+			dbo.tbl_pcc_fac pcc_fac ON pcc_fac.pcc_orguid = pcc_client.orguuid AND pcc_fac.pcc_facid = pcc_client.facid
+		FULL JOIN
+			dbo.tbl_facility local_fac ON pcc_fac.fac_id = local_fac.facility_id 
     '''+ query_condition + ' ORDER BY pcc_client.first_name, pcc_client.last_name;'
     # Run query for all states
     pcc_df = schemaList.run_query_all_states(query)
