@@ -1,19 +1,11 @@
-from dash import Dash, html, dcc, dash_table, Input, Output, State, no_update
+from dash import Dash, html, dcc, dash_table, Input, Output, State
 from dash.exceptions import PreventUpdate
 import dash_bootstrap_components as dbc
-import sqlalchemy
-import sqlalchemy.sql
-from sqlalchemy.exc import SQLAlchemyError
 import pandas as pd
-import plotly.graph_objects as go
-import plotly.express as px
-from plotly.subplots import make_subplots
-from datetime import datetime, timedelta
 from dash_styles import nav_bar, content
 import sca_functions
-import location_function
 from classes import schemaList, dbCredentials
-from dash_styles import searchBarStyles, dataTableStyles, toggleInfo
+from dash_styles import searchBarStyles
 
 db_address = dbCredentials.db_address
 
@@ -369,14 +361,15 @@ main_app.layout = html.Div(
         Output('fac_stats_container', 'style'),
         Output('fac_qry_container', 'style'),
         Output('patient_container', 'style'),
+        Output('facility_map_container', 'style'),
         Output('provider_container', 'style')
     ],
     Input('current_url', 'pathname')
 )
 def render_container(pathname):
     # Change containers display properties depending on URL
-    fac_stats_style_dic, fac_qry_style_dic, patient_style_dic, prov_qry_style_dic = sca_functions.render_container_sub(pathname)
-    return fac_stats_style_dic, fac_qry_style_dic, patient_style_dic, prov_qry_style_dic
+    fac_stats_style_dic, fac_qry_style_dic, patient_style_dic, fac_map_style_dic, prov_qry_style_dic = sca_functions.render_container_sub(pathname)
+    return fac_stats_style_dic, fac_qry_style_dic, patient_style_dic, fac_map_style_dic, prov_qry_style_dic
 
 # Callback to populate the state dropdown
 @main_app.callback(
@@ -641,7 +634,7 @@ def query_ptnt_info(ptnt_id, state):
 )
 def generate_fac_map(pathname):
     if pathname == '/fac_map':
-        fac_map_df = location_function.get_fac_address()
+        #fac_map_df = location_function.get_fac_address()
         #fac_map_fig = px.scatter_map(fac_map_df, lat='Latitude', lon='Longitude', hover_name='facility_name')
         #return fac_map_fig
         pass

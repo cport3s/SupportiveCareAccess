@@ -85,7 +85,7 @@ def render_container_sub(pathname):
         fac_qry_style_dic['display']='none'
         fac_map_style_dic['display']='none'
         prov_qry_style_dic['display']='none'
-    return fac_stats_style_dic, fac_qry_style_dic, patient_style_dic, prov_qry_style_dic
+    return fac_stats_style_dic, fac_qry_style_dic, patient_style_dic, fac_map_style_dic, prov_qry_style_dic
 
 # Populate state dropdown in facility stats page
 def populate_facility_dropdown_sub(pathname):
@@ -190,36 +190,20 @@ def generate_fac_graph_sub(local_fac_id, date_range, state):
     db_conn.close()
     return facility_upload_log_graph
 
+# Populate facility info dropdown in facility info page
 def populate_fac_info_dropdown(pathname):
     if pathname == '/fac_info':
         # Create an empty dataframe to store all data
         pcc_fac_dataframe = pd.DataFrame()
-        # Connect to DB and get all states
-        db_conn = schemaList.db_connect(db_address, 'Provider_App')
-        query = 'SELECT st_state FROM dbo.tbl_state ORDER BY st_state;'
-        query_result_df = pd.read_sql(query, db_conn)
-        # Close db connection
-        db_conn.close()
-        # Loop through all states and get all facilities
-        for state in query_result_df['st_state']:
-            # Connect to each state's DB
-            db_conn = schemaList.db_connect(db_address, state)
-            query = '''
-                SELECT
-                	facility_id, 
-                	facility_name,
-                    db_name() AS state
-                FROM            
-                	dbo.tbl_facility
-            '''
-            # Check if dataframe is empty
-            if pcc_fac_dataframe.empty:
-                pcc_fac_dataframe = pd.read_sql(query, db_conn)
-            else:
-                pcc_fac_dataframe = pd.concat([pcc_fac_dataframe, pd.read_sql(query, db_conn)], ignore_index=True)
-            print(pcc_fac_dataframe)
-            # Close db connection
-            db_conn.close()
+        query = '''
+            SELECT
+            	facility_id, 
+            	facility_name,
+                db_name() AS state
+            FROM            
+            	dbo.tbl_facility
+        '''
+        pcc_fac_dataframe = schemaList.run_query_all_states(query)
         # Sort dataframe by facility name
         pcc_fac_dataframe = pcc_fac_dataframe.sort_values(by='facility_name', ignore_index=True)
         # Give format for dash dropdowns
@@ -227,7 +211,8 @@ def populate_fac_info_dropdown(pathname):
         return return_dict
     else:
         return False
-    
+
+# Query facility info in facility info page 
 def query_fac_info_sub(fac_dropdown_value):
     state = fac_dropdown_value.split('|')[1].strip()
     fac_id = fac_dropdown_value.split('|')[0].strip()
@@ -244,7 +229,7 @@ def query_fac_info_sub(fac_dropdown_value):
 	        pccFacility.pcc_orgUid AS 'Org ID',
 	        pccFacility.pcc_facID AS 'PCC ID',
 	        pccFacility.pcc_active AS 'PCC Active',
-            pccFacility.pickListID,
+            pccFacility.pickListID AS 'DocID Script',
 	        CONCAT(CAST(pccFacility.aimsDocID AS VARCHAR(4)), '|', CAST(pccFacility.phqDocID AS VARCHAR(4)), '|', CAST(pccFacility.bimsDocID AS VARCHAR(4)), '|', CAST(pccFacility.psychDocID AS VARCHAR(4)), '|', CAST(pccFacility.evalDocID AS VARCHAR(4)), '|', CAST(pccFacility.progDocID AS VARCHAR(4))) AS 'DocID'
         FROM
         	dbo.tbl_facility facility
@@ -295,6 +280,7 @@ def query_fac_info_sub(fac_dropdown_value):
         	note_log.note_type AS 'Session Type', 
         	note_log.cpt_code AS 'CPT Code', 
         	note_log.note_id AS 'Session ID',
+            FORMAT(note_log.create_dte, 'yyyy-MM-dd hh:mm') AS 'Submit Date',
         	FORMAT(upl_log.cr_dte, 'yyyy-MM-dd hh:mm') AS 'Upload Entry',
         	FORMAT(upl_log.done_dte, 'yyyy-MM-dd hh:mm') AS 'Upload Date'
         FROM            
@@ -314,13 +300,6 @@ def query_fac_info_sub(fac_dropdown_value):
     return pcc_status_df, pcc_prov_df, pcc_notes_df
 
 def global_fac_statistics_sub():
-    # Connect to DB and get all states
-    db_conn = schemaList.db_connect(db_address, 'Provider_App')
-    query = 'SELECT st_state FROM dbo.tbl_state ORDER BY st_state;'
-    query_result_df = pd.read_sql(query, db_conn)
-    # Close db connection
-    db_conn.close()
-    tmp_st_list = ['TSC_'+state for state in query_result_df['st_state']]
     all_sts_dataframe = pd.DataFrame()
     all_sts_pending_dataframe = pd.DataFrame()
     # First, query all completed logs
@@ -336,17 +315,9 @@ def global_fac_statistics_sub():
     	cr_dte
     ORDER BY
     	cr_dte
-    '''.format((datetime.now() - timedelta(days=30)).strftime("%Y/%m/%d %H:%M:%S"))
-    for state in tmp_st_list:
-        # Connect to DB and get all states
-        db_conn = schemaList.db_connect(db_address, state)
-        tmp_log_dataframe = pd.read_sql(query, db_conn)
-        if all_sts_dataframe.empty:
-            all_sts_dataframe = tmp_log_dataframe.copy()
-        else:
-            all_sts_dataframe = pd.concat([all_sts_dataframe, tmp_log_dataframe], ignore_index = True)
-        # Close db connection
-        db_conn.close()
+    '''.format((datetime.now() - timedelta(days=90)).strftime("%Y/%m/%d"))
+    # Run query for all states
+    all_sts_dataframe = schemaList.run_query_all_states(query)
     # Now, query all pending logs
     query = '''
     SELECT
@@ -360,17 +331,10 @@ def global_fac_statistics_sub():
     	cr_dte
     ORDER BY
     	cr_dte
-    '''.format((datetime.now() - timedelta(days=30)).strftime("%Y/%m/%d %H:%M:%S"))
-    for state in tmp_st_list:
-        # Connect to DB and get all states
-        db_conn = schemaList.db_connect(db_address, state)
-        tmp_log_dataframe = pd.read_sql(query, db_conn)
-        if all_sts_pending_dataframe.empty:
-            all_sts_pending_dataframe = tmp_log_dataframe.copy()
-        else:
-            all_sts_pending_dataframe = pd.concat([all_sts_pending_dataframe, tmp_log_dataframe], ignore_index = True)
-        # Close db connection
-        db_conn.close()
+    '''.format((datetime.now() - timedelta(days=90)).strftime("%Y/%m/%d"))
+    # Run query for all states
+    all_sts_pending_dataframe = schemaList.run_query_all_states(query)
+    # Arrange dataframes
     all_sts_dataframe = all_sts_dataframe.groupby('cr_dte').sum().reset_index()
     all_sts_pending_dataframe = all_sts_pending_dataframe.groupby('cr_dte').sum().reset_index()
     # Create plot
