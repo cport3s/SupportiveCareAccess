@@ -47,7 +47,7 @@ def render_container_sub(pathname):
     fac_stats_style_dic = content.FAC_STATS_STYLE
     patient_style_dic = content.PATIENT_STYLE
     fac_qry_style_dic = content.FAC_QRY_STYLE
-    fac_map_style_dic = content.FAC_MAP_STYLE
+    fac_map_style_dic = content.PATIENT_MATCH_STYLE
     prov_qry_style_dic = content.PROV_QRY_STYLE
     if pathname == '/fac_stats':
         fac_stats_style_dic['display']='block'
@@ -67,7 +67,7 @@ def render_container_sub(pathname):
         fac_qry_style_dic['display']='block'
         fac_map_style_dic['display']='none'
         prov_qry_style_dic['display']='none'
-    elif pathname == '/fac_map':
+    elif pathname == '/patient_match':
         fac_stats_style_dic['display']='none'
         patient_style_dic['display']='none'
         fac_qry_style_dic['display']='none'
@@ -602,3 +602,53 @@ def populate_ptnt_st_dropdown_sub():
     # Give format for dash dropdowns
     return [{'label':[state+' | State ID: ',id], 'value': 'TSC_'+state} for id,state in query_result_dict.items()]
     
+def ptnt_match_query(last_name, first_name):
+    # Create query
+    if last_name is None:
+        query_condition = 'WHERE pcc_client.first_name LIKE \'%{}%\''.format(first_name)
+        local_condition = 'WHERE local_client.FirstName LIKE \'%{}%\''.format(first_name)
+    elif first_name is None:
+        query_condition = 'WHERE pcc_client.last_name LIKE \'%{}%\''.format(last_name)
+        local_condition = 'WHERE local_client.LastName LIKE \'%{}%\''.format(last_name)
+    else:
+        query_condition = 'WHERE pcc_client.last_name LIKE \'%{}%\' AND pcc_client.first_name LIKE \'%{}%\''.format(last_name, first_name)
+        local_condition = 'WHERE local_client.LastName LIKE \'%{}%\' AND local_client.FirstName LIKE \'%{}%\''.format(last_name, first_name)
+    query = '''
+        SELECT
+        	pcc_client.pcc_client_id AS 'Index', 
+	        pcc_client.cl_id AS 'Local Client ID', 
+	        pcc_client.pcc_id AS 'PCC Client ID', 
+	        CONCAT(pcc_client.last_name, ', ', pcc_client.first_name) AS 'PCC Name', 
+	        CONCAT(local_client.LastName, ', ', local_client.FirstName) AS 'Local Name',
+	        pcc_client.facID AS 'PCC Fac ID', 
+	        pcc_client.orgUuId AS 'OrgID',  
+	        pcc_client.pcc_dob AS 'PCC DOB',
+	        FORMAT(local_client.DateOfBirth, 'yyyy-MM-dd') AS 'LOCAL DOB',
+            db_name() AS State
+        FROM
+        	dbo.tbl_pcc_patients_client pcc_client
+        FULL JOIN
+        	dbo.ClientInfoTable local_client ON local_client.ClientID = pcc_client.cl_id
+    '''+ query_condition + ' ORDER BY pcc_client.first_name, pcc_client.last_name;'
+    # Run query for all states
+    pcc_df = schemaList.run_query_all_states(query)
+    # Search for the same patient in local patient table
+    query = '''
+        SELECT
+        	local_client.ClientID AS 'Local Client ID',
+        	CONCAT(local_client.LastName, ', ', local_client.FirstName) AS 'Local Name',
+        	CONCAT(pcc_client.last_name, ', ', pcc_client.first_name) AS 'PCC Name', 
+        	local_fac.facility_name,
+        	FORMAT(local_client.DateOfBirth, 'yyyy-MM-dd') AS 'LOCAL DOB',
+        	pcc_client.pcc_dob AS 'PCC DOB',
+        	db_name() AS State
+        FROM
+        	ClientInfoTable local_client
+        FULL JOIN
+        	dbo.tbl_pcc_patients_client pcc_client ON local_client.ClientID = pcc_client.pcc_id
+        FULL JOIN
+        	dbo.tbl_facility local_fac ON local_client.facility_id = local_fac.facility_id
+    '''+ local_condition + ' ORDER BY local_client.FirstName, local_client.LastName;'
+    # Run query for all states
+    local_df = schemaList.run_query_all_states(query)
+    return pcc_df, local_df

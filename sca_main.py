@@ -24,7 +24,7 @@ main_app.layout = html.Div(
                 dbc.NavLink('Patient Info', href='/patients_info', active='exact'),
                 dbc.NavLink('Provider Info', href='/prov_info', active='exact'),
                 dbc.NavLink('Facility Info', href='/fac_info', active='exact'),
-                dbc.NavLink('Facility Map', href='/fac_map', active='exact'),
+                dbc.NavLink('Patient Matching', href='/patient_match', active='exact'),
                 dbc.NavLink('Facility Statistics', href='/fac_stats', active='exact')
             ],
             vertical=True,
@@ -151,12 +151,27 @@ main_app.layout = html.Div(
         ),
         # Facility Map
         html.Div(
-            id='facility_map_container',
-            style=content.FAC_MAP_STYLE,
+            id='patient_match_container',
+            style=content.PATIENT_MATCH_STYLE,
             children = [
-                dcc.Graph(
-                    id='facility_map'
-                )
+                dcc.Input(
+                    id='ptnt_last_name_input',
+                    type='text',
+                    placeholder='Type Patient\'s Last Name',
+                ),
+                dcc.Input(
+                    id='ptnt_first_name_input',
+                    type='text',
+                    placeholder='Type Patient\'s First Name',
+                ),
+                html.H3('PCC Client Table'),
+                dash_table.DataTable(
+                    id='ptnt_match_result_table'
+                ),
+                html.H3('Local Client Table'),
+                dash_table.DataTable(
+                    id='local_client_match_result_table',
+                ),
             ]
         ),
         # Patient Info
@@ -361,7 +376,7 @@ main_app.layout = html.Div(
         Output('fac_stats_container', 'style'),
         Output('fac_qry_container', 'style'),
         Output('patient_container', 'style'),
-        Output('facility_map_container', 'style'),
+        Output('patient_match_container', 'style'),
         Output('provider_container', 'style')
     ],
     Input('current_url', 'pathname')
@@ -629,15 +644,22 @@ def query_ptnt_info(ptnt_id, state):
 
 # Callback to query facilities address and generate map
 @main_app.callback(
-    Output('facility_map', 'figure'),
-    Input('current_url', 'pathname')
+    [
+        Output('ptnt_match_result_table', 'columns'),
+        Output('ptnt_match_result_table', 'data'),
+        Output('local_client_match_result_table', 'columns'),
+        Output('local_client_match_result_table', 'data')
+    ],
+    [
+        Input('current_url', 'pathname'),
+        Input('ptnt_last_name_input', 'value'),
+        Input('ptnt_first_name_input', 'value')
+    ]
 )
-def generate_fac_map(pathname):
-    if pathname == '/fac_map':
-        #fac_map_df = location_function.get_fac_address()
-        #fac_map_fig = px.scatter_map(fac_map_df, lat='Latitude', lon='Longitude', hover_name='facility_name')
-        #return fac_map_fig
-        pass
+def generate_fac_map(pathname, last_name, first_name):
+    if pathname == '/patient_match':
+        ptnt_match_df, local_client_match_df = sca_functions.ptnt_match_query(last_name, first_name)
+        return [{'name':i, 'id':i} for i in ptnt_match_df.columns], ptnt_match_df.to_dict('records'), [{'name':i, 'id':i} for i in local_client_match_df.columns], local_client_match_df.to_dict('records')
     else:
         raise PreventUpdate
 
