@@ -22,9 +22,9 @@ main_app.layout = html.Div(
             id='nav_menu_container',
             children=[
                 dbc.NavLink('Patient Info', href='/patients_info', active='exact'),
+                dbc.NavLink('Patient Matching', href='/patient_match', active='exact'),
                 dbc.NavLink('Provider Info', href='/prov_info', active='exact'),
                 dbc.NavLink('Facility Info', href='/fac_info', active='exact'),
-                dbc.NavLink('Patient Matching', href='/patient_match', active='exact'),
                 dbc.NavLink('Facility Statistics', href='/fac_stats', active='exact')
             ],
             vertical=True,
@@ -166,11 +166,23 @@ main_app.layout = html.Div(
                 ),
                 html.H3('PCC Client Table'),
                 dash_table.DataTable(
-                    id='ptnt_match_result_table'
+                    id='ptnt_match_result_table',
+                    style_data={
+                                'whiteSpace': 'normal',
+                                'height': 'auto'
+                    },
+                    page_size=5,
+                    filter_action='native'
                 ),
                 html.H3('Local Client Table'),
                 dash_table.DataTable(
                     id='local_client_match_result_table',
+                    style_data={
+                                'whiteSpace': 'normal',
+                                'height': 'auto'
+                    },
+                    page_size=5,
+                    filter_action='native'
                 ),
             ]
         ),

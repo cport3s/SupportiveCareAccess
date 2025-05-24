@@ -639,6 +639,7 @@ def ptnt_match_query(last_name, first_name):
     query = '''
         SELECT
         	local_client.ClientID AS 'Local Client ID',
+            pcc_client.pcc_id AS 'PCC Client ID',
         	CONCAT(local_client.LastName, ', ', local_client.FirstName) AS 'Local Name',
         	CONCAT(pcc_client.last_name, ', ', pcc_client.first_name) AS 'PCC Name', 
         	local_fac.facility_name,
@@ -648,7 +649,7 @@ def ptnt_match_query(last_name, first_name):
         FROM
         	ClientInfoTable local_client
         FULL JOIN
-        	dbo.tbl_pcc_patients_client pcc_client ON local_client.ClientID = pcc_client.pcc_id
+        	dbo.tbl_pcc_patients_client pcc_client ON local_client.ClientID = pcc_client.cl_id
         FULL JOIN
         	dbo.tbl_facility local_fac ON local_client.facility_id = local_fac.facility_id
     '''+ local_condition + ' ORDER BY local_client.FirstName, local_client.LastName;'
