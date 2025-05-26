@@ -149,7 +149,7 @@ main_app.layout = html.Div(
                 )
             ]
         ),
-        # Facility Map
+        # Patient Match
         html.Div(
             id='patient_match_container',
             style=content.PATIENT_MATCH_STYLE,
