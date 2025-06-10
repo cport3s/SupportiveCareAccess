@@ -618,11 +618,11 @@ def ptnt_match_query(last_name, first_name):
         	pcc_client.pcc_client_id AS 'Index', 
 	        pcc_client.cl_id AS 'Local Client ID', 
 	        pcc_client.pcc_id AS 'PCC Client ID', 
+            CONCAT(local_client.LastName, ', ', local_client.FirstName) AS 'Local Name',
 	        CONCAT(pcc_client.last_name, ', ', pcc_client.first_name) AS 'PCC Name', 
-	        CONCAT(local_client.LastName, ', ', local_client.FirstName) AS 'Local Name',
 	        local_fac.facility_name AS 'Facility', 
-	        pcc_client.pcc_dob AS 'PCC DOB',
 	        FORMAT(local_client.DateOfBirth, 'yyyy-MM-dd') AS 'Local DOB',
+            pcc_client.pcc_dob AS 'PCC DOB',
             db_name() AS State
         FROM
         	dbo.tbl_pcc_patients_client pcc_client
@@ -642,8 +642,8 @@ def ptnt_match_query(last_name, first_name):
             pcc_client.pcc_id AS 'PCC Client ID',
         	CONCAT(local_client.LastName, ', ', local_client.FirstName) AS 'Local Name',
         	CONCAT(pcc_client.last_name, ', ', pcc_client.first_name) AS 'PCC Name', 
-        	local_fac.facility_name,
-        	FORMAT(local_client.DateOfBirth, 'yyyy-MM-dd') AS 'LOCAL DOB',
+        	local_fac.facility_name AS 'Facility',
+        	FORMAT(local_client.DateOfBirth, 'yyyy-MM-dd') AS 'Local DOB',
         	pcc_client.pcc_dob AS 'PCC DOB',
         	db_name() AS State
         FROM
