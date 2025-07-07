@@ -1,0 +1,574 @@
+orgUuid, facId, facilityName, active, healthType
+Windsor Health and Rehabilitation Center- LLC, 0496A609-8864-492C-8EF2-3EE1A64CDD00, 174, Windsor Rehab & Healthcare Center, CT
+Whispering Pines Rehabilitation & Nursing Center, E509B3D2-7288-4472-88F8-35B47294ED83, 1, Talmadge Park Operating Company, CT
+Whispering Winds RCH, E509B3D2-7288-4472-88F8-35B47294ED83, 2, Talmadge Park Operating Company, CT
+Grandview Rehabilitation and Healthcare Center - SNF, 3244B71A-43C1-4E40-996B-8A26309D3081, 1, Parkside Rehabilitation and Healthcare Center LLC dba Grandview Rehab, CT
+Cobalt Lodge Healthcare & Rehab Center, 7415A729-7B26-4AED-817A-A642C13206B5, 1, Cobalt Lodge Convalescent & Rehab Center - Cobalt Ct, CT
+BANE BRIGHTON HOUSE LLC, 8F954B85-6399-4CFA-9FAE-13433596DF17, 1, Bane Care Management, MA
+Grove Manor Nursing Home INC , F3F03D08-61FC-4AEF-8BD1-A2FE99CE8653, 1, Grove Manor Nursing Home, CT
+The Nursing and Rehabilitation Center at Stadium Place, 9477C791-089D-4782-BCAD-FF1C2C786CF5, 7, Vita, MD
+Elkton Nursing and Rehabilitation Center LLC, 9477C791-089D-4782-BCAD-FF1C2C786CF5, 19, Vita, MD
+Kingsway Arms Nursing Center - SNF, 5BDBF449-92BD-46AF-9581-D509D35E1EB8, 1, Kingsway Arms Nursing Center Inc. - Schenectady NY, NY
+Kingsway Manor Assisted Living - ALF, 5BDBF449-92BD-46AF-9581-D509D35E1EB8, 2, Kingsway Arms Nursing Center Inc. - Schenectady NY, NY
+Waterbury Gardens, 11F04E44-36B0-435F-A571-D8892FE45C43, 28, Waterbury Gardens, CT
+Complete Care at Severna Park Center, BD3691A7-A5D1-44BA-8EF1-95D23B596867, 323, Complete Care MD DE WV, MD
+Complete Care at Multi-Medical Center, BD3691A7-A5D1-44BA-8EF1-95D23B596867, 324, Complete Care MD DE WV, MD
+Complete Care at Corsica Hills Center, BD3691A7-A5D1-44BA-8EF1-95D23B596867, 325, Complete Care MD DE WV, MD
+Complete Care at LaPlata Center, BD3691A7-A5D1-44BA-8EF1-95D23B596867, 326, Complete Care MD DE WV, MD
+Complete Care at Heritage Center , BD3691A7-A5D1-44BA-8EF1-95D23B596867, 327, Complete Care MD DE WV, MD
+Complete Care at Silver Lake Center, BD3691A7-A5D1-44BA-8EF1-95D23B596867, 329, Complete Care MD DE WV, DE
+Complete Care at Hillside Center, BD3691A7-A5D1-44BA-8EF1-95D23B596867, 330, Complete Care MD DE WV, DE
+Complete Care at Oak Ridge Center, BD3691A7-A5D1-44BA-8EF1-95D23B596867, 331, Complete Care MD DE WV, WV
+Complete Care at Dawn View Center, BD3691A7-A5D1-44BA-8EF1-95D23B596867, 332, Complete Care MD DE WV, WV
+Complete Care at Brackenville Center, BD3691A7-A5D1-44BA-8EF1-95D23B596867, 333, Complete Care MD DE WV, DE
+Peter Becker Community, 1F3D0D0C-2697-44A8-AAB2-A4EAFCBF7BD3, 1, Peter Becker Community, PA
+Peter Becker Community - PC, 1F3D0D0C-2697-44A8-AAB2-A4EAFCBF7BD3, 2, Peter Becker Community, PA
+Peter Becker Community - ILF, 1F3D0D0C-2697-44A8-AAB2-A4EAFCBF7BD3, 3, Peter Becker Community, PA
+Aventura at Pembrooke, BCA7049E-9E3E-4FFE-97F7-6408BEDFCC3E, 24, Aventura Health Group, PA
+Silver Stream Nursing and Rehab, 435DA3E2-A5CC-460F-9309-D278BC65754A, 14, Silver Stream Nursing and Rehab Facility, PA
+Tallwoods Care Center, ACA411ED-6C48-44E6-8754-33C08736A997, 1, Riverfront Healthcare Associates Inc. dba Tallwoods Care Center, NJ
+Fountainview Care Center, ACA411ED-6C48-44E6-8754-33C08736A997, 2, Riverfront Healthcare Associates Inc. dba Tallwoods Care Center, NJ
+Somerset Woods, ACA411ED-6C48-44E6-8754-33C08736A997, 3, Riverfront Healthcare Associates Inc. dba Tallwoods Care Center, NJ
+Geer Nursing and Rehab, 4B33FB86-D13F-4440-B4E4-F7114F0F919B, 4, The Robert C. Geer Memorial Hospital Inc., CT
+Barnegat Nursing Center, 04D812D3-DD99-4581-8194-003F2CD059D5, 3, Continuum Healthcare LLC, NJ
+Highland Manor Rehabilitation & Nursing Center, 04D812D3-DD99-4581-8194-003F2CD059D5, 4, Continuum Healthcare LLC, PA
+Majestic Oaks, 04D812D3-DD99-4581-8194-003F2CD059D5, 5, Continuum Healthcare LLC, PA
+Brush Hill Care Center, BC71D751-B4E1-4E1C-9994-C8D4B452E278, 195, Milton Health Care, MA
+The Gardens at Orangeville, DAA4076D-CD62-462B-BBB5-59A3F6440D15, 15, CCS Clinical Consulting Services, PA
+The Gardens at East Mountain, DAA4076D-CD62-462B-BBB5-59A3F6440D15, 30, CCS Clinical Consulting Services, PA
+The Gardens at Gettysburg, DAA4076D-CD62-462B-BBB5-59A3F6440D15, 31, CCS Clinical Consulting Services, PA
+The Gardens at York Terrace, DAA4076D-CD62-462B-BBB5-59A3F6440D15, 33, CCS Clinical Consulting Services, PA
+The Gardens at Stroud, DAA4076D-CD62-462B-BBB5-59A3F6440D15, 35, CCS Clinical Consulting Services, PA
+The Gardens at Wyoming Valley, DAA4076D-CD62-462B-BBB5-59A3F6440D15, 36, CCS Clinical Consulting Services, PA
+The Gardens at Tunkhannock, DAA4076D-CD62-462B-BBB5-59A3F6440D15, 38, CCS Clinical Consulting Services, PA
+The Gardens at Scranton, DAA4076D-CD62-462B-BBB5-59A3F6440D15, 39, CCS Clinical Consulting Services, PA
+Northern Dauphin Nursing and Rehab, DAA4076D-CD62-462B-BBB5-59A3F6440D15, 43, CCS Clinical Consulting Services, PA
+Fairlane Gardens Nursing and Rehabilitation, DAA4076D-CD62-462B-BBB5-59A3F6440D15, 46, CCS Clinical Consulting Services, PA
+Rose City Nursing and Rehabilitation, DAA4076D-CD62-462B-BBB5-59A3F6440D15, 47, CCS Clinical Consulting Services, PA
+Trinity Health & Rehabilitation Center, 528E4007-5F87-4748-AC6D-3B4A68F211D1, 1, Jbf Healthcare Management Inc. - East Greenwich Ri, RI
+Hebert Health Center, 528E4007-5F87-4748-AC6D-3B4A68F211D1, 2, Jbf Healthcare Management Inc. - East Greenwich Ri, RI
+Atrium Post Acute Care of Princeton, 5710AC81-93B9-46D3-931D-896B6EE0F6DC, 34, Spring Hills Senior Communities LLC, NJ
+Belknap County Nursing Home, E96738A8-D903-4C6A-92A2-3E9881755277, 1, Belknap County (NH), NH
+The Paramount at Somers Rehabilitation & Nursing Center, E852131D-7B47-4F1F-8A64-DD89AE46BD13, 41, Care Rite Centers, NY
+Rockville Skilled Nursing & Rehabilitation Center, E852131D-7B47-4F1F-8A64-DD89AE46BD13, 45, Care Rite Centers, NY
+FoltsBrook Center for Nursing and Rehabilitation, BA81448A-0304-4B11-BEB6-BB2279F066C2, 4, Wecare Hcc Llc - Cedarhurst Ny, NY
+WeCare at Sycamore Rehabilitation and Nursing Center, BA81448A-0304-4B11-BEB6-BB2279F066C2, 8, Wecare Hcc Llc - Cedarhurst Ny, PA
+WeCare at Rolling Meadows Rehabilitation and Nursing Center, BA81448A-0304-4B11-BEB6-BB2279F066C2, 9, Wecare Hcc Llc - Cedarhurst Ny, PA
+Burgh Care Center, BA81448A-0304-4B11-BEB6-BB2279F066C2, 10, Wecare Hcc Llc - Cedarhurst Ny, PA
+WeCare at South Hills Rehabilitation and Nursing Center 12, BA81448A-0304-4B11-BEB6-BB2279F066C2, 12, Wecare Hcc Llc - Cedarhurst Ny, PA
+Avalon Care Center, BA81448A-0304-4B11-BEB6-BB2279F066C2, 15, Wecare Hcc Llc - Cedarhurst Ny, PA
+Heritage Care Center, BA81448A-0304-4B11-BEB6-BB2279F066C2, 16, Wecare Hcc Llc - Cedarhurst Ny, PA
+Jameson Nursing and Rehab Center, BA81448A-0304-4B11-BEB6-BB2279F066C2, 17, Wecare Hcc Llc - Cedarhurst Ny, PA
+Sugar Creek Care Center, BA81448A-0304-4B11-BEB6-BB2279F066C2, 18, Wecare Hcc Llc - Cedarhurst Ny, PA
+Avalon Springs Care Center, BA81448A-0304-4B11-BEB6-BB2279F066C2, 19, Wecare Hcc Llc - Cedarhurst Ny, PA
+Richfield Health Center - Salem, 45E8482D-1F44-4ED8-A088-5C7926668CB9, 1, Richfield Retirement Community, VA
+Limecrest Subacute and Rehabilitation Center 1, D728D818-DBDE-4830-8CD5-7022CECFF73A, 1, Alliance Hc Holdings Inc, NJ
+Woodland Behavioral & Nursing Center, D728D818-DBDE-4830-8CD5-7022CECFF73A, 2, Alliance Hc Holdings Inc, NJ
+Mountain View Care Center, D728D818-DBDE-4830-8CD5-7022CECFF73A, 4, Alliance Hc Holdings Inc, PA
+Bloomsburg Care And Rehabilitation Center, D728D818-DBDE-4830-8CD5-7022CECFF73A, 7, Alliance Hc Holdings Inc, PA
+Iliff Nursing and Rehabilitation, 1B04A681-85D4-4145-B073-54459B17DE59, 164, August Healthcare, VA
+August Healthcare at Richmond, 1B04A681-85D4-4145-B073-54459B17DE59, 194, August Healthcare, VA
+August Healthcare at Richmond - AL, 1B04A681-85D4-4145-B073-54459B17DE59, 195, August Healthcare, VA
+Laurel Crest Retirement Community - ALF, 294E1386-D67B-4269-AE22-EDCAB0CC74B0, 16, Presbyterian Communities Of South Carolina - Columbia Sc, SC
+Laurel Crest Retirement Community - SNF, 294E1386-D67B-4269-AE22-EDCAB0CC74B0, 17, Presbyterian Communities Of South Carolina - Columbia Sc, SC
+Laurel Crest Retirement Community - ILF, 294E1386-D67B-4269-AE22-EDCAB0CC74B0, 18, Presbyterian Communities Of South Carolina - Columbia Sc, SC
+Spring Meadows by Monarch, 86E67301-C174-405A-9D05-D9139034A630, 1, MONARCH COMMUNITIES MANAGEMENT LLC, CT
+The John Clarke Nursing Center, 829D32D5-6621-42A1-B77C-FDF6F705576A, 1, John Clarke Retirement Center, RI
+Rural Retreat Care Center LLC, 6C6322DD-598F-4CA2-87EF-4C555E016A8A, 1, Rural Retreat Care Center, VA
+Royal Meadowview Center, 8A2045A0-D429-4D30-AF39-4A785DB9D194, 2, Royal Health Group, MA
+Royal Wood Mill Center, 8A2045A0-D429-4D30-AF39-4A785DB9D194, 4, Royal Health Group, MA
+Royal Norwell Nursing Home- SNF, 8A2045A0-D429-4D30-AF39-4A785DB9D194, 6, Royal Health Group, MA
+Royal of Fairhaven Nursing Center- SNF, 8A2045A0-D429-4D30-AF39-4A785DB9D194, 7, Royal Health Group, MA
+Cape Cod Nursing and Rehab Center- SNF, 8A2045A0-D429-4D30-AF39-4A785DB9D194, 8, Royal Health Group, MA
+Royal of Cotuit Nursing and Rehabilitation- SNF, 8A2045A0-D429-4D30-AF39-4A785DB9D194, 9, Royal Health Group, MA
+Royal Megansett Nursing and Retirement Home- SNF, 8A2045A0-D429-4D30-AF39-4A785DB9D194, 10, Royal Health Group, MA
+Royal Wayland Nursing and Rehabilitation C- SNF, 8A2045A0-D429-4D30-AF39-4A785DB9D194, 11, Royal Health Group, MA
+Royal Nursing Center LLC- SNF, 8A2045A0-D429-4D30-AF39-4A785DB9D194, 12, Royal Health Group, MA
+Royal Westerly Nursing and Rehabilitation- SNF, 8A2045A0-D429-4D30-AF39-4A785DB9D194, 13, Royal Health Group, RI
+Royal Middletown Nursing and Rehabilitation- SNF, 8A2045A0-D429-4D30-AF39-4A785DB9D194, 14, Royal Health Group, RI
+Royal Braintree Nursing and Rehabilitation- SNF, 8A2045A0-D429-4D30-AF39-4A785DB9D194, 15, Royal Health Group, MA
+Lawrence Street Winnie Health Care Center, CFD4FBB5-DF81-40E6-81B0-1A9EA3BDA2FE, 1, Health Services Management, TX
+West Janisch Winnie Health Care Center, CFD4FBB5-DF81-40E6-81B0-1A9EA3BDA2FE, 10, Health Services Management, TX
+Liberty Winnie Healthcare Center, CFD4FBB5-DF81-40E6-81B0-1A9EA3BDA2FE, 12, Health Services Management, TX
+Cleveland Winnie Health Care, CFD4FBB5-DF81-40E6-81B0-1A9EA3BDA2FE, 22, Health Services Management, TX
+Conroe Winnie Health Care Center, CFD4FBB5-DF81-40E6-81B0-1A9EA3BDA2FE, 25, Health Services Management, TX
+Sugar Land Winnie Health Care Center, CFD4FBB5-DF81-40E6-81B0-1A9EA3BDA2FE, 26, Health Services Management, TX
+The Concierge, 818DCBE5-57B5-4DD1-A446-C52B5D5D77F4, 1, The Concierge, TX
+Davis Place, E1A05A04-59E6-4FFF-BDB3-BA9FC5FFA053, 8, Davis Place Health Care, CT
+Aaron Manor, FAA94743-0BA8-4DBA-87E5-06083864C783, 1, Ryders Health Management, CT
+Cheshire House Nursing & Rehab Center, FAA94743-0BA8-4DBA-87E5-06083864C783, 4, Ryders Health Management, CT
+Mystic Healthcare Rehab & Nursing Center, FAA94743-0BA8-4DBA-87E5-06083864C783, 8, Ryders Health Management, CT
+Abigail House for Nursing and Rehab, 99D24E1F-5340-4374-A31A-CE1F5D595FBF, 1, Abigail House For Nursing & Rehab - Camden Nj, NJ
+Gladeview Health Care Center, 5D95A0CD-EC04-4AFE-A184-EEE5DBA957CE, 1, Gladeview Health Care Center, CT
+Complete Care at Milford Manor Nursing & Rehabilitation Center, 102BF89C-9C4B-4A48-A004-62B2FCD30D8C, 324, Complete Care NJ, NJ
+Complete Care at Wayne Hills, 102BF89C-9C4B-4A48-A004-62B2FCD30D8C, 325, Complete Care NJ, NJ
+Dawn Hill Home for Rehab & Healthcare, D1EFBE46-EAED-4EF4-9ACC-F92633E891DE, 3, Green Tree Healthcare Management LLC, RI
+Berkshire Place, D1EFBE46-EAED-4EF4-9ACC-F92633E891DE, 4, Green Tree Healthcare Management LLC, RI
+Silver Creek Manor, D1EFBE46-EAED-4EF4-9ACC-F92633E891DE, 5, Green Tree Healthcare Management LLC, RI
+Edgewood Center for Rehab & Healthcare, D1EFBE46-EAED-4EF4-9ACC-F92633E891DE, 9, Green Tree Healthcare Management LLC, NH
+Angel Oak Nursing, 84CBA71B-47AB-486B-A203-38AAE5EBE65F, 13, The Ivy At Gastonia LLC, SC
+Aster Creek Nursing and Rehabilitation Center , 66405F12-B19B-4A4D-98FA-A6F492310258, 2, Future Care Consultants LLC, NJ
+Presidential Oaks - Skilled Nursing, 3D82DCA7-C9C4-4C39-85E1-E0BB73C02F1C, 1, Presidential Oaks, NH
+Parkway Pavilion -SNF, 45A38623-F26B-432C-8030-A632737125F6, 60, Wachusett Healthcare, CT
+Villa Maria Nursing and Rehabilitation Community, 45A38623-F26B-432C-8030-A632737125F6, 78, Wachusett Healthcare, CT
+Medway Country Manor - SNF, A5EA06C2-8D63-47ED-8C34-891B0D6B725E, 1, Medway Country Manor, MA
+Myrtle Beach Manor - AL, AC0B8EC2-C338-4BE2-B895-90D1B5180E9C, 235, Phoenix Senior  Living, SC
+Myrtle Beach Manor - SNF, AC0B8EC2-C338-4BE2-B895-90D1B5180E9C, 236, Phoenix Senior  Living, SC
+Meadow Green Nursing & Rehab Center, 4389C47C-F003-4CB9-90FC-7F226E6A3486, 2, A. Franchi Health Care, MA
+Mary Ann Morse Nursing & Rehab Center, D69F5437-AA2A-420D-9F78-16CF5AF6652E, 1, Mary Ann Morse Healthcare Corp, MA
+Leeway Inc - SNF, 773A53FC-A56E-4AA1-933F-37DE9E8DAD0D, 1, Leeway Inc - New Haven CT, CT
+Paradigm at First Colony, 3B1E635B-E502-4B2B-ABB1-471517A765A3, 154, Paradigm Healthcare LLC, TX
+Paradigm at Westbury, 3B1E635B-E502-4B2B-ABB1-471517A765A3, 157, Paradigm Healthcare LLC, TX
+Paradigm at Woodwind Lakes, 3B1E635B-E502-4B2B-ABB1-471517A765A3, 158, Paradigm Healthcare LLC, TX
+Paradigm at The Prairies, 3B1E635B-E502-4B2B-ABB1-471517A765A3, 159, Paradigm Healthcare LLC, TX
+Paradigm at The Creek, 3B1E635B-E502-4B2B-ABB1-471517A765A3, 160, Paradigm Healthcare LLC, TX
+Paradigm at The Oak, 3B1E635B-E502-4B2B-ABB1-471517A765A3, 161, Paradigm Healthcare LLC, TX
+Paradigm at Stevens, 3B1E635B-E502-4B2B-ABB1-471517A765A3, 162, Paradigm Healthcare LLC, TX
+Paradigm at Bay City, 3B1E635B-E502-4B2B-ABB1-471517A765A3, 163, Paradigm Healthcare LLC, TX
+Paradigm at The Brazos, 3B1E635B-E502-4B2B-ABB1-471517A765A3, 164, Paradigm Healthcare LLC, TX
+Paradigm at Faith Memorial, 3B1E635B-E502-4B2B-ABB1-471517A765A3, 165, Paradigm Healthcare LLC, TX
+Paradigm at Kountze, 3B1E635B-E502-4B2B-ABB1-471517A765A3, 166, Paradigm Healthcare LLC, TX
+Paradigm Northwest, 3B1E635B-E502-4B2B-ABB1-471517A765A3, 167, Paradigm Healthcare LLC, TX
+Paradigm at The Pines, 3B1E635B-E502-4B2B-ABB1-471517A765A3, 168, Paradigm Healthcare LLC, TX
+Paradigm at Sweeny, 3B1E635B-E502-4B2B-ABB1-471517A765A3, 169, Paradigm Healthcare LLC, TX
+Nazareth Living Care Center, 3B1E635B-E502-4B2B-ABB1-471517A765A3, 170, Paradigm Healthcare LLC, TX
+Viviant Healthcare of Hanahan, 9B87614D-0A1F-47F1-93BA-7C62C9B98D36, 35, Srz Mgmt Holdings Llc - Lees Summit Mo, SC
+The Renaissance at Kessler Park, B1D359A9-4A43-4746-80D8-2DE99151B55D, 1, Advance Healthcare Solutions INC, TX
+Advanced Health & Rehab Center of Garland, B1D359A9-4A43-4746-80D8-2DE99151B55D, 3, Advance Healthcare Solutions INC, TX
+Clarksville Nursing Center, B1D359A9-4A43-4746-80D8-2DE99151B55D, 10, Advance Healthcare Solutions INC, TX
+Clyde Nursing Center, B1D359A9-4A43-4746-80D8-2DE99151B55D, 11, Advance Healthcare Solutions INC, TX
+Crowell Nursing Center, B1D359A9-4A43-4746-80D8-2DE99151B55D, 15, Advance Healthcare Solutions INC, TX
+Greenville Health & Rehabilitation Center, B1D359A9-4A43-4746-80D8-2DE99151B55D, 18, Advance Healthcare Solutions INC, TX
+Mesquite Tree Nursing Center, B1D359A9-4A43-4746-80D8-2DE99151B55D, 22, Advance Healthcare Solutions INC, TX
+Palo Pinto Nursing Center, B1D359A9-4A43-4746-80D8-2DE99151B55D, 25, Advance Healthcare Solutions INC, TX
+Prairie House Living Center, B1D359A9-4A43-4746-80D8-2DE99151B55D, 29, Advance Healthcare Solutions INC, TX
+Santa Fe Health and Rehab Center, B1D359A9-4A43-4746-80D8-2DE99151B55D, 32, Advance Healthcare Solutions INC, TX
+Advanced Rehabilitation and Healthcare of Vernon, B1D359A9-4A43-4746-80D8-2DE99151B55D, 36, Advance Healthcare Solutions INC, TX
+Advanced Rehabilitation and Healthcare of Bowie, B1D359A9-4A43-4746-80D8-2DE99151B55D, 41, Advance Healthcare Solutions INC, TX
+Seymour Rehabilitation and Healthcare, B1D359A9-4A43-4746-80D8-2DE99151B55D, 42, Advance Healthcare Solutions INC, TX
+Brady West Rehab & Nursing, B1D359A9-4A43-4746-80D8-2DE99151B55D, 43, Advance Healthcare Solutions INC, TX
+Granbury Rehab and Nursing, B1D359A9-4A43-4746-80D8-2DE99151B55D, 44, Advance Healthcare Solutions INC, TX
+Tomball Rehab and Nursing, B1D359A9-4A43-4746-80D8-2DE99151B55D, 48, Advance Healthcare Solutions INC, TX
+Windcrest Health & Rehabilitation, B1D359A9-4A43-4746-80D8-2DE99151B55D, 57, Advance Healthcare Solutions INC, TX
+Advanced Rehabilitation & Healthcare of Burleson, B1D359A9-4A43-4746-80D8-2DE99151B55D, 61, Advance Healthcare Solutions INC, TX
+Twin Lakes Rehabilitation and Healthcare Center, 77A2F8AF-8616-436B-A3AC-F8C7040E6275, 2, Panacea Health Corp., PA
+The Villa at Stamford - Stamford - Stamford CT - SN, 821B166B-78E1-4E65-99FD-2D6A12EA3089, 3, Center Management Group, CT
+Elizabethtown Rehabilitation & Nursing Center, 3C73A164-559D-4281-9CB1-65419B0F5E46, 1, Key Health Management LLC, PA
+Emerald Rehab and Healthcare Center, 3C73A164-559D-4281-9CB1-65419B0F5E46, 2, Key Health Management LLC, PA
+Forest Park Healthcare and Rehabilitation Center, 3C73A164-559D-4281-9CB1-65419B0F5E46, 4, Key Health Management LLC, PA
+Manokin Nursing and Rehab, 3C73A164-559D-4281-9CB1-65419B0F5E46, 5, Key Health Management LLC, MD
+Caroline Nursing and Rehab, 3C73A164-559D-4281-9CB1-65419B0F5E46, 6, Key Health Management LLC, MD
+Mallard Bay Nursing & Rehab, 3C73A164-559D-4281-9CB1-65419B0F5E46, 7, Key Health Management LLC, MD
+Chestertown Nursing and Rehab, 3C73A164-559D-4281-9CB1-65419B0F5E46, 8, Key Health Management LLC, MD
+Denton Nursing and Rehab, 3C73A164-559D-4281-9CB1-65419B0F5E46, 9, Key Health Management LLC, MD
+Hartley Nursing and Rehab, 3C73A164-559D-4281-9CB1-65419B0F5E46, 10, Key Health Management LLC, MD
+Pines Nursing and Rehab, 3C73A164-559D-4281-9CB1-65419B0F5E46, 11, Key Health Management LLC, MD
+Chicopee Rehabilitation and Nursing, 37503167-1E32-44BE-942C-8D15FC1053D6, 24, Maybrook Healthcare Llc, MA
+Fitchburg Rehab and Nursing, 37503167-1E32-44BE-942C-8D15FC1053D6, 25, Maybrook Healthcare Llc, MA
+Jaffrey Rehabilitation and Nursing Center, 37503167-1E32-44BE-942C-8D15FC1053D6, 48, Maybrook Healthcare Llc, NH
+Wachusett Rehab and Nursing Center LLC, 37503167-1E32-44BE-942C-8D15FC1053D6, 49, Maybrook Healthcare Llc, MA
+Leominster Rehab and Nursing Center LLC, 37503167-1E32-44BE-942C-8D15FC1053D6, 50, Maybrook Healthcare Llc, MA
+Champion Rehab and Nursing Center, 37503167-1E32-44BE-942C-8D15FC1053D6, 51, Maybrook Healthcare Llc, MA
+Oceanside Rehabilitation and Nursing Center, 37503167-1E32-44BE-942C-8D15FC1053D6, 52, Maybrook Healthcare Llc, MA
+Greenfield Rehabilitation and Nursing Center - SNF, 37503167-1E32-44BE-942C-8D15FC1053D6, 53, Maybrook Healthcare Llc, MA
+Watertown Rehabilitation and Nursing Center- SNF, 37503167-1E32-44BE-942C-8D15FC1053D6, 54, Maybrook Healthcare Llc, MA
+Derry Rehabilitation and Nursing Center- SNF, 37503167-1E32-44BE-942C-8D15FC1053D6, 55, Maybrook Healthcare Llc, NH
+Kruse Village - SNF, F0132DD8-7D21-47FA-BBDE-0A4D15748544, 143, Health Dimensions Group, TX
+Watermark at East Hill SN, 170926C1-A88F-4869-913D-84FB2A7DA745, 81, Watermark Retirement Communities, CT
+Watermark at East Hill  AL, 170926C1-A88F-4869-913D-84FB2A7DA745, 82, Watermark Retirement Communities, CT
+Watermark at East Hill MC, 170926C1-A88F-4869-913D-84FB2A7DA745, 84, Watermark Retirement Communities, CT
+Elizabethtown Rehabilitation & Nursing Center, B328E3F1-4132-4CA6-A935-E470FE90B464, 1, Jewel Healthcare, PA
+Emerald Rehab and Healthcare Center, B328E3F1-4132-4CA6-A935-E470FE90B464, 2, Jewel Healthcare, PA
+Forest Park Healthcare and Rehabilitation Center, B328E3F1-4132-4CA6-A935-E470FE90B464, 4, Jewel Healthcare, PA
+Whites Creek Healthcare LLC, 09808754-70DD-40EB-B558-D0CBE2CC71B8, 15, Ahava Hc Llc, TN
+Country Village Care- SNF, 58401B57-969A-49E8-B40C-93467C19FB3E, 7, Cross Healthcare Management, TX
+Country Village Care- ALF, 58401B57-969A-49E8-B40C-93467C19FB3E, 8, Cross Healthcare Management, TX
+Country Village Care- MC, 58401B57-969A-49E8-B40C-93467C19FB3E, 9, Cross Healthcare Management, TX
+Sterling Healthcare and Rehab - SNF, 75007AAB-CB56-4CF0-BF51-56F80A84B73E, 3, Nationwide Healthcare Services, PA
+Laurel Square Healthcare and Rehabilitation Center, 75007AAB-CB56-4CF0-BF51-56F80A84B73E, 7, Nationwide Healthcare Services, PA
+Carnegie Post Acute Care, EF777A78-107F-41EA-9AC2-B78F8659E715, 14, Mb Healthcare Services Llc, NJ
+MRC Creekside Skilled Nursing - SNF, 941B0D96-DB48-4016-AB13-DDC099A6008B, 2, Methodist Retirement Communities - The Woodlands TX, TX
+Nightingale  at Glenwood, 44EC0615-72CC-4A3E-A741-4946D8C5B3D0, 3, Nightingale Nursing and Rehab Center, AR
+Nightingale at Stonegate, 44EC0615-72CC-4A3E-A741-4946D8C5B3D0, 4, Nightingale Nursing and Rehab Center, AR
+Nightingale at Crossett, 44EC0615-72CC-4A3E-A741-4946D8C5B3D0, 5, Nightingale Nursing and Rehab Center, AR
+Nightingale at Arkadelphia, 44EC0615-72CC-4A3E-A741-4946D8C5B3D0, 6, Nightingale Nursing and Rehab Center, AR
+The Woods A Nightingale Community, 44EC0615-72CC-4A3E-A741-4946D8C5B3D0, 7, Nightingale Nursing and Rehab Center, AR
+Embassy Winchester LLC, 90F91D75-ECA4-4382-BF2C-40EAC37D1C78, 38, Handler, OH
+Embassy Woodview LLC, 90F91D75-ECA4-4382-BF2C-40EAC37D1C78, 39, Handler, OH
+Clepper Manor, 90F91D75-ECA4-4382-BF2C-40EAC37D1C78, 45, Handler, PA
+Embassy of Hearthside, 90F91D75-ECA4-4382-BF2C-40EAC37D1C78, 49, Handler, PA
+Embassy of Huntingdon Park, 90F91D75-ECA4-4382-BF2C-40EAC37D1C78, 51, Handler, PA
+Embassy of Woodland Park, 90F91D75-ECA4-4382-BF2C-40EAC37D1C78, 52, Handler, PA
+Embassy of Park Avenue, 90F91D75-ECA4-4382-BF2C-40EAC37D1C78, 54, Handler, PA
+Blue Ridge Therapy Connection, 7FA467AC-01F4-41B5-A07D-0873DB4AE203, 1, Hill Valley Healthcare LLC, VA
+Highland Ridge Rehab Center, 7FA467AC-01F4-41B5-A07D-0873DB4AE203, 3, Hill Valley Healthcare LLC, VA
+Brookside Rehab and Nursing of VA, 7FA467AC-01F4-41B5-A07D-0873DB4AE203, 13, Hill Valley Healthcare LLC, VA
+Oakwood Care Center of Maryland, 7FA467AC-01F4-41B5-A07D-0873DB4AE203, 14, Hill Valley Healthcare LLC, MD
+Smoky Ridge Health & Rehabilitation, 92E69601-6534-41F7-A64F-A039150BD755, 1, Brighton Healthcare Group, NC
+Deer Meadows Operating LLC, 062DDFE6-612E-4694-A7BE-904F59D39648, 1, Premier Health Care LLC, PA
+Meadowview Rehab & Nursing Center, 062DDFE6-612E-4694-A7BE-904F59D39648, 3, Premier Health Care LLC, PA
+Pleasant Acres Rehabilitation & Nursing Center, 062DDFE6-612E-4694-A7BE-904F59D39648, 29, Premier Health Care LLC, PA
+West Newton HealthCare, 5B094EAB-0D6D-4B7A-B885-5E7CFD1CA7CA, 20, Next Step Healthcare, MA
+The Elmhurst HealthCare, 5B094EAB-0D6D-4B7A-B885-5E7CFD1CA7CA, 22, Next Step Healthcare, MA
+Fitchburg HealthCare, 5B094EAB-0D6D-4B7A-B885-5E7CFD1CA7CA, 31, Next Step Healthcare, MA
+Fall River HealthCare, 5B094EAB-0D6D-4B7A-B885-5E7CFD1CA7CA, 45, Next Step Healthcare, MA
+Luther Woods SNF LLC, 12FE1BA2-B4A6-4F2C-8BCC-B7CE8C3CEEEA, 57, Medical Facilities of America Administrative Consulting Services, PA
+The Nursing and Rehabilitation Center at Stadium Place, 12FE1BA2-B4A6-4F2C-8BCC-B7CE8C3CEEEA, 60, Medical Facilities of America Administrative Consulting Services, MD
+Elkton Nursing and Rehabilitation Center, 12FE1BA2-B4A6-4F2C-8BCC-B7CE8C3CEEEA, 61, Medical Facilities of America Administrative Consulting Services, MD
+Beacon Rehabilitation and Nursing Center, 67B45EAB-9D1D-4CEF-9F18-69A7D28B82FD, 1, Beacon Rehabilitation and Nursing Center, NY
+Highland View Rehabilitation and Healthcare Center, 4BF1A5D7-42DB-47B3-8611-359FB59B3832, 14, Crown Healthcare Group LLC, PA
+Hillcrest Rehabilitation and Healthcare Center, 4BF1A5D7-42DB-47B3-8611-359FB59B3832, 71, Crown Healthcare Group LLC, PA
+Beaver Valley Healthcare and Rehabilitation Center, 4BF1A5D7-42DB-47B3-8611-359FB59B3832, 78, Crown Healthcare Group LLC, PA
+West Altamonte Nursing and Rehabilitation Center, AAE614FD-A22F-4636-B9B3-A166EE83AA4D, 75, Harborview Health Systems Inc., FL
+Sarasota Center for Nursing & Rehabilitation, AAE614FD-A22F-4636-B9B3-A166EE83AA4D, 79, Harborview Health Systems Inc., FL
+Arbor Manor, B55AC841-ECDD-4A4E-81EC-7BD54FEEAAF8, 1, Arbor Manor Care Center, MI
+The Rehab Center and Memory Care at Bristol - SNF, E88F045F-0FB9-4F8A-81A9-A3411658AAC8, 1, The Rehab Center and Memory Care at Bristol, VA
+Complete Care at Harrington Court, 92D0519C-812A-4AE2-BE16-02260F53656F, 104, Complete Care CT, CT
+Complete Care at Glendale Center, 92D0519C-812A-4AE2-BE16-02260F53656F, 115, Complete Care CT, CT
+Complete Care at Meriden Center, 92D0519C-812A-4AE2-BE16-02260F53656F, 118, Complete Care CT, CT
+Complete Care at Groton Regency, 92D0519C-812A-4AE2-BE16-02260F53656F, 127, Complete Care CT, CT
+Complete Care at Kimberly Hall North, 92D0519C-812A-4AE2-BE16-02260F53656F, 141, Complete Care CT, CT
+Complete Care at Kimberly Hall South, 92D0519C-812A-4AE2-BE16-02260F53656F, 142, Complete Care CT, CT
+Complete Care at Fox Hill, 92D0519C-812A-4AE2-BE16-02260F53656F, 143, Complete Care CT, CT
+Complete Care at Middlebury LLC, 92D0519C-812A-4AE2-BE16-02260F53656F, 144, Complete Care CT, CT
+Afton, 208B14B8-0B93-49BB-A159-23DCBE94B499, 31, Diversicare, TX
+Gerrish Manor, BC58F390-C922-4749-81EE-B11B38F0F5B9, 2, Merrimack County Nursing Home, NH
+Corner View Nursing and Rehabilitation Center, 45DA6961-83A7-4AE1-A984-F06FC298C1BC, 17, Prestige Healthcare Group, PA
+Lynwood Manor Healthcare Center, 4CBE85D8-6B1B-4032-AAFB-E8A08860E74A, 1, CRG Management LLC, MI
+Eden Rehabilitation and Healthcare Center, 4CBE85D8-6B1B-4032-AAFB-E8A08860E74A, 14, CRG Management LLC, NC
+Maple Farm, FE3744EE-9699-4DEF-B9C2-A4843DDCDDBE, 1, Garden Spot Communities, PA
+GSV Skilled Nursing Households, FE3744EE-9699-4DEF-B9C2-A4843DDCDDBE, 3, Garden Spot Communities, PA
+GSV Personal Care, FE3744EE-9699-4DEF-B9C2-A4843DDCDDBE, 5, Garden Spot Communities, PA
+GSV PC Memory Support , FE3744EE-9699-4DEF-B9C2-A4843DDCDDBE, 8, Garden Spot Communities, PA
+FAIRMOUNT HOMES: WHEAT RIDGE HEALTH CENTER, 34EEB613-3971-490B-B7C5-48A687E7BF39, 1, Fairmount Homes, PA
+FAIRMOUNT HOMES: WHEAT RIDGE PERSONAL CARE, 34EEB613-3971-490B-B7C5-48A687E7BF39, 3, Fairmount Homes, PA
+FAIRMOUNT HOMES: FCPC&FC SUITES, 34EEB613-3971-490B-B7C5-48A687E7BF39, 4, Fairmount Homes, PA
+Leisure Chateau Care Center, 58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, Leisure Chateau Care Center, NJ
+Marwood Manor Nursing Home, E2CC85BC-BDA5-40D2-98FB-9C73E013CEC7, 1, Marwood Manor Nursing & Rehab - Port Huron Mi, MI
+Sachem Center for Health & Rehab, A7DE13A1-8390-42CE-AEA1-214F7880E33F, 13, OC Maplewood Center LLC, MA
+Eliot Center for Health & Rehab, A7DE13A1-8390-42CE-AEA1-214F7880E33F, 14, OC Maplewood Center LLC, MA
+Fall River Jewish Home, A7DE13A1-8390-42CE-AEA1-214F7880E33F, 15, OC Maplewood Center LLC, MA
+St. Clare Home - SNF, BAAA7DEA-2106-43EB-98BF-0D34C07F8BF3, 1, St. Clare Home, RI
+St. Clare Home - ALF, BAAA7DEA-2106-43EB-98BF-0D34C07F8BF3, 2, St. Clare Home, RI
+Amberwoods of Farmington, 9DBED679-9933-4F35-B01D-A8CA133BDDCA, 1, Amberwoods of Farmington, CT
+Hampton Ridge Healthcare & Rehabilitation, 8A2F8D61-204A-4FC0-ADF2-51ABF110E5CD, 4, Ocean Healthcare, NJ
+Senior Care of Marion LLC, F150552E-6D3D-4EEB-8876-74B1A5C00FF3, 1, Senior Care Of Marion Llc- Marion Sc, SC
+AristaCare at Parkside, 1DE6DA92-A134-4BE0-BFFF-67EE858A8422, 8, Aristacare Health Services, NJ
+Embassy Manor at Edison, 1DE6DA92-A134-4BE0-BFFF-67EE858A8422, 18, Aristacare Health Services, NJ
+Marywood Nursing Care Center, 0DB7B074-C951-4B6F-91A8-50DF81215B9B, 1, MaryWood , MI
+Premier Rehab and Healthcare, B7EA1680-06EA-4004-8AD7-B1CA7A61FAEB, 149, Birchwood Operations, NH
+Care Pavilion, 2640075F-6A79-44A0-859C-6A23C75EE895, 4, Bedrock Care Llc, PA
+Tucker House, 2640075F-6A79-44A0-859C-6A23C75EE895, 7, Bedrock Care Llc, PA
+Maplewood Manor, 2640075F-6A79-44A0-859C-6A23C75EE895, 9, Bedrock Care Llc, PA
+TVAR-SNF The Village at Rockville, 515686ED-EB3E-4C18-AF18-178CD38CEA5F, 1, National Lutheran Home at Rockville, MD
+TVAR-IL The Village at Rockville, 515686ED-EB3E-4C18-AF18-178CD38CEA5F, 3, National Lutheran Home at Rockville, MD
+TVAR-AL The Village at Rockville, 515686ED-EB3E-4C18-AF18-178CD38CEA5F, 11, National Lutheran Home at Rockville, MD
+Brookline Healthcare and Rehabilitation Center, D2076162-75C7-4081-82A0-C62702F26D1F, 3, Prima Wellness, PA
+Brookline Village Senior Living, D2076162-75C7-4081-82A0-C62702F26D1F, 4, Prima Wellness, PA
+Brookline Cottages Senior Living, D2076162-75C7-4081-82A0-C62702F26D1F, 5, Prima Wellness, PA
+Willow Ridge, 3678763E-AB77-4F6B-AE71-88B2A1A6E584, 10, Cch Healthcare, NC
+Hickory , 3678763E-AB77-4F6B-AE71-88B2A1A6E584, 31, Cch Healthcare, NC
+Maple Leaf Health Care, 3678763E-AB77-4F6B-AE71-88B2A1A6E584, 32, Cch Healthcare, NC
+Lincolnton, 3678763E-AB77-4F6B-AE71-88B2A1A6E584, 34, Cch Healthcare, NC
+Viewmont, 3678763E-AB77-4F6B-AE71-88B2A1A6E584, 36, Cch Healthcare, NC
+Valley Nursing and Rehabilitation Center, 3678763E-AB77-4F6B-AE71-88B2A1A6E584, 40, Cch Healthcare, NC
+Cedarwood Gardens, 19DE869B-9E86-4E07-BE26-8A12E315C66C, 9, Alpha Healthcare Management, MA
+Laurel Bay Health & Rehab Center, EE8AD327-7476-42F5-B8C5-5A0360B667E1, 1, Laurel Bay Health & Rehab Center- Keansburg Nj, NJ
+Will-O-Bell, 3467E0B6-F7C5-4A79-9B2A-7B48BEF75008, 1, WOB Facility Management LLC dba Will-O-Bell, TX
+Franklin Oaks Nursing and Rehabilitation Center, 217559DC-1001-4DF5-9C33-B0964A7A9AF4, 21, Principle Long Term Care, NC
+Kerr Lake Nursing and Rehabilitation Center, 217559DC-1001-4DF5-9C33-B0964A7A9AF4, 38, Principle Long Term Care, NC
+Achieve Rehabilitation and Nursing Center - SNF, EAB99EE0-7CB6-4E4D-8D77-433E4BB851A4, 169, Heart Healthcare Management, SC
+Meriden Health and Rehab, 0C781E73-66A9-46C0-9EB9-201E4B46026D, 26, Vantage Care LLC, CT
+Smithfield Manor Inc. - Smithfield NC - SNF, 2D559A9D-CCF9-43AC-83DB-2BD2A320C621, 1, Smithfield Manor, NC
+Autumnwood Care Centre, FD3DB31D-9FAA-48A2-BDD0-D9035F45E62C, 3, 17322 Euclid Avenue Company Llc., OH
+Bethesda Care Centre, FD3DB31D-9FAA-48A2-BDD0-D9035F45E62C, 4, 17322 Euclid Avenue Company Llc., OH
+Cirrus Manor , 84096C08-DA79-4E6E-AEC5-C928361D4A3F, 6, Elemental Management Group LLC, NY
+Oakland Grove, 9532A704-9975-40FA-92F7-DE4CE697E8DC, 7, Athena Health Care Systems, RI
+Southshore Health Care Center, 9532A704-9975-40FA-92F7-DE4CE697E8DC, 11, Athena Health Care Systems, MA
+Cape Regency, 9532A704-9975-40FA-92F7-DE4CE697E8DC, 14, Athena Health Care Systems, MA
+Northwood Rehabilitation & Health Care Center, 9532A704-9975-40FA-92F7-DE4CE697E8DC, 15, Athena Health Care Systems, MA
+Plymouth Rehabilitation and Health Care Center, 9532A704-9975-40FA-92F7-DE4CE697E8DC, 16, Athena Health Care Systems, MA
+Tremont Healthcare Center, 9532A704-9975-40FA-92F7-DE4CE697E8DC, 19, Athena Health Care Systems, MA
+Southeast Health Care Center, 9532A704-9975-40FA-92F7-DE4CE697E8DC, 21, Athena Health Care Systems, MA
+Summit Commons Rehab and Health Care Center, 9532A704-9975-40FA-92F7-DE4CE697E8DC, 23, Athena Health Care Systems, RI
+Valerie Manor Health Care Center, 9532A704-9975-40FA-92F7-DE4CE697E8DC, 26, Athena Health Care Systems, CT
+Wadsworth Glen Health Care & Rehab Center, 9532A704-9975-40FA-92F7-DE4CE697E8DC, 31, Athena Health Care Systems, CT
+Sheriden Woods, 9532A704-9975-40FA-92F7-DE4CE697E8DC, 33, Athena Health Care Systems, CT
+Orchard View Manor, 9532A704-9975-40FA-92F7-DE4CE697E8DC, 34, Athena Health Care Systems, RI
+Arden Care Center SNF, 30A4AB5B-9A14-43CE-9737-0E734F156269, 5, Highbridge Health Llc, CT
+Saint John Paul II Center, 30A4AB5B-9A14-43CE-9737-0E734F156269, 6, Highbridge Health Llc, CT
+Norwalk Care Center, 30A4AB5B-9A14-43CE-9737-0E734F156269, 7, Highbridge Health Llc, CT
+Stamford Care Center, 30A4AB5B-9A14-43CE-9737-0E734F156269, 8, Highbridge Health Llc, CT
+Autumn Lake Healthcare at Bucks Hill, 8C809285-483D-45DD-AC19-C12AFAB3219A, 1, Autumn Health Care, CT
+Autumn Lake Healthcare at Cromwell, 8C809285-483D-45DD-AC19-C12AFAB3219A, 3, Autumn Health Care, CT
+Autumn Lake Healthcare at Norwalk, 8C809285-483D-45DD-AC19-C12AFAB3219A, 8, Autumn Health Care, CT
+Autumn Lake Healthcare at New Britain, 8C809285-483D-45DD-AC19-C12AFAB3219A, 9, Autumn Health Care, CT
+Autumn Lake Healthcare at Southgate, 8C809285-483D-45DD-AC19-C12AFAB3219A, 11, Autumn Health Care, NJ
+King David Rehabilitation Center, 8C809285-483D-45DD-AC19-C12AFAB3219A, 14, Autumn Health Care, MD
+Autumn Lake Healthcare at Alice Manor, 8C809285-483D-45DD-AC19-C12AFAB3219A, 15, Autumn Health Care, MD
+Autumn Lake Healthcare at BridgePark, 8C809285-483D-45DD-AC19-C12AFAB3219A, 18, Autumn Health Care, MD
+Autumn Lake Healthcare at Pikesville, 8C809285-483D-45DD-AC19-C12AFAB3219A, 20, Autumn Health Care, MD
+Autumn Lake Healthcare at Memorial Bridge (Carneys), 8C809285-483D-45DD-AC19-C12AFAB3219A, 21, Autumn Health Care, NJ
+Autumn Lake Healthcare at Salem County (Golden), 8C809285-483D-45DD-AC19-C12AFAB3219A, 23, Autumn Health Care, NJ
+Autumn Lake Healthcare at Oakview , 8C809285-483D-45DD-AC19-C12AFAB3219A, 31, Autumn Health Care, MD
+Autumn Lake Healthcare at Riverview, 8C809285-483D-45DD-AC19-C12AFAB3219A, 32, Autumn Health Care, MD
+Autumn Lake Healthcare at Spa Creek, 8C809285-483D-45DD-AC19-C12AFAB3219A, 35, Autumn Health Care, MD
+Autumn Lake Healthcare at Chesapeake Woods, 8C809285-483D-45DD-AC19-C12AFAB3219A, 36, Autumn Health Care, MD
+Autumn Lake Healthcare at Homewood , 8C809285-483D-45DD-AC19-C12AFAB3219A, 37, Autumn Health Care, MD
+Autumn Lake Healthcare at Long Green, 8C809285-483D-45DD-AC19-C12AFAB3219A, 39, Autumn Health Care, MD
+Autumn Lake Healthcare at Ballenger Creek, 8C809285-483D-45DD-AC19-C12AFAB3219A, 43, Autumn Health Care, MD
+Autumn Lake Healthcare at Waugh Chapel, 8C809285-483D-45DD-AC19-C12AFAB3219A, 44, Autumn Health Care, MD
+Autumn Lake Healthcare at Glen Burnie, 8C809285-483D-45DD-AC19-C12AFAB3219A, 51, Autumn Health Care, MD
+Autumn Lake Healthcare at Overlea, 8C809285-483D-45DD-AC19-C12AFAB3219A, 54, Autumn Health Care, MD
+Autumn Lake Healthcare at Glen Hill, 8C809285-483D-45DD-AC19-C12AFAB3219A, 68, Autumn Health Care, CT
+Autumn Lake Healthcare at Madison, 8C809285-483D-45DD-AC19-C12AFAB3219A, 69, Autumn Health Care, CT
+Autumn Lake Healthcare at West Hartford, 8C809285-483D-45DD-AC19-C12AFAB3219A, 70, Autumn Health Care, CT
+Autumn Lake Healthcare at The Willows, 8C809285-483D-45DD-AC19-C12AFAB3219A, 71, Autumn Health Care, CT
+The Springs of Batesville, ABCA3F64-58A8-4825-9C21-07E3421CB80B, 6, The Wellstone Group - The Springs of Arkansas, AR
+The Springs of Broadway, ABCA3F64-58A8-4825-9C21-07E3421CB80B, 7, The Wellstone Group - The Springs of Arkansas, AR
+The Springs of Jonesboro, ABCA3F64-58A8-4825-9C21-07E3421CB80B, 8, The Wellstone Group - The Springs of Arkansas, AR
+The Springs of Searcy, ABCA3F64-58A8-4825-9C21-07E3421CB80B, 11, The Wellstone Group - The Springs of Arkansas, AR
+The Springs of Avalon, ABCA3F64-58A8-4825-9C21-07E3421CB80B, 12, The Wellstone Group - The Springs of Arkansas, AR
+Siloam Healthcare LLC, ABCA3F64-58A8-4825-9C21-07E3421CB80B, 13, The Wellstone Group - The Springs of Arkansas, AR
+The Springs of Pinnacle Mountain, ABCA3F64-58A8-4825-9C21-07E3421CB80B, 15, The Wellstone Group - The Springs of Arkansas, AR
+The Springs of John Barrow, ABCA3F64-58A8-4825-9C21-07E3421CB80B, 16, The Wellstone Group - The Springs of Arkansas, AR
+The Springs of Chenal, ABCA3F64-58A8-4825-9C21-07E3421CB80B, 17, The Wellstone Group - The Springs of Arkansas, AR
+The Springs of Harrison, ABCA3F64-58A8-4825-9C21-07E3421CB80B, 19, The Wellstone Group - The Springs of Arkansas, AR
+The Springs of Mt Vista, ABCA3F64-58A8-4825-9C21-07E3421CB80B, 20, The Wellstone Group - The Springs of Arkansas, AR
+The Springs of Park Avenue, ABCA3F64-58A8-4825-9C21-07E3421CB80B, 21, The Wellstone Group - The Springs of Arkansas, AR
+Premier at The Springs, ABCA3F64-58A8-4825-9C21-07E3421CB80B, 23, The Wellstone Group - The Springs of Arkansas, AR
+The Springs of Greers Ferry, ABCA3F64-58A8-4825-9C21-07E3421CB80B, 24, The Wellstone Group - The Springs of Arkansas, AR
+Creekside at The Springs, ABCA3F64-58A8-4825-9C21-07E3421CB80B, 25, The Wellstone Group - The Springs of Arkansas, AR
+The Springs of Brinkley, ABCA3F64-58A8-4825-9C21-07E3421CB80B, 26, The Wellstone Group - The Springs of Arkansas, AR
+The Springs of Pine Bluff, ABCA3F64-58A8-4825-9C21-07E3421CB80B, 27, The Wellstone Group - The Springs of Arkansas, AR
+The Springs of Texarkana, ABCA3F64-58A8-4825-9C21-07E3421CB80B, 28, The Wellstone Group - The Springs of Arkansas, AR
+The Springs of Fairfield Bay, ABCA3F64-58A8-4825-9C21-07E3421CB80B, 30, The Wellstone Group - The Springs of Arkansas, AR
+The Springs of Waldron, ABCA3F64-58A8-4825-9C21-07E3421CB80B, 32, The Wellstone Group - The Springs of Arkansas, AR
+Havencare at Filosa, 298C79CD-BD58-454A-A8B2-1738A4C24B3E, 1, HavenCare Management, CT
+Havencare at Hancock Hall, 298C79CD-BD58-454A-A8B2-1738A4C24B3E, 2, HavenCare Management, CT
+Havencare at Valerie Manor, 298C79CD-BD58-454A-A8B2-1738A4C24B3E, 3, HavenCare Management, CT
+Havencare at Litchfield Woods, 298C79CD-BD58-454A-A8B2-1738A4C24B3E, 4, HavenCare Management, CT
+Towson Rehabilitation and Healthcare Center, 280453FA-C1D7-4E82-98B2-7EC98939F498, 35, Atlas Healthcare, MD
+Roland Park Rehabilitation and Healthcare Center, 280453FA-C1D7-4E82-98B2-7EC98939F498, 36, Atlas Healthcare, MD
+Rossville Rehabilitation and Healthcare Center, 280453FA-C1D7-4E82-98B2-7EC98939F498, 37, Atlas Healthcare, MD
+Shrewsbury Rehabilitation and Nursing at Southgate, 280453FA-C1D7-4E82-98B2-7EC98939F498, 39, Atlas Healthcare, MA
+Hathorne Hill Rehabilitation and Healthcare Center, 280453FA-C1D7-4E82-98B2-7EC98939F498, 41, Atlas Healthcare, MA
+Village Green Rehabilitation and Healthcare Center, 280453FA-C1D7-4E82-98B2-7EC98939F498, 42, Atlas Healthcare, CT
+Haverhill Rehabilitation and Healthcare Center , 280453FA-C1D7-4E82-98B2-7EC98939F498, 43, Atlas Healthcare, MA
+Masconomet Healthcare Center, 280453FA-C1D7-4E82-98B2-7EC98939F498, 44, Atlas Healthcare, MA
+Nemasket Healthcare, 280453FA-C1D7-4E82-98B2-7EC98939F498, 45, Atlas Healthcare, MA
+Oak Knoll Healthcare Center, 280453FA-C1D7-4E82-98B2-7EC98939F498, 46, Atlas Healthcare, MA
+Port Healthcare Center, 280453FA-C1D7-4E82-98B2-7EC98939F498, 47, Atlas Healthcare, MA
+Sippican Healthcare Center, 280453FA-C1D7-4E82-98B2-7EC98939F498, 48, Atlas Healthcare, MA
+McLean Health Center - Simsbury CT - SNF, F2AEB534-2DB8-4FD6-AA5B-22BABC8C62D5, 1, McLean Health Center, CT
+McLean Health Center - Simsbury CT - ALF, F2AEB534-2DB8-4FD6-AA5B-22BABC8C62D5, 2, McLean Health Center, CT
+Respiratory and Rehab Ctr RI, 35DD34B7-A51D-4EDD-97F3-CC05481E9005, 260, Mayflower Healthcare, RI
+Greenville Skilled Nursing and Rehabilitation, 35DD34B7-A51D-4EDD-97F3-CC05481E9005, 261, Mayflower Healthcare, RI
+Warren Skilled Nursing and Rehabilitation, 35DD34B7-A51D-4EDD-97F3-CC05481E9005, 263, Mayflower Healthcare, RI
+Ignite Medical Resort Webster LLC, 5A0C736B-7652-4792-A81E-5C35FB3478E4, 59, Ignite Team Partners, TX
+Ignite Medical Resort Katy LLC, 5A0C736B-7652-4792-A81E-5C35FB3478E4, 70, Ignite Team Partners, TX
+Ignite Medical Resort Sugar Land LLC, 5A0C736B-7652-4792-A81E-5C35FB3478E4, 78, Ignite Team Partners, TX
+Focused Care of Waxahachie, 782CDAF0-CAB2-4492-BA6F-56BF5517BB3F, 2, Focused Post Acute Care Partners, TX
+Focused Care of Center, 782CDAF0-CAB2-4492-BA6F-56BF5517BB3F, 6, Focused Post Acute Care Partners, TX
+Focused Care at Sherman, 782CDAF0-CAB2-4492-BA6F-56BF5517BB3F, 7, Focused Post Acute Care Partners, TX
+Focused Care at Mount Pleasant, 782CDAF0-CAB2-4492-BA6F-56BF5517BB3F, 8, Focused Post Acute Care Partners, TX
+Focused Care of Gilmer, 782CDAF0-CAB2-4492-BA6F-56BF5517BB3F, 9, Focused Post Acute Care Partners, TX
+Focused Care at Linden, 782CDAF0-CAB2-4492-BA6F-56BF5517BB3F, 13, Focused Post Acute Care Partners, TX
+Focused Care at Clarksville, 782CDAF0-CAB2-4492-BA6F-56BF5517BB3F, 22, Focused Post Acute Care Partners, TX
+Focused Care at Hamilton, 782CDAF0-CAB2-4492-BA6F-56BF5517BB3F, 23, Focused Post Acute Care Partners, TX
+Millennium Post Acute Rehabilitation, 50B2F434-D827-403C-ADA6-74F4B2D0A59B, 226, Ensign Services, SC
+Opus Post Acute Rehabilitation, 50B2F434-D827-403C-ADA6-74F4B2D0A59B, 227, Ensign Services, SC
+Compass Post Acute Rehabilitation, 50B2F434-D827-403C-ADA6-74F4B2D0A59B, 229, Ensign Services, SC
+Oak View Health and Rehabilitation, 50B2F434-D827-403C-ADA6-74F4B2D0A59B, 402, Ensign Services, SC
+Lafayette, 48DE5E64-7E68-4E6F-8F6E-4329C1199966, 36, PHM Partners LLC, MA
+Vivo Healthcare Winter Haven, E6010080-171E-4B44-B8DE-01FDFD4B157D, 20, Vivo Healthcare LLC, FL
+St. Petersburg Nursing & Rehab, E6010080-171E-4B44-B8DE-01FDFD4B157D, 22, Vivo Healthcare LLC, FL
+Clewiston Nursing & Rehabilitation, E6010080-171E-4B44-B8DE-01FDFD4B157D, 23, Vivo Healthcare LLC, FL
+Mohawk Meadows, AC60695B-956D-42CB-A27E-9A8F739BEA43, 1, Mohawk Manner, NJ
+The Hills Nursing and Rehabilitation, 143F80E7-D11D-4754-AB3F-D8F1F30FAB37, 44, Creative Solutions in Healthcare, TX
+Fortress Nursing and Rehabilitation, 143F80E7-D11D-4754-AB3F-D8F1F30FAB37, 104, Creative Solutions in Healthcare, TX
+Avalon Place Kirbyville, 143F80E7-D11D-4754-AB3F-D8F1F30FAB37, 185, Creative Solutions in Healthcare, TX
+Grand Islander Center, F9AED6F1-7047-4D42-A9EF-1A2241E330FB, 19, GHC Hosted Prod, RI
+Grandview Center, F9AED6F1-7047-4D42-A9EF-1A2241E330FB, 20, GHC Hosted Prod, RI
+Kent Regency Center, F9AED6F1-7047-4D42-A9EF-1A2241E330FB, 21, GHC Hosted Prod, RI
+Saint Albans Healthcare & Rehabilitation Center, F9AED6F1-7047-4D42-A9EF-1A2241E330FB, 257, GHC Hosted Prod, VT
+Respiratory and Rehab Ctr RI, F9AED6F1-7047-4D42-A9EF-1A2241E330FB, 260, GHC Hosted Prod, RI
+Greenville Skilled Nursing and Rehabilitation, F9AED6F1-7047-4D42-A9EF-1A2241E330FB, 261, GHC Hosted Prod, RI
+Warren Skilled Nursing and Rehabilitation, F9AED6F1-7047-4D42-A9EF-1A2241E330FB, 263, GHC Hosted Prod, RI
+Glen Hill Center, F9AED6F1-7047-4D42-A9EF-1A2241E330FB, 289, GHC Hosted Prod, PA
+Madison House (CT), F9AED6F1-7047-4D42-A9EF-1A2241E330FB, 291, GHC Hosted Prod, PA
+Saint John Paul II Center, F9AED6F1-7047-4D42-A9EF-1A2241E330FB, 292, GHC Hosted Prod, PA
+St Joseph's Center, F9AED6F1-7047-4D42-A9EF-1A2241E330FB, 294, GHC Hosted Prod, CT
+The Reservoir, F9AED6F1-7047-4D42-A9EF-1A2241E330FB, 295, GHC Hosted Prod, PA
+Greenwood Center, F9AED6F1-7047-4D42-A9EF-1A2241E330FB, 316, GHC Hosted Prod, RI
+Village Green of Bristol, F9AED6F1-7047-4D42-A9EF-1A2241E330FB, 608, GHC Hosted Prod, PA
+St Johnsbury Health Rehab Center, F9AED6F1-7047-4D42-A9EF-1A2241E330FB, 639, GHC Hosted Prod, PA
+Berlin Health Rehab Center, F9AED6F1-7047-4D42-A9EF-1A2241E330FB, 640, GHC Hosted Prod, PA
+Springfield Health Rehab, F9AED6F1-7047-4D42-A9EF-1A2241E330FB, 641, GHC Hosted Prod, PA
+Bennington Health Rehab Center, F9AED6F1-7047-4D42-A9EF-1A2241E330FB, 642, GHC Hosted Prod, PA
+Burlington Health and Rehab Center, F9AED6F1-7047-4D42-A9EF-1A2241E330FB, 643, GHC Hosted Prod, PA
+MissionCare at Holyoke, 1C8E4081-96C1-45F3-89C3-449654205E1F, 8, iCare Health Network, MA
+White House Health Care Center, E054F312-6AC7-4C32-997A-5692F22405EC, 1, White House Health Care & Rehab Center - Orange NJ, NJ
+Centennial Healthcare and Rehabilitation Center, E054F312-6AC7-4C32-997A-5692F22405EC, 2, White House Health Care & Rehab Center - Orange NJ, PA
+Oakwood Healthcare And Rehabilitation Center, E054F312-6AC7-4C32-997A-5692F22405EC, 4, White House Health Care & Rehab Center - Orange NJ, PA
+Bear Hill Healthcare LLC, E054F312-6AC7-4C32-997A-5692F22405EC, 6, White House Health Care & Rehab Center - Orange NJ, MA
+Pine View Healthcare and Rehabilitation, E054F312-6AC7-4C32-997A-5692F22405EC, 10, White House Health Care & Rehab Center - Orange NJ, PA
+Salemhaven Inc., 220CA4AB-FB14-4F3F-B348-AB6FA38BF861, 1, Salemhaven Nursing Home - Salem Nh, NH
+Embassy of East Mountain, 130D9218-7EFB-4516-B5F6-45FDFBF84F58, 42, Handler Group, PA
+Embassy of Scranton, 130D9218-7EFB-4516-B5F6-45FDFBF84F58, 43, Handler Group, PA
+Embassy of Tunkhannock, 130D9218-7EFB-4516-B5F6-45FDFBF84F58, 44, Handler Group, PA
+Embassy of Wyoming Valley, 130D9218-7EFB-4516-B5F6-45FDFBF84F58, 45, Handler Group, PA
+Sterling Care Riverside SNF, 7689A674-F852-4317-96FD-91F40620F4D5, 67, Sterling Senior Care, MD
+Sterling Care Rockville Nursing, 7689A674-F852-4317-96FD-91F40620F4D5, 69, Sterling Senior Care, MD
+Sterling Care Bethesda, 7689A674-F852-4317-96FD-91F40620F4D5, 70, Sterling Senior Care, MD
+Sterling Care Bel Air, 7689A674-F852-4317-96FD-91F40620F4D5, 71, Sterling Senior Care, MD
+Sterling Care Forest Hill, 7689A674-F852-4317-96FD-91F40620F4D5, 72, Sterling Senior Care, MD
+Elderwood of Scallop Shell at Wakefield - SNF, 775FA799-D481-43E3-AF04-64FFDB7DC4F7, 3, ELDERWOOD, RI
+Frostburg Rehab Center - SNF, 8E449B43-3D44-4AE3-B6F4-6D21136C8DAA, 61, Naya Healthcare, MD
+Frostburg Village Assisted Living - ALF, 8E449B43-3D44-4AE3-B6F4-6D21136C8DAA, 62, Naya Healthcare, MD
+Briarwood Rehabilitation & Healthcare Center, D7E7B1BC-439C-4C05-BB20-E09C3A825627, 4, Marquis Health Services, MA
+Chestnut Woods Rehabilitation & Healthcare Center, D7E7B1BC-439C-4C05-BB20-E09C3A825627, 8, Marquis Health Services, MA
+Cedar View Rehabilitation & Healthcare Center, D7E7B1BC-439C-4C05-BB20-E09C3A825627, 17, Marquis Health Services, MA
+Elmhurst Rehabilitation & Healthcare Center  , D7E7B1BC-439C-4C05-BB20-E09C3A825627, 18, Marquis Health Services, RI
+North End Rehabilitation & Healthcare Center, D7E7B1BC-439C-4C05-BB20-E09C3A825627, 20, Marquis Health Services, MA
+Westmoreland Rehabilitation & Healthcare, D7E7B1BC-439C-4C05-BB20-E09C3A825627, 34, Marquis Health Services, VA
+Lincolnwood Rehabilitation and Healthcare Center, D7E7B1BC-439C-4C05-BB20-E09C3A825627, 37, Marquis Health Services, RI
+Allendale Rehabilitation and Healthcare Center, D7E7B1BC-439C-4C05-BB20-E09C3A825627, 40, Marquis Health Services, NJ
+Bayview Rehabilitation & Healthcare Center at Scalabrini, D7E7B1BC-439C-4C05-BB20-E09C3A825627, 42, Marquis Health Services, RI
+University City Rehabilitation and Healthcare Center, D7E7B1BC-439C-4C05-BB20-E09C3A825627, 53, Marquis Health Services, PA
+Aspen Hill Rehabilitation & Healthcare Center, D7E7B1BC-439C-4C05-BB20-E09C3A825627, 58, Marquis Health Services, MA
+Heritage Hills Rehabilitation & Healthcare, D7E7B1BC-439C-4C05-BB20-E09C3A825627, 59, Marquis Health Services, RI
+Morgan Rehabilitation & Healthcare Center, D7E7B1BC-439C-4C05-BB20-E09C3A825627, 60, Marquis Health Services, RI
+Riverview Rehabilitation & Healthcare Center, D7E7B1BC-439C-4C05-BB20-E09C3A825627, 61, Marquis Health Services, RI
+Westerly Rehabilitation & Healthcare Center, D7E7B1BC-439C-4C05-BB20-E09C3A825627, 62, Marquis Health Services, RI
+Lighthouse Rehabilitation and Healthcare Center, D7E7B1BC-439C-4C05-BB20-E09C3A825627, 89, Marquis Health Services, MA
+Cape Cod Post Acute Care, D7E7B1BC-439C-4C05-BB20-E09C3A825627, 90, Marquis Health Services, MA
+Willow Brook Rehabilitation and Health Care Center, D7E7B1BC-439C-4C05-BB20-E09C3A825627, 91, Marquis Health Services, MA
+Southern New Hampshire Rehabilitation & Healthcare Center, D7E7B1BC-439C-4C05-BB20-E09C3A825627, 92, Marquis Health Services, NH
+Brockton Post Acute Care, D7E7B1BC-439C-4C05-BB20-E09C3A825627, 98, Marquis Health Services, MA
+Mill Brook Rehabilitation & Healthcare Center, D7E7B1BC-439C-4C05-BB20-E09C3A825627, 99, Marquis Health Services, MA
+Highland Park Rehabilitation & Healthcare Center, D7E7B1BC-439C-4C05-BB20-E09C3A825627, 100, Marquis Health Services, MA
+Medford Multi Care Center, 4559BAF9-AFDD-4CC2-B21C-CB4CFD27D27A, 1, Medford Multicare, NY
+Springcreek Rehabilitation and Nursing Center, 62114B55-1FD0-449B-A8FA-4DBFB777D3CF, 290, Avon Healthcare Services, MI
+Adrian Bay Rehab and Nursing Center, 62114B55-1FD0-449B-A8FA-4DBFB777D3CF, 294, Avon Healthcare Services, MI
+Alamo Cove Rehab and Nursing Center, 62114B55-1FD0-449B-A8FA-4DBFB777D3CF, 295, Avon Healthcare Services, MI
+Advocate Healthcare of East Boston, D3EDEA01-F3AA-4390-BBE8-0F53326ADECB, 36, Apex Rehab Care Center, MA
+Wilmington Rehab Center LLC, 5A66ABA4-5121-49A0-B0F7-EF040A8A6E10, 14, Pointe Group Llc, MA
+Salem Rehab Center LLC, 5A66ABA4-5121-49A0-B0F7-EF040A8A6E10, 19, Pointe Group Llc, MA
+Adviniacare Newburyport LLC - Newburyport MA - SNF, 5A66ABA4-5121-49A0-B0F7-EF040A8A6E10, 28, Pointe Group Llc, MA
+Adviniacare Newton Wellesley LLC - Wellesley MA - SNF, 5A66ABA4-5121-49A0-B0F7-EF040A8A6E10, 29, Pointe Group Llc, MA
+AdviniaCare Pawtucket Pleasant Rehab Center, 5A66ABA4-5121-49A0-B0F7-EF040A8A6E10, 30, Pointe Group Llc, RI
+AdviniaCare Providence Dodge Rehab Center, 5A66ABA4-5121-49A0-B0F7-EF040A8A6E10, 31, Pointe Group Llc, RI
+Kingston Center for Rehabilitation and Health Care, 5A66ABA4-5121-49A0-B0F7-EF040A8A6E10, 32, Pointe Group Llc, RI
+Baypointe Rehab Center LLC, 5A66ABA4-5121-49A0-B0F7-EF040A8A6E10, 33, Pointe Group Llc, MA
+Eastpointe Rehab Center LLC, 5A66ABA4-5121-49A0-B0F7-EF040A8A6E10, 34, Pointe Group Llc, MA
+Southpointe Rehab Center LLC, 5A66ABA4-5121-49A0-B0F7-EF040A8A6E10, 35, Pointe Group Llc, MA
+Northbridge Assisted Living Facility LLC, 5A66ABA4-5121-49A0-B0F7-EF040A8A6E10, 36, Pointe Group Llc, MA
+Northbridge Rehab Center LLC, 5A66ABA4-5121-49A0-B0F7-EF040A8A6E10, 37, Pointe Group Llc, MA
+Seashore Pointe Rehab Center LLC, 5A66ABA4-5121-49A0-B0F7-EF040A8A6E10, 38, Pointe Group Llc, MA
+Rivers Edge Nursing and Rehabilitation Center, 05FA0CF9-902F-4E0B-A9EB-B7060E7035BD, 8, Platinum Care Centers Inc, PA
+Alameda Center for Rehabilitation and Healthcare, 05FA0CF9-902F-4E0B-A9EB-B7060E7035BD, 9, Platinum Care Centers Inc, NJ
+Seton Manor SNF, 0C465DCD-58F0-4EAE-B1EA-DB6A515E2F58, 6, IMPERIAL HEALTHCARE GROUP LLC, PA
+Garden Spring Center, 0C465DCD-58F0-4EAE-B1EA-DB6A515E2F58, 10, IMPERIAL HEALTHCARE GROUP LLC, PA
+Pennypack Center, 0C465DCD-58F0-4EAE-B1EA-DB6A515E2F58, 12, IMPERIAL HEALTHCARE GROUP LLC, PA
+Fairview Care Center of Bethlehem Pike, 0C465DCD-58F0-4EAE-B1EA-DB6A515E2F58, 20, IMPERIAL HEALTHCARE GROUP LLC, PA
+Horsham Center for Jewish Life- SNF, 0C465DCD-58F0-4EAE-B1EA-DB6A515E2F58, 22, IMPERIAL HEALTHCARE GROUP LLC, PA
+Lancaster Nursing and Rehabilitation Center, 0C465DCD-58F0-4EAE-B1EA-DB6A515E2F58, 25, IMPERIAL HEALTHCARE GROUP LLC, PA
+Individual Care of Texas Inc, C25BD54B-7182-4FCB-B5D5-9C51621F1B4F, 2, Individual Care of Texas Inc, TX
+Chesapeake Shores - Lexington Park MD Opco LLC, 9A1F76F6-01D7-4166-8989-9DFDE687AE47, 1, Lunar Healthcare LLC, MD
+Copper Ridge SNF, 9A1F76F6-01D7-4166-8989-9DFDE687AE47, 2, Lunar Healthcare LLC, MD
+Copper Ridge  ALF, 9A1F76F6-01D7-4166-8989-9DFDE687AE47, 3, Lunar Healthcare LLC, MD
+Lakeside Nursing and Rehabilitation, 5FD8C0CE-B257-4807-AFA1-B6198CA3128F, 2, 239 Legris Avenue Operations Llc, RI
+Clarion Nursing and Rehab - SNF, 42920C0D-A4DF-49EE-B285-AB56FC36BA7C, 52, Valley West Health, PA
+Clarion Senior Living, 42920C0D-A4DF-49EE-B285-AB56FC36BA7C, 53, Valley West Health, PA
+Haida Healthcare and Rehabilitation Center, 42920C0D-A4DF-49EE-B285-AB56FC36BA7C, 54, Valley West Health, PA
+Kinzua Healthcare and Rehabilitation Center, 42920C0D-A4DF-49EE-B285-AB56FC36BA7C, 57, Valley West Health, PA
+Oil City Healthcare and Rehabilitation Center - SNF, 42920C0D-A4DF-49EE-B285-AB56FC36BA7C, 59, Valley West Health, PA
+Oil City Senior Living, 42920C0D-A4DF-49EE-B285-AB56FC36BA7C, 60, Valley West Health, PA
+Richland Healthcare and Rehabilitation Center, 42920C0D-A4DF-49EE-B285-AB56FC36BA7C, 61, Valley West Health, PA
+Shippenville Healthcare and Rehabilitation Center, 42920C0D-A4DF-49EE-B285-AB56FC36BA7C, 62, Valley West Health, PA
+Titusville Healthcare and Rehabilitation Center, 42920C0D-A4DF-49EE-B285-AB56FC36BA7C, 63, Valley West Health, PA
+Uniontown Healthcare and Rehabilitation Center, 42920C0D-A4DF-49EE-B285-AB56FC36BA7C, 64, Valley West Health, PA
+Walnut Creek Healthcare and Rehabilitation Center, 42920C0D-A4DF-49EE-B285-AB56FC36BA7C, 65, Valley West Health, PA
+Waynesburg Healthcare and Rehabilitation Center, 42920C0D-A4DF-49EE-B285-AB56FC36BA7C, 66, Valley West Health, PA
+William Penn Healthcare and Rehabilitation Center, 42920C0D-A4DF-49EE-B285-AB56FC36BA7C, 68, Valley West Health, PA
+Havencrest Healthcare and Rehabilitation Center, E5A8FEA1-59C4-4687-A65A-3DA0BED88383, 73, Guardian Eldercare, PA
+Beaver Valley Healthcare and Rehabilitation Center, E5A8FEA1-59C4-4687-A65A-3DA0BED88383, 80, Guardian Eldercare, PA
+Fairmont Healthcare and Rehabilitation Center, E5A8FEA1-59C4-4687-A65A-3DA0BED88383, 82, Guardian Eldercare, WV
+Pawtucket Falls Healthcare Center, F7B38146-62BD-4D96-94AC-FED0004810EC, 2, Whitney Manor Operating Company Llc, RI
+Grandview Rehab, F7B38146-62BD-4D96-94AC-FED0004810EC, 3, Whitney Manor Operating Company Llc, CT
+Tuscola County Medical Care Facility - SNF, 5E65010F-3557-4C46-800C-DA1116C7B361, 1, Tuscola County Medical Care Community, MI
+Brenham Nursing & Rehabilitation Center - SNF, DED04873-CDFD-4E02-9806-A8C89527E2A5, 2, Regency Integrated Health Services LLC - Victoria TX #1216150, TX
+Stevens Nursing & Rehab Center of Hallettsville - SNF, DED04873-CDFD-4E02-9806-A8C89527E2A5, 20, Regency Integrated Health Services LLC - Victoria TX #1216150, TX
+Wharton Nursing & Rehab Center - SNF, DED04873-CDFD-4E02-9806-A8C89527E2A5, 23, Regency Integrated Health Services LLC - Victoria TX #1216150, TX
+Windsor Quail Valley Post-Acute Healthcare - SNF, DED04873-CDFD-4E02-9806-A8C89527E2A5, 31, Regency Integrated Health Services LLC - Victoria TX #1216150, TX
+The Woodlands Nursing and Rehabilitation Center - SNF, DED04873-CDFD-4E02-9806-A8C89527E2A5, 47, Regency Integrated Health Services LLC - Victoria TX #1216150, TX
+Richboro Care Center, 42AF0791-F27E-41D4-AC11-1AF9CC8A94EF, 12, Vintage Healthcare PA, PA
+Caring Heart Rehab & Nursing Center, 42AF0791-F27E-41D4-AC11-1AF9CC8A94EF, 13, Vintage Healthcare PA, PA
+Buckingham Valley Rehab & Nursing, 42AF0791-F27E-41D4-AC11-1AF9CC8A94EF, 14, Vintage Healthcare PA, PA
+Westgate Hills Rehabilitation and Nursing Center, 42AF0791-F27E-41D4-AC11-1AF9CC8A94EF, 23, Vintage Healthcare PA, PA
+Green Meadows Nursing and Rehabilitation Center, 42AF0791-F27E-41D4-AC11-1AF9CC8A94EF, 29, Vintage Healthcare PA, PA
+Rosewood Gardens (Vintage PA), 42AF0791-F27E-41D4-AC11-1AF9CC8A94EF, 33, Vintage Healthcare PA, PA
+Coral Springs Rehab and Healthcare Center, 42AF0791-F27E-41D4-AC11-1AF9CC8A94EF, 35, Vintage Healthcare PA, DE
+Ocean Grove Post Acute , 42AF0791-F27E-41D4-AC11-1AF9CC8A94EF, 36, Vintage Healthcare PA, DE
+Evergreen Post Acute, 42AF0791-F27E-41D4-AC11-1AF9CC8A94EF, 37, Vintage Healthcare PA, DE
+Glenbrook Rehab and Nursing Center , 42AF0791-F27E-41D4-AC11-1AF9CC8A94EF, 38, Vintage Healthcare PA, PA
+Heritage Pointe, 42AF0791-F27E-41D4-AC11-1AF9CC8A94EF, 39, Vintage Healthcare PA, PA
+Liberty Pointe, 42AF0791-F27E-41D4-AC11-1AF9CC8A94EF, 40, Vintage Healthcare PA, PA
+Willow Brook , 42AF0791-F27E-41D4-AC11-1AF9CC8A94EF, 41, Vintage Healthcare PA, PA
+Bay Terrace Rehabilitation and Healthcare Center, 42AF0791-F27E-41D4-AC11-1AF9CC8A94EF, 42, Vintage Healthcare PA, DE
+Park Lane Post Acute, 42AF0791-F27E-41D4-AC11-1AF9CC8A94EF, 43, Vintage Healthcare PA, PA
+S.P.J.S.T. Rest Home #3, 0C8B489D-6B26-405F-876F-4A03A41A9CA0, 1, Czech Catholic Home for the Aged, TX
+Grandview Nursing and Rehabilitation, E58B7580-B6CC-46CC-AE7B-181E3FC46999, 6, John L Montgomery Care Center - Freehold Nj, PA
+Spring Creek Healthcare Center, E58B7580-B6CC-46CC-AE7B-181E3FC46999, 10, John L Montgomery Care Center - Freehold Nj, NJ
+Sunset Ridge Healthcare & Rehabilitation Center, E58B7580-B6CC-46CC-AE7B-181E3FC46999, 20, John L Montgomery Care Center - Freehold Nj, PA
+Springfield Health Rehab, E58B7580-B6CC-46CC-AE7B-181E3FC46999, 22, John L Montgomery Care Center - Freehold Nj, VT
+CareOne at Randolph, 5A25F205-07FF-4D03-B15A-DFB113645342, 37, Care One LLC, MA
+CareOne at Millbury, 5A25F205-07FF-4D03-B15A-DFB113645342, 38, Care One LLC, MA
+Avista Nursing and Rehab - 29, 659ACD53-9453-4FCA-AAF7-6B6BA0942E2B, 29, Preferred Care At Mercer, MI
+Carriage House Nursing and Rehab, 659ACD53-9453-4FCA-AAF7-6B6BA0942E2B, 34, Preferred Care At Mercer, MI
+Briarwood Nursing and Rehab, 659ACD53-9453-4FCA-AAF7-6B6BA0942E2B, 36, Preferred Care At Mercer, MI
+Marvin and Betty Danto Healthcare Center, 659ACD53-9453-4FCA-AAF7-6B6BA0942E2B, 38, Preferred Care At Mercer, MI
+Adira Nursing and Rehab, 659ACD53-9453-4FCA-AAF7-6B6BA0942E2B, 39, Preferred Care At Mercer, MI
+Accela Rehab and Care Center at Springfield, 44DAE95E-A635-4921-B817-2B8D4FC98A48, 9, Excelsior Care Group, PA
+Accela Rehab and Care Center at Somerton, 44DAE95E-A635-4921-B817-2B8D4FC98A48, 15, Excelsior Care Group, PA
+Preferred Care At Wall, 4D500799-EDE6-49A0-820A-4C616879ADDC, 26, Preferred Care Health, NJ
+Montgomery Village Healthcare Center, 4D500799-EDE6-49A0-820A-4C616879ADDC, 36, Preferred Care Health, MD
+Montcare at Potomac, 4D500799-EDE6-49A0-820A-4C616879ADDC, 39, Preferred Care Health, MD
+Montcare at Bethesda, 4D500799-EDE6-49A0-820A-4C616879ADDC, 40, Preferred Care Health, MD
+Montcare at Wheaton, 4D500799-EDE6-49A0-820A-4C616879ADDC, 41, Preferred Care Health, MD
+Johns Island Post Acute, 63ED0839-FC23-49D6-880F-EEFD4CD27404, 76, The Providence Group, SC
+The Grand at Guilderland , 1C4B6A09-681A-41D4-B3FA-0666663A1105, 27, The Grand Healthcare, NY
+The Grand at River Valley , 1C4B6A09-681A-41D4-B3FA-0666663A1105, 32, The Grand Healthcare, NY
+Mayfair Care Center Inc. -  - SNF, 1C4B6A09-681A-41D4-B3FA-0666663A1105, 48, The Grand Healthcare, NY
+Bridge View Nursing Home, 1C4B6A09-681A-41D4-B3FA-0666663A1105, 52, The Grand Healthcare, NY
+Fulton Common Nursing Home , 1C4B6A09-681A-41D4-B3FA-0666663A1105, 53, The Grand Healthcare, NY
+Aberjona Nursing Rehab Center, 037E292A-6807-4ECB-B1AD-5ADAF189AF8C, 1, Salter Healthcare, MA
+Winchester Nursing Rehab Center, 037E292A-6807-4ECB-B1AD-5ADAF189AF8C, 3, Salter Healthcare, MA
+Woburn Nursing Rehab Center, 037E292A-6807-4ECB-B1AD-5ADAF189AF8C, 4, Salter Healthcare, MA
+Advocate Healthcare of East Boston, 037E292A-6807-4ECB-B1AD-5ADAF189AF8C, 5, Salter Healthcare, MA
+Burlington Health & Rehab, 037E292A-6807-4ECB-B1AD-5ADAF189AF8C, 7, Salter Healthcare, VT
+Walpole Healthcare, 037E292A-6807-4ECB-B1AD-5ADAF189AF8C, 8, Salter Healthcare, MA
+Hillcrest Home, 0D6E31E6-CE24-4999-90AA-66F39BC3A8BE, 1, Hillcrest Home - Harrison AR, AR
+Bloomfield Health Care Center - SNF, F527DDE2-A615-4233-8C60-EB8EA2753B7D, 11, National HealthCare Associates Inc, CT
+Village Crest Health and Rehab Center - SNF, F527DDE2-A615-4233-8C60-EB8EA2753B7D, 20, National HealthCare Associates Inc, CT
+Dover Center for Health & Rehabilitation, F527DDE2-A615-4233-8C60-EB8EA2753B7D, 29, National HealthCare Associates Inc, NH
+Beacon Brook Health Center, F527DDE2-A615-4233-8C60-EB8EA2753B7D, 49, National HealthCare Associates Inc, CT
+Montowese Health & Rehabilitation Center, F527DDE2-A615-4233-8C60-EB8EA2753B7D, 52, National HealthCare Associates Inc, CT
+Stone Bridge Rehabilitation and Health Care Center, F527DDE2-A615-4233-8C60-EB8EA2753B7D, 54, National HealthCare Associates Inc, CT
+The Cascades of Stone Bridge ALF, F527DDE2-A615-4233-8C60-EB8EA2753B7D, 56, National HealthCare Associates Inc, CT
+Glastonbury Health Care Center, F527DDE2-A615-4233-8C60-EB8EA2753B7D, 58, National HealthCare Associates Inc, CT
+Laurel Ridge Health Care Center, F527DDE2-A615-4233-8C60-EB8EA2753B7D, 59, National HealthCare Associates Inc, CT
+The Summit at Plantsville, F527DDE2-A615-4233-8C60-EB8EA2753B7D, 60, National HealthCare Associates Inc, CT
+Maefair Health Care Center, F527DDE2-A615-4233-8C60-EB8EA2753B7D, 61, National HealthCare Associates Inc, CT
+Shady Knoll Health Care Center, F527DDE2-A615-4233-8C60-EB8EA2753B7D, 62, National HealthCare Associates Inc, CT
+Mt Hope Nazarene Retirement Community, 6714227C-9811-4847-AEC2-55B5EE8C6809, 1, Mount Hope Nazarene Retirement Community, PA
+Hartford Nursing & Rehab Center, 03B88E4D-E8D2-40C2-9EAA-4BC8B2EF5B55, 13, Ciena Healthcare Management Inc, MI
+Regency at Jackson, 03B88E4D-E8D2-40C2-9EAA-4BC8B2EF5B55, 108, Ciena Healthcare Management Inc, MI
+Aria Nursing and Rehab, 03B88E4D-E8D2-40C2-9EAA-4BC8B2EF5B55, 109, Ciena Healthcare Management Inc, MI
+RegalCare at Greenwich, E017343B-08E9-45B1-94A3-7D259BF136B7, 8, Regalcare Op Holdings, CT
+Salmon Brook Rehab & Nursing, E017343B-08E9-45B1-94A3-7D259BF136B7, 12, Regalcare Op Holdings, CT
+Skyview Rehab & Nursing, E017343B-08E9-45B1-94A3-7D259BF136B7, 13, Regalcare Op Holdings, CT
+Brookmont Healthcare and Rehabilitation Center, A0652FA5-D41A-4701-89E7-709F8E4E4F25, 49, Diamond Healthcare at Brookmont, PA
+Jewel Healthcare and Rehabilitation Center, A0652FA5-D41A-4701-89E7-709F8E4E4F25, 50, Diamond Healthcare at Brookmont, PA
+Diamond Healthcare at Stroud, A0652FA5-D41A-4701-89E7-709F8E4E4F25, 51, Diamond Healthcare at Brookmont, PA
