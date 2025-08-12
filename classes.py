@@ -59,6 +59,8 @@ class dbCredentials():
     password = 'Supp)rtive209'
     # To run on ITPROG
     driver = 'SQL Server Native Client 11.0'
+    hostname = 'localhost'
     # To run on WEBSVR
     #driver = 'ODBC Driver 17 for SQL Server'
+    #hostname = 'WEBSVR'
     db_address = 'mssql+pyodbc://sqlsvr:61433/{}?trusted_connection=yes&driver=' + driver

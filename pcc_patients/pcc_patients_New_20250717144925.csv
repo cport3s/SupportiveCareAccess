@@ -1,0 +1,3 @@
+patientId,facId,orgUuid,patientStatus,firstName,lastName,birthDate,dischargeDate
+19413491,260,35DD34B7-A51D-4EDD-97F3-CC05481E9005,New,Cheryl,Buote,1946-08-20,
+19494094,260,35DD34B7-A51D-4EDD-97F3-CC05481E9005,New,William,Callaghan,1952-10-26,

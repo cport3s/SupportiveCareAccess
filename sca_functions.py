@@ -36,7 +36,7 @@ def suppcare_header():
                             style = SuppCareBanner.banner_style
                         )
                     ],
-                    href='http://localhost:7000/',
+                    href='http://' + dbCredentials.hostname + ':7000/',
                     style = SuppCareBanner.a_element_style
                 )
     return header
