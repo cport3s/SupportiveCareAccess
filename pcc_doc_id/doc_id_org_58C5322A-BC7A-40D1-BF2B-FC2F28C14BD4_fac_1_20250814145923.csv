@@ -1,0 +1,1457 @@
+orgUuid, facId, Category ID, name, description
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 2, Authorization Request Status, List of authorization request status options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 13, Authorization Type, List of authorization types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 14, Cash Receipt Type, List of cash receipt types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 1, Citizenship, List of citizenship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 3, Contact Relationships, List of contact relationship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 15, Contact Type, List of contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 16, Department, List of department options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 41, Diet Supplements, List of diet supplements for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 26, Disposition, List of disposition options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 4, Education, List of education options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 17, Ethnicity, List of ethnicities for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 18, External Facility Type, List of external facility types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 5, Facility Reporting Group, List of facility reporting group options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 9, Insurance Contact Type, List of insurance contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 10, Insurance Plan Type, List of insurance plan types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 19, Language, List of languages for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 20, Marital Status, List of marital statuses for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 21, Medical Professional Type, List of medical professional types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 12, Non-Billable Services, List of non-billable services for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 7, Prefix, List of prefix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 11, Professional Contact Type, List of professional contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 22, Professional Relation, List of professional relation options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 23, Race, List of race options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 6, Religion, List of religion options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 24, Staff Position, List of staff position options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 8, Suffix, List of suffix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 25, To/From Type, List of to/from types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 27, Upload Category, List of upload categories options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 2, Authorization Request Status, List of authorization request status options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 13, Authorization Type, List of authorization types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 14, Cash Receipt Type, List of cash receipt types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 1, Citizenship, List of citizenship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 3, Contact Relationships, List of contact relationship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 15, Contact Type, List of contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 16, Department, List of department options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 41, Diet Supplements, List of diet supplements for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 26, Disposition, List of disposition options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 4, Education, List of education options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 17, Ethnicity, List of ethnicities for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 18, External Facility Type, List of external facility types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 5, Facility Reporting Group, List of facility reporting group options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 9, Insurance Contact Type, List of insurance contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 10, Insurance Plan Type, List of insurance plan types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 19, Language, List of languages for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 20, Marital Status, List of marital statuses for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 21, Medical Professional Type, List of medical professional types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 12, Non-Billable Services, List of non-billable services for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 7, Prefix, List of prefix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 11, Professional Contact Type, List of professional contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 22, Professional Relation, List of professional relation options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 23, Race, List of race options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 6, Religion, List of religion options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 24, Staff Position, List of staff position options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 8, Suffix, List of suffix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 25, To/From Type, List of to/from types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 27, Upload Category, List of upload categories options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 2, Authorization Request Status, List of authorization request status options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 13, Authorization Type, List of authorization types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 14, Cash Receipt Type, List of cash receipt types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 1, Citizenship, List of citizenship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 3, Contact Relationships, List of contact relationship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 15, Contact Type, List of contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 16, Department, List of department options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 41, Diet Supplements, List of diet supplements for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 26, Disposition, List of disposition options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 4, Education, List of education options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 17, Ethnicity, List of ethnicities for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 18, External Facility Type, List of external facility types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 5, Facility Reporting Group, List of facility reporting group options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 9, Insurance Contact Type, List of insurance contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 10, Insurance Plan Type, List of insurance plan types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 19, Language, List of languages for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 20, Marital Status, List of marital statuses for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 21, Medical Professional Type, List of medical professional types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 12, Non-Billable Services, List of non-billable services for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 7, Prefix, List of prefix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 11, Professional Contact Type, List of professional contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 22, Professional Relation, List of professional relation options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 23, Race, List of race options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 6, Religion, List of religion options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 24, Staff Position, List of staff position options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 8, Suffix, List of suffix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 25, To/From Type, List of to/from types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 27, Upload Category, List of upload categories options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 2, Authorization Request Status, List of authorization request status options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 13, Authorization Type, List of authorization types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 14, Cash Receipt Type, List of cash receipt types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 1, Citizenship, List of citizenship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 3, Contact Relationships, List of contact relationship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 15, Contact Type, List of contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 16, Department, List of department options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 41, Diet Supplements, List of diet supplements for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 26, Disposition, List of disposition options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 4, Education, List of education options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 17, Ethnicity, List of ethnicities for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 18, External Facility Type, List of external facility types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 5, Facility Reporting Group, List of facility reporting group options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 9, Insurance Contact Type, List of insurance contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 10, Insurance Plan Type, List of insurance plan types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 19, Language, List of languages for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 20, Marital Status, List of marital statuses for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 21, Medical Professional Type, List of medical professional types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 12, Non-Billable Services, List of non-billable services for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 7, Prefix, List of prefix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 11, Professional Contact Type, List of professional contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 22, Professional Relation, List of professional relation options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 23, Race, List of race options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 6, Religion, List of religion options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 24, Staff Position, List of staff position options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 8, Suffix, List of suffix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 25, To/From Type, List of to/from types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 27, Upload Category, List of upload categories options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 2, Authorization Request Status, List of authorization request status options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 13, Authorization Type, List of authorization types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 14, Cash Receipt Type, List of cash receipt types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 1, Citizenship, List of citizenship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 3, Contact Relationships, List of contact relationship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 15, Contact Type, List of contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 16, Department, List of department options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 41, Diet Supplements, List of diet supplements for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 26, Disposition, List of disposition options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 4, Education, List of education options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 17, Ethnicity, List of ethnicities for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 18, External Facility Type, List of external facility types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 5, Facility Reporting Group, List of facility reporting group options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 9, Insurance Contact Type, List of insurance contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 10, Insurance Plan Type, List of insurance plan types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 19, Language, List of languages for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 20, Marital Status, List of marital statuses for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 21, Medical Professional Type, List of medical professional types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 12, Non-Billable Services, List of non-billable services for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 7, Prefix, List of prefix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 11, Professional Contact Type, List of professional contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 22, Professional Relation, List of professional relation options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 23, Race, List of race options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 6, Religion, List of religion options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 24, Staff Position, List of staff position options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 8, Suffix, List of suffix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 25, To/From Type, List of to/from types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 27, Upload Category, List of upload categories options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 2, Authorization Request Status, List of authorization request status options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 13, Authorization Type, List of authorization types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 14, Cash Receipt Type, List of cash receipt types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 1, Citizenship, List of citizenship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 3, Contact Relationships, List of contact relationship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 15, Contact Type, List of contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 16, Department, List of department options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 41, Diet Supplements, List of diet supplements for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 26, Disposition, List of disposition options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 4, Education, List of education options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 17, Ethnicity, List of ethnicities for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 18, External Facility Type, List of external facility types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 5, Facility Reporting Group, List of facility reporting group options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 9, Insurance Contact Type, List of insurance contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 10, Insurance Plan Type, List of insurance plan types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 19, Language, List of languages for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 20, Marital Status, List of marital statuses for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 21, Medical Professional Type, List of medical professional types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 12, Non-Billable Services, List of non-billable services for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 7, Prefix, List of prefix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 11, Professional Contact Type, List of professional contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 22, Professional Relation, List of professional relation options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 23, Race, List of race options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 6, Religion, List of religion options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 24, Staff Position, List of staff position options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 8, Suffix, List of suffix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 25, To/From Type, List of to/from types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 27, Upload Category, List of upload categories options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 2, Authorization Request Status, List of authorization request status options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 13, Authorization Type, List of authorization types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 14, Cash Receipt Type, List of cash receipt types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 1, Citizenship, List of citizenship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 3, Contact Relationships, List of contact relationship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 15, Contact Type, List of contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 16, Department, List of department options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 41, Diet Supplements, List of diet supplements for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 26, Disposition, List of disposition options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 4, Education, List of education options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 17, Ethnicity, List of ethnicities for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 18, External Facility Type, List of external facility types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 5, Facility Reporting Group, List of facility reporting group options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 9, Insurance Contact Type, List of insurance contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 10, Insurance Plan Type, List of insurance plan types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 19, Language, List of languages for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 20, Marital Status, List of marital statuses for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 21, Medical Professional Type, List of medical professional types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 12, Non-Billable Services, List of non-billable services for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 7, Prefix, List of prefix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 11, Professional Contact Type, List of professional contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 22, Professional Relation, List of professional relation options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 23, Race, List of race options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 6, Religion, List of religion options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 24, Staff Position, List of staff position options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 8, Suffix, List of suffix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 25, To/From Type, List of to/from types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 27, Upload Category, List of upload categories options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 2, Authorization Request Status, List of authorization request status options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 13, Authorization Type, List of authorization types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 14, Cash Receipt Type, List of cash receipt types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 1, Citizenship, List of citizenship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 3, Contact Relationships, List of contact relationship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 15, Contact Type, List of contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 16, Department, List of department options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 41, Diet Supplements, List of diet supplements for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 26, Disposition, List of disposition options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 4, Education, List of education options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 17, Ethnicity, List of ethnicities for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 18, External Facility Type, List of external facility types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 5, Facility Reporting Group, List of facility reporting group options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 9, Insurance Contact Type, List of insurance contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 10, Insurance Plan Type, List of insurance plan types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 19, Language, List of languages for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 20, Marital Status, List of marital statuses for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 21, Medical Professional Type, List of medical professional types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 12, Non-Billable Services, List of non-billable services for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 7, Prefix, List of prefix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 11, Professional Contact Type, List of professional contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 22, Professional Relation, List of professional relation options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 23, Race, List of race options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 6, Religion, List of religion options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 24, Staff Position, List of staff position options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 8, Suffix, List of suffix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 25, To/From Type, List of to/from types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 27, Upload Category, List of upload categories options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 2, Authorization Request Status, List of authorization request status options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 13, Authorization Type, List of authorization types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 14, Cash Receipt Type, List of cash receipt types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 1, Citizenship, List of citizenship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 3, Contact Relationships, List of contact relationship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 15, Contact Type, List of contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 16, Department, List of department options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 41, Diet Supplements, List of diet supplements for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 26, Disposition, List of disposition options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 4, Education, List of education options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 17, Ethnicity, List of ethnicities for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 18, External Facility Type, List of external facility types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 5, Facility Reporting Group, List of facility reporting group options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 9, Insurance Contact Type, List of insurance contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 10, Insurance Plan Type, List of insurance plan types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 19, Language, List of languages for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 20, Marital Status, List of marital statuses for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 21, Medical Professional Type, List of medical professional types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 12, Non-Billable Services, List of non-billable services for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 7, Prefix, List of prefix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 11, Professional Contact Type, List of professional contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 22, Professional Relation, List of professional relation options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 23, Race, List of race options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 6, Religion, List of religion options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 24, Staff Position, List of staff position options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 8, Suffix, List of suffix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 25, To/From Type, List of to/from types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 27, Upload Category, List of upload categories options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 2, Authorization Request Status, List of authorization request status options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 13, Authorization Type, List of authorization types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 14, Cash Receipt Type, List of cash receipt types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 1, Citizenship, List of citizenship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 3, Contact Relationships, List of contact relationship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 15, Contact Type, List of contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 16, Department, List of department options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 41, Diet Supplements, List of diet supplements for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 26, Disposition, List of disposition options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 4, Education, List of education options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 17, Ethnicity, List of ethnicities for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 18, External Facility Type, List of external facility types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 5, Facility Reporting Group, List of facility reporting group options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 9, Insurance Contact Type, List of insurance contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 10, Insurance Plan Type, List of insurance plan types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 19, Language, List of languages for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 20, Marital Status, List of marital statuses for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 21, Medical Professional Type, List of medical professional types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 12, Non-Billable Services, List of non-billable services for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 7, Prefix, List of prefix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 11, Professional Contact Type, List of professional contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 22, Professional Relation, List of professional relation options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 23, Race, List of race options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 6, Religion, List of religion options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 24, Staff Position, List of staff position options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 8, Suffix, List of suffix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 25, To/From Type, List of to/from types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 27, Upload Category, List of upload categories options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 2, Authorization Request Status, List of authorization request status options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 13, Authorization Type, List of authorization types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 14, Cash Receipt Type, List of cash receipt types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 1, Citizenship, List of citizenship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 3, Contact Relationships, List of contact relationship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 15, Contact Type, List of contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 16, Department, List of department options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 41, Diet Supplements, List of diet supplements for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 26, Disposition, List of disposition options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 4, Education, List of education options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 17, Ethnicity, List of ethnicities for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 18, External Facility Type, List of external facility types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 5, Facility Reporting Group, List of facility reporting group options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 9, Insurance Contact Type, List of insurance contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 10, Insurance Plan Type, List of insurance plan types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 19, Language, List of languages for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 20, Marital Status, List of marital statuses for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 21, Medical Professional Type, List of medical professional types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 12, Non-Billable Services, List of non-billable services for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 7, Prefix, List of prefix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 11, Professional Contact Type, List of professional contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 22, Professional Relation, List of professional relation options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 23, Race, List of race options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 6, Religion, List of religion options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 24, Staff Position, List of staff position options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 8, Suffix, List of suffix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 25, To/From Type, List of to/from types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 27, Upload Category, List of upload categories options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 2, Authorization Request Status, List of authorization request status options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 13, Authorization Type, List of authorization types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 14, Cash Receipt Type, List of cash receipt types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 1, Citizenship, List of citizenship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 3, Contact Relationships, List of contact relationship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 15, Contact Type, List of contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 16, Department, List of department options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 41, Diet Supplements, List of diet supplements for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 26, Disposition, List of disposition options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 4, Education, List of education options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 17, Ethnicity, List of ethnicities for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 18, External Facility Type, List of external facility types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 5, Facility Reporting Group, List of facility reporting group options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 9, Insurance Contact Type, List of insurance contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 10, Insurance Plan Type, List of insurance plan types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 19, Language, List of languages for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 20, Marital Status, List of marital statuses for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 21, Medical Professional Type, List of medical professional types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 12, Non-Billable Services, List of non-billable services for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 7, Prefix, List of prefix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 11, Professional Contact Type, List of professional contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 22, Professional Relation, List of professional relation options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 23, Race, List of race options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 6, Religion, List of religion options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 24, Staff Position, List of staff position options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 8, Suffix, List of suffix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 25, To/From Type, List of to/from types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 27, Upload Category, List of upload categories options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 2, Authorization Request Status, List of authorization request status options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 13, Authorization Type, List of authorization types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 14, Cash Receipt Type, List of cash receipt types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 1, Citizenship, List of citizenship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 3, Contact Relationships, List of contact relationship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 15, Contact Type, List of contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 16, Department, List of department options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 41, Diet Supplements, List of diet supplements for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 26, Disposition, List of disposition options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 4, Education, List of education options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 17, Ethnicity, List of ethnicities for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 18, External Facility Type, List of external facility types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 5, Facility Reporting Group, List of facility reporting group options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 9, Insurance Contact Type, List of insurance contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 10, Insurance Plan Type, List of insurance plan types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 19, Language, List of languages for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 20, Marital Status, List of marital statuses for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 21, Medical Professional Type, List of medical professional types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 12, Non-Billable Services, List of non-billable services for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 7, Prefix, List of prefix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 11, Professional Contact Type, List of professional contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 22, Professional Relation, List of professional relation options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 23, Race, List of race options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 6, Religion, List of religion options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 24, Staff Position, List of staff position options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 8, Suffix, List of suffix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 25, To/From Type, List of to/from types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 27, Upload Category, List of upload categories options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 2, Authorization Request Status, List of authorization request status options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 13, Authorization Type, List of authorization types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 14, Cash Receipt Type, List of cash receipt types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 1, Citizenship, List of citizenship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 3, Contact Relationships, List of contact relationship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 15, Contact Type, List of contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 16, Department, List of department options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 41, Diet Supplements, List of diet supplements for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 26, Disposition, List of disposition options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 4, Education, List of education options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 17, Ethnicity, List of ethnicities for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 18, External Facility Type, List of external facility types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 5, Facility Reporting Group, List of facility reporting group options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 9, Insurance Contact Type, List of insurance contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 10, Insurance Plan Type, List of insurance plan types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 19, Language, List of languages for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 20, Marital Status, List of marital statuses for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 21, Medical Professional Type, List of medical professional types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 12, Non-Billable Services, List of non-billable services for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 7, Prefix, List of prefix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 11, Professional Contact Type, List of professional contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 22, Professional Relation, List of professional relation options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 23, Race, List of race options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 6, Religion, List of religion options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 24, Staff Position, List of staff position options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 8, Suffix, List of suffix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 25, To/From Type, List of to/from types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 27, Upload Category, List of upload categories options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 2, Authorization Request Status, List of authorization request status options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 13, Authorization Type, List of authorization types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 14, Cash Receipt Type, List of cash receipt types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 1, Citizenship, List of citizenship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 3, Contact Relationships, List of contact relationship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 15, Contact Type, List of contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 16, Department, List of department options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 41, Diet Supplements, List of diet supplements for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 26, Disposition, List of disposition options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 4, Education, List of education options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 17, Ethnicity, List of ethnicities for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 18, External Facility Type, List of external facility types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 5, Facility Reporting Group, List of facility reporting group options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 9, Insurance Contact Type, List of insurance contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 10, Insurance Plan Type, List of insurance plan types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 19, Language, List of languages for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 20, Marital Status, List of marital statuses for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 21, Medical Professional Type, List of medical professional types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 12, Non-Billable Services, List of non-billable services for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 7, Prefix, List of prefix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 11, Professional Contact Type, List of professional contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 22, Professional Relation, List of professional relation options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 23, Race, List of race options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 6, Religion, List of religion options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 24, Staff Position, List of staff position options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 8, Suffix, List of suffix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 25, To/From Type, List of to/from types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 27, Upload Category, List of upload categories options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 2, Authorization Request Status, List of authorization request status options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 13, Authorization Type, List of authorization types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 14, Cash Receipt Type, List of cash receipt types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 1, Citizenship, List of citizenship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 3, Contact Relationships, List of contact relationship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 15, Contact Type, List of contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 16, Department, List of department options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 41, Diet Supplements, List of diet supplements for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 26, Disposition, List of disposition options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 4, Education, List of education options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 17, Ethnicity, List of ethnicities for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 18, External Facility Type, List of external facility types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 5, Facility Reporting Group, List of facility reporting group options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 9, Insurance Contact Type, List of insurance contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 10, Insurance Plan Type, List of insurance plan types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 19, Language, List of languages for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 20, Marital Status, List of marital statuses for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 21, Medical Professional Type, List of medical professional types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 12, Non-Billable Services, List of non-billable services for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 7, Prefix, List of prefix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 11, Professional Contact Type, List of professional contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 22, Professional Relation, List of professional relation options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 23, Race, List of race options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 6, Religion, List of religion options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 24, Staff Position, List of staff position options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 8, Suffix, List of suffix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 25, To/From Type, List of to/from types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 27, Upload Category, List of upload categories options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 2, Authorization Request Status, List of authorization request status options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 13, Authorization Type, List of authorization types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 14, Cash Receipt Type, List of cash receipt types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 1, Citizenship, List of citizenship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 3, Contact Relationships, List of contact relationship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 15, Contact Type, List of contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 16, Department, List of department options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 41, Diet Supplements, List of diet supplements for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 26, Disposition, List of disposition options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 4, Education, List of education options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 17, Ethnicity, List of ethnicities for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 18, External Facility Type, List of external facility types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 5, Facility Reporting Group, List of facility reporting group options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 9, Insurance Contact Type, List of insurance contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 10, Insurance Plan Type, List of insurance plan types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 19, Language, List of languages for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 20, Marital Status, List of marital statuses for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 21, Medical Professional Type, List of medical professional types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 12, Non-Billable Services, List of non-billable services for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 7, Prefix, List of prefix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 11, Professional Contact Type, List of professional contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 22, Professional Relation, List of professional relation options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 23, Race, List of race options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 6, Religion, List of religion options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 24, Staff Position, List of staff position options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 8, Suffix, List of suffix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 25, To/From Type, List of to/from types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 27, Upload Category, List of upload categories options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 2, Authorization Request Status, List of authorization request status options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 13, Authorization Type, List of authorization types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 14, Cash Receipt Type, List of cash receipt types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 1, Citizenship, List of citizenship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 3, Contact Relationships, List of contact relationship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 15, Contact Type, List of contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 16, Department, List of department options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 41, Diet Supplements, List of diet supplements for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 26, Disposition, List of disposition options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 4, Education, List of education options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 17, Ethnicity, List of ethnicities for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 18, External Facility Type, List of external facility types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 5, Facility Reporting Group, List of facility reporting group options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 9, Insurance Contact Type, List of insurance contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 10, Insurance Plan Type, List of insurance plan types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 19, Language, List of languages for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 20, Marital Status, List of marital statuses for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 21, Medical Professional Type, List of medical professional types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 12, Non-Billable Services, List of non-billable services for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 7, Prefix, List of prefix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 11, Professional Contact Type, List of professional contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 22, Professional Relation, List of professional relation options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 23, Race, List of race options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 6, Religion, List of religion options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 24, Staff Position, List of staff position options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 8, Suffix, List of suffix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 25, To/From Type, List of to/from types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 27, Upload Category, List of upload categories options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 2, Authorization Request Status, List of authorization request status options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 13, Authorization Type, List of authorization types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 14, Cash Receipt Type, List of cash receipt types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 1, Citizenship, List of citizenship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 3, Contact Relationships, List of contact relationship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 15, Contact Type, List of contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 16, Department, List of department options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 41, Diet Supplements, List of diet supplements for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 26, Disposition, List of disposition options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 4, Education, List of education options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 17, Ethnicity, List of ethnicities for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 18, External Facility Type, List of external facility types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 5, Facility Reporting Group, List of facility reporting group options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 9, Insurance Contact Type, List of insurance contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 10, Insurance Plan Type, List of insurance plan types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 19, Language, List of languages for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 20, Marital Status, List of marital statuses for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 21, Medical Professional Type, List of medical professional types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 12, Non-Billable Services, List of non-billable services for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 7, Prefix, List of prefix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 11, Professional Contact Type, List of professional contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 22, Professional Relation, List of professional relation options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 23, Race, List of race options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 6, Religion, List of religion options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 24, Staff Position, List of staff position options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 8, Suffix, List of suffix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 25, To/From Type, List of to/from types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 27, Upload Category, List of upload categories options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 2, Authorization Request Status, List of authorization request status options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 13, Authorization Type, List of authorization types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 14, Cash Receipt Type, List of cash receipt types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 1, Citizenship, List of citizenship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 3, Contact Relationships, List of contact relationship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 15, Contact Type, List of contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 16, Department, List of department options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 41, Diet Supplements, List of diet supplements for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 26, Disposition, List of disposition options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 4, Education, List of education options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 17, Ethnicity, List of ethnicities for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 18, External Facility Type, List of external facility types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 5, Facility Reporting Group, List of facility reporting group options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 9, Insurance Contact Type, List of insurance contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 10, Insurance Plan Type, List of insurance plan types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 19, Language, List of languages for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 20, Marital Status, List of marital statuses for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 21, Medical Professional Type, List of medical professional types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 12, Non-Billable Services, List of non-billable services for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 7, Prefix, List of prefix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 11, Professional Contact Type, List of professional contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 22, Professional Relation, List of professional relation options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 23, Race, List of race options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 6, Religion, List of religion options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 24, Staff Position, List of staff position options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 8, Suffix, List of suffix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 25, To/From Type, List of to/from types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 27, Upload Category, List of upload categories options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 2, Authorization Request Status, List of authorization request status options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 13, Authorization Type, List of authorization types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 14, Cash Receipt Type, List of cash receipt types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 1, Citizenship, List of citizenship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 3, Contact Relationships, List of contact relationship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 15, Contact Type, List of contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 16, Department, List of department options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 41, Diet Supplements, List of diet supplements for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 26, Disposition, List of disposition options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 4, Education, List of education options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 17, Ethnicity, List of ethnicities for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 18, External Facility Type, List of external facility types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 5, Facility Reporting Group, List of facility reporting group options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 9, Insurance Contact Type, List of insurance contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 10, Insurance Plan Type, List of insurance plan types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 19, Language, List of languages for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 20, Marital Status, List of marital statuses for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 21, Medical Professional Type, List of medical professional types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 12, Non-Billable Services, List of non-billable services for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 7, Prefix, List of prefix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 11, Professional Contact Type, List of professional contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 22, Professional Relation, List of professional relation options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 23, Race, List of race options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 6, Religion, List of religion options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 24, Staff Position, List of staff position options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 8, Suffix, List of suffix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 25, To/From Type, List of to/from types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 27, Upload Category, List of upload categories options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 2, Authorization Request Status, List of authorization request status options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 13, Authorization Type, List of authorization types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 14, Cash Receipt Type, List of cash receipt types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 1, Citizenship, List of citizenship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 3, Contact Relationships, List of contact relationship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 15, Contact Type, List of contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 16, Department, List of department options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 41, Diet Supplements, List of diet supplements for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 26, Disposition, List of disposition options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 4, Education, List of education options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 17, Ethnicity, List of ethnicities for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 18, External Facility Type, List of external facility types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 5, Facility Reporting Group, List of facility reporting group options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 9, Insurance Contact Type, List of insurance contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 10, Insurance Plan Type, List of insurance plan types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 19, Language, List of languages for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 20, Marital Status, List of marital statuses for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 21, Medical Professional Type, List of medical professional types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 12, Non-Billable Services, List of non-billable services for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 7, Prefix, List of prefix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 11, Professional Contact Type, List of professional contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 22, Professional Relation, List of professional relation options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 23, Race, List of race options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 6, Religion, List of religion options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 24, Staff Position, List of staff position options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 8, Suffix, List of suffix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 25, To/From Type, List of to/from types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 27, Upload Category, List of upload categories options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 2, Authorization Request Status, List of authorization request status options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 13, Authorization Type, List of authorization types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 14, Cash Receipt Type, List of cash receipt types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 1, Citizenship, List of citizenship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 3, Contact Relationships, List of contact relationship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 15, Contact Type, List of contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 16, Department, List of department options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 41, Diet Supplements, List of diet supplements for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 26, Disposition, List of disposition options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 4, Education, List of education options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 17, Ethnicity, List of ethnicities for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 18, External Facility Type, List of external facility types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 5, Facility Reporting Group, List of facility reporting group options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 9, Insurance Contact Type, List of insurance contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 10, Insurance Plan Type, List of insurance plan types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 19, Language, List of languages for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 20, Marital Status, List of marital statuses for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 21, Medical Professional Type, List of medical professional types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 12, Non-Billable Services, List of non-billable services for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 7, Prefix, List of prefix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 11, Professional Contact Type, List of professional contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 22, Professional Relation, List of professional relation options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 23, Race, List of race options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 6, Religion, List of religion options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 24, Staff Position, List of staff position options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 8, Suffix, List of suffix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 25, To/From Type, List of to/from types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 27, Upload Category, List of upload categories options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 2, Authorization Request Status, List of authorization request status options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 13, Authorization Type, List of authorization types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 14, Cash Receipt Type, List of cash receipt types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 1, Citizenship, List of citizenship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 3, Contact Relationships, List of contact relationship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 15, Contact Type, List of contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 16, Department, List of department options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 41, Diet Supplements, List of diet supplements for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 26, Disposition, List of disposition options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 4, Education, List of education options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 17, Ethnicity, List of ethnicities for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 18, External Facility Type, List of external facility types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 5, Facility Reporting Group, List of facility reporting group options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 9, Insurance Contact Type, List of insurance contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 10, Insurance Plan Type, List of insurance plan types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 19, Language, List of languages for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 20, Marital Status, List of marital statuses for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 21, Medical Professional Type, List of medical professional types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 12, Non-Billable Services, List of non-billable services for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 7, Prefix, List of prefix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 11, Professional Contact Type, List of professional contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 22, Professional Relation, List of professional relation options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 23, Race, List of race options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 6, Religion, List of religion options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 24, Staff Position, List of staff position options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 8, Suffix, List of suffix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 25, To/From Type, List of to/from types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 27, Upload Category, List of upload categories options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 2, Authorization Request Status, List of authorization request status options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 13, Authorization Type, List of authorization types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 14, Cash Receipt Type, List of cash receipt types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 1, Citizenship, List of citizenship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 3, Contact Relationships, List of contact relationship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 15, Contact Type, List of contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 16, Department, List of department options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 41, Diet Supplements, List of diet supplements for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 26, Disposition, List of disposition options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 4, Education, List of education options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 17, Ethnicity, List of ethnicities for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 18, External Facility Type, List of external facility types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 5, Facility Reporting Group, List of facility reporting group options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 9, Insurance Contact Type, List of insurance contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 10, Insurance Plan Type, List of insurance plan types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 19, Language, List of languages for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 20, Marital Status, List of marital statuses for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 21, Medical Professional Type, List of medical professional types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 12, Non-Billable Services, List of non-billable services for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 7, Prefix, List of prefix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 11, Professional Contact Type, List of professional contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 22, Professional Relation, List of professional relation options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 23, Race, List of race options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 6, Religion, List of religion options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 24, Staff Position, List of staff position options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 8, Suffix, List of suffix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 25, To/From Type, List of to/from types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 27, Upload Category, List of upload categories options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 2, Authorization Request Status, List of authorization request status options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 13, Authorization Type, List of authorization types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 14, Cash Receipt Type, List of cash receipt types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 1, Citizenship, List of citizenship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 3, Contact Relationships, List of contact relationship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 15, Contact Type, List of contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 16, Department, List of department options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 41, Diet Supplements, List of diet supplements for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 26, Disposition, List of disposition options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 4, Education, List of education options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 17, Ethnicity, List of ethnicities for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 18, External Facility Type, List of external facility types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 5, Facility Reporting Group, List of facility reporting group options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 9, Insurance Contact Type, List of insurance contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 10, Insurance Plan Type, List of insurance plan types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 19, Language, List of languages for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 20, Marital Status, List of marital statuses for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 21, Medical Professional Type, List of medical professional types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 12, Non-Billable Services, List of non-billable services for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 7, Prefix, List of prefix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 11, Professional Contact Type, List of professional contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 22, Professional Relation, List of professional relation options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 23, Race, List of race options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 6, Religion, List of religion options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 24, Staff Position, List of staff position options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 8, Suffix, List of suffix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 25, To/From Type, List of to/from types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 27, Upload Category, List of upload categories options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 2, Authorization Request Status, List of authorization request status options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 13, Authorization Type, List of authorization types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 14, Cash Receipt Type, List of cash receipt types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 1, Citizenship, List of citizenship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 3, Contact Relationships, List of contact relationship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 15, Contact Type, List of contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 16, Department, List of department options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 41, Diet Supplements, List of diet supplements for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 26, Disposition, List of disposition options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 4, Education, List of education options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 17, Ethnicity, List of ethnicities for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 18, External Facility Type, List of external facility types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 5, Facility Reporting Group, List of facility reporting group options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 9, Insurance Contact Type, List of insurance contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 10, Insurance Plan Type, List of insurance plan types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 19, Language, List of languages for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 20, Marital Status, List of marital statuses for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 21, Medical Professional Type, List of medical professional types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 12, Non-Billable Services, List of non-billable services for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 7, Prefix, List of prefix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 11, Professional Contact Type, List of professional contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 22, Professional Relation, List of professional relation options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 23, Race, List of race options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 6, Religion, List of religion options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 24, Staff Position, List of staff position options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 8, Suffix, List of suffix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 25, To/From Type, List of to/from types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 27, Upload Category, List of upload categories options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 2, Authorization Request Status, List of authorization request status options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 13, Authorization Type, List of authorization types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 14, Cash Receipt Type, List of cash receipt types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 1, Citizenship, List of citizenship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 3, Contact Relationships, List of contact relationship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 15, Contact Type, List of contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 16, Department, List of department options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 41, Diet Supplements, List of diet supplements for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 26, Disposition, List of disposition options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 4, Education, List of education options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 17, Ethnicity, List of ethnicities for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 18, External Facility Type, List of external facility types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 5, Facility Reporting Group, List of facility reporting group options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 9, Insurance Contact Type, List of insurance contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 10, Insurance Plan Type, List of insurance plan types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 19, Language, List of languages for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 20, Marital Status, List of marital statuses for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 21, Medical Professional Type, List of medical professional types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 12, Non-Billable Services, List of non-billable services for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 7, Prefix, List of prefix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 11, Professional Contact Type, List of professional contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 22, Professional Relation, List of professional relation options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 23, Race, List of race options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 6, Religion, List of religion options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 24, Staff Position, List of staff position options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 8, Suffix, List of suffix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 25, To/From Type, List of to/from types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 27, Upload Category, List of upload categories options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 2, Authorization Request Status, List of authorization request status options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 13, Authorization Type, List of authorization types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 14, Cash Receipt Type, List of cash receipt types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 1, Citizenship, List of citizenship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 3, Contact Relationships, List of contact relationship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 15, Contact Type, List of contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 16, Department, List of department options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 41, Diet Supplements, List of diet supplements for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 26, Disposition, List of disposition options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 4, Education, List of education options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 17, Ethnicity, List of ethnicities for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 18, External Facility Type, List of external facility types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 5, Facility Reporting Group, List of facility reporting group options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 9, Insurance Contact Type, List of insurance contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 10, Insurance Plan Type, List of insurance plan types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 19, Language, List of languages for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 20, Marital Status, List of marital statuses for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 21, Medical Professional Type, List of medical professional types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 12, Non-Billable Services, List of non-billable services for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 7, Prefix, List of prefix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 11, Professional Contact Type, List of professional contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 22, Professional Relation, List of professional relation options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 23, Race, List of race options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 6, Religion, List of religion options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 24, Staff Position, List of staff position options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 8, Suffix, List of suffix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 25, To/From Type, List of to/from types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 27, Upload Category, List of upload categories options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 2, Authorization Request Status, List of authorization request status options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 13, Authorization Type, List of authorization types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 14, Cash Receipt Type, List of cash receipt types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 1, Citizenship, List of citizenship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 3, Contact Relationships, List of contact relationship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 15, Contact Type, List of contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 16, Department, List of department options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 41, Diet Supplements, List of diet supplements for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 26, Disposition, List of disposition options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 4, Education, List of education options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 17, Ethnicity, List of ethnicities for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 18, External Facility Type, List of external facility types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 5, Facility Reporting Group, List of facility reporting group options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 9, Insurance Contact Type, List of insurance contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 10, Insurance Plan Type, List of insurance plan types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 19, Language, List of languages for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 20, Marital Status, List of marital statuses for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 21, Medical Professional Type, List of medical professional types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 12, Non-Billable Services, List of non-billable services for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 7, Prefix, List of prefix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 11, Professional Contact Type, List of professional contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 22, Professional Relation, List of professional relation options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 23, Race, List of race options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 6, Religion, List of religion options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 24, Staff Position, List of staff position options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 8, Suffix, List of suffix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 25, To/From Type, List of to/from types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 27, Upload Category, List of upload categories options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 2, Authorization Request Status, List of authorization request status options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 13, Authorization Type, List of authorization types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 14, Cash Receipt Type, List of cash receipt types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 1, Citizenship, List of citizenship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 3, Contact Relationships, List of contact relationship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 15, Contact Type, List of contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 16, Department, List of department options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 41, Diet Supplements, List of diet supplements for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 26, Disposition, List of disposition options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 4, Education, List of education options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 17, Ethnicity, List of ethnicities for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 18, External Facility Type, List of external facility types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 5, Facility Reporting Group, List of facility reporting group options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 9, Insurance Contact Type, List of insurance contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 10, Insurance Plan Type, List of insurance plan types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 19, Language, List of languages for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 20, Marital Status, List of marital statuses for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 21, Medical Professional Type, List of medical professional types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 12, Non-Billable Services, List of non-billable services for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 7, Prefix, List of prefix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 11, Professional Contact Type, List of professional contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 22, Professional Relation, List of professional relation options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 23, Race, List of race options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 6, Religion, List of religion options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 24, Staff Position, List of staff position options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 8, Suffix, List of suffix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 25, To/From Type, List of to/from types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 27, Upload Category, List of upload categories options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 2, Authorization Request Status, List of authorization request status options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 13, Authorization Type, List of authorization types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 14, Cash Receipt Type, List of cash receipt types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 1, Citizenship, List of citizenship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 3, Contact Relationships, List of contact relationship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 15, Contact Type, List of contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 16, Department, List of department options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 41, Diet Supplements, List of diet supplements for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 26, Disposition, List of disposition options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 4, Education, List of education options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 17, Ethnicity, List of ethnicities for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 18, External Facility Type, List of external facility types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 5, Facility Reporting Group, List of facility reporting group options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 9, Insurance Contact Type, List of insurance contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 10, Insurance Plan Type, List of insurance plan types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 19, Language, List of languages for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 20, Marital Status, List of marital statuses for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 21, Medical Professional Type, List of medical professional types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 12, Non-Billable Services, List of non-billable services for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 7, Prefix, List of prefix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 11, Professional Contact Type, List of professional contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 22, Professional Relation, List of professional relation options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 23, Race, List of race options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 6, Religion, List of religion options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 24, Staff Position, List of staff position options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 8, Suffix, List of suffix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 25, To/From Type, List of to/from types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 27, Upload Category, List of upload categories options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 2, Authorization Request Status, List of authorization request status options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 13, Authorization Type, List of authorization types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 14, Cash Receipt Type, List of cash receipt types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 1, Citizenship, List of citizenship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 3, Contact Relationships, List of contact relationship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 15, Contact Type, List of contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 16, Department, List of department options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 41, Diet Supplements, List of diet supplements for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 26, Disposition, List of disposition options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 4, Education, List of education options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 17, Ethnicity, List of ethnicities for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 18, External Facility Type, List of external facility types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 5, Facility Reporting Group, List of facility reporting group options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 9, Insurance Contact Type, List of insurance contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 10, Insurance Plan Type, List of insurance plan types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 19, Language, List of languages for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 20, Marital Status, List of marital statuses for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 21, Medical Professional Type, List of medical professional types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 12, Non-Billable Services, List of non-billable services for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 7, Prefix, List of prefix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 11, Professional Contact Type, List of professional contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 22, Professional Relation, List of professional relation options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 23, Race, List of race options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 6, Religion, List of religion options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 24, Staff Position, List of staff position options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 8, Suffix, List of suffix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 25, To/From Type, List of to/from types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 27, Upload Category, List of upload categories options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 2, Authorization Request Status, List of authorization request status options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 13, Authorization Type, List of authorization types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 14, Cash Receipt Type, List of cash receipt types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 1, Citizenship, List of citizenship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 3, Contact Relationships, List of contact relationship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 15, Contact Type, List of contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 16, Department, List of department options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 41, Diet Supplements, List of diet supplements for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 26, Disposition, List of disposition options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 4, Education, List of education options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 17, Ethnicity, List of ethnicities for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 18, External Facility Type, List of external facility types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 5, Facility Reporting Group, List of facility reporting group options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 9, Insurance Contact Type, List of insurance contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 10, Insurance Plan Type, List of insurance plan types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 19, Language, List of languages for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 20, Marital Status, List of marital statuses for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 21, Medical Professional Type, List of medical professional types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 12, Non-Billable Services, List of non-billable services for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 7, Prefix, List of prefix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 11, Professional Contact Type, List of professional contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 22, Professional Relation, List of professional relation options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 23, Race, List of race options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 6, Religion, List of religion options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 24, Staff Position, List of staff position options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 8, Suffix, List of suffix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 25, To/From Type, List of to/from types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 27, Upload Category, List of upload categories options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 2, Authorization Request Status, List of authorization request status options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 13, Authorization Type, List of authorization types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 14, Cash Receipt Type, List of cash receipt types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 1, Citizenship, List of citizenship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 3, Contact Relationships, List of contact relationship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 15, Contact Type, List of contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 16, Department, List of department options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 41, Diet Supplements, List of diet supplements for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 26, Disposition, List of disposition options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 4, Education, List of education options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 17, Ethnicity, List of ethnicities for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 18, External Facility Type, List of external facility types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 5, Facility Reporting Group, List of facility reporting group options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 9, Insurance Contact Type, List of insurance contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 10, Insurance Plan Type, List of insurance plan types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 19, Language, List of languages for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 20, Marital Status, List of marital statuses for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 21, Medical Professional Type, List of medical professional types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 12, Non-Billable Services, List of non-billable services for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 7, Prefix, List of prefix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 11, Professional Contact Type, List of professional contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 22, Professional Relation, List of professional relation options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 23, Race, List of race options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 6, Religion, List of religion options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 24, Staff Position, List of staff position options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 8, Suffix, List of suffix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 25, To/From Type, List of to/from types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 27, Upload Category, List of upload categories options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 2, Authorization Request Status, List of authorization request status options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 13, Authorization Type, List of authorization types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 14, Cash Receipt Type, List of cash receipt types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 1, Citizenship, List of citizenship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 3, Contact Relationships, List of contact relationship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 15, Contact Type, List of contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 16, Department, List of department options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 41, Diet Supplements, List of diet supplements for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 26, Disposition, List of disposition options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 4, Education, List of education options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 17, Ethnicity, List of ethnicities for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 18, External Facility Type, List of external facility types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 5, Facility Reporting Group, List of facility reporting group options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 9, Insurance Contact Type, List of insurance contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 10, Insurance Plan Type, List of insurance plan types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 19, Language, List of languages for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 20, Marital Status, List of marital statuses for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 21, Medical Professional Type, List of medical professional types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 12, Non-Billable Services, List of non-billable services for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 7, Prefix, List of prefix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 11, Professional Contact Type, List of professional contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 22, Professional Relation, List of professional relation options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 23, Race, List of race options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 6, Religion, List of religion options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 24, Staff Position, List of staff position options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 8, Suffix, List of suffix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 25, To/From Type, List of to/from types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 27, Upload Category, List of upload categories options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 2, Authorization Request Status, List of authorization request status options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 13, Authorization Type, List of authorization types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 14, Cash Receipt Type, List of cash receipt types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 1, Citizenship, List of citizenship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 3, Contact Relationships, List of contact relationship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 15, Contact Type, List of contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 16, Department, List of department options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 41, Diet Supplements, List of diet supplements for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 26, Disposition, List of disposition options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 4, Education, List of education options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 17, Ethnicity, List of ethnicities for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 18, External Facility Type, List of external facility types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 5, Facility Reporting Group, List of facility reporting group options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 9, Insurance Contact Type, List of insurance contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 10, Insurance Plan Type, List of insurance plan types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 19, Language, List of languages for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 20, Marital Status, List of marital statuses for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 21, Medical Professional Type, List of medical professional types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 12, Non-Billable Services, List of non-billable services for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 7, Prefix, List of prefix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 11, Professional Contact Type, List of professional contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 22, Professional Relation, List of professional relation options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 23, Race, List of race options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 6, Religion, List of religion options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 24, Staff Position, List of staff position options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 8, Suffix, List of suffix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 25, To/From Type, List of to/from types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 27, Upload Category, List of upload categories options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 2, Authorization Request Status, List of authorization request status options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 13, Authorization Type, List of authorization types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 14, Cash Receipt Type, List of cash receipt types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 1, Citizenship, List of citizenship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 3, Contact Relationships, List of contact relationship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 15, Contact Type, List of contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 16, Department, List of department options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 41, Diet Supplements, List of diet supplements for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 26, Disposition, List of disposition options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 4, Education, List of education options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 17, Ethnicity, List of ethnicities for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 18, External Facility Type, List of external facility types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 5, Facility Reporting Group, List of facility reporting group options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 9, Insurance Contact Type, List of insurance contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 10, Insurance Plan Type, List of insurance plan types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 19, Language, List of languages for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 20, Marital Status, List of marital statuses for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 21, Medical Professional Type, List of medical professional types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 12, Non-Billable Services, List of non-billable services for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 7, Prefix, List of prefix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 11, Professional Contact Type, List of professional contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 22, Professional Relation, List of professional relation options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 23, Race, List of race options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 6, Religion, List of religion options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 24, Staff Position, List of staff position options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 8, Suffix, List of suffix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 25, To/From Type, List of to/from types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 27, Upload Category, List of upload categories options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 2, Authorization Request Status, List of authorization request status options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 13, Authorization Type, List of authorization types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 14, Cash Receipt Type, List of cash receipt types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 1, Citizenship, List of citizenship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 3, Contact Relationships, List of contact relationship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 15, Contact Type, List of contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 16, Department, List of department options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 41, Diet Supplements, List of diet supplements for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 26, Disposition, List of disposition options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 4, Education, List of education options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 17, Ethnicity, List of ethnicities for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 18, External Facility Type, List of external facility types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 5, Facility Reporting Group, List of facility reporting group options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 9, Insurance Contact Type, List of insurance contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 10, Insurance Plan Type, List of insurance plan types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 19, Language, List of languages for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 20, Marital Status, List of marital statuses for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 21, Medical Professional Type, List of medical professional types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 12, Non-Billable Services, List of non-billable services for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 7, Prefix, List of prefix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 11, Professional Contact Type, List of professional contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 22, Professional Relation, List of professional relation options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 23, Race, List of race options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 6, Religion, List of religion options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 24, Staff Position, List of staff position options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 8, Suffix, List of suffix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 25, To/From Type, List of to/from types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 27, Upload Category, List of upload categories options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 2, Authorization Request Status, List of authorization request status options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 13, Authorization Type, List of authorization types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 14, Cash Receipt Type, List of cash receipt types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 1, Citizenship, List of citizenship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 3, Contact Relationships, List of contact relationship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 15, Contact Type, List of contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 16, Department, List of department options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 41, Diet Supplements, List of diet supplements for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 26, Disposition, List of disposition options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 4, Education, List of education options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 17, Ethnicity, List of ethnicities for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 18, External Facility Type, List of external facility types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 5, Facility Reporting Group, List of facility reporting group options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 9, Insurance Contact Type, List of insurance contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 10, Insurance Plan Type, List of insurance plan types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 19, Language, List of languages for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 20, Marital Status, List of marital statuses for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 21, Medical Professional Type, List of medical professional types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 12, Non-Billable Services, List of non-billable services for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 7, Prefix, List of prefix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 11, Professional Contact Type, List of professional contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 22, Professional Relation, List of professional relation options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 23, Race, List of race options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 6, Religion, List of religion options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 24, Staff Position, List of staff position options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 8, Suffix, List of suffix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 25, To/From Type, List of to/from types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 27, Upload Category, List of upload categories options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 2, Authorization Request Status, List of authorization request status options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 13, Authorization Type, List of authorization types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 14, Cash Receipt Type, List of cash receipt types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 1, Citizenship, List of citizenship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 3, Contact Relationships, List of contact relationship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 15, Contact Type, List of contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 16, Department, List of department options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 41, Diet Supplements, List of diet supplements for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 26, Disposition, List of disposition options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 4, Education, List of education options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 17, Ethnicity, List of ethnicities for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 18, External Facility Type, List of external facility types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 5, Facility Reporting Group, List of facility reporting group options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 9, Insurance Contact Type, List of insurance contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 10, Insurance Plan Type, List of insurance plan types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 19, Language, List of languages for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 20, Marital Status, List of marital statuses for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 21, Medical Professional Type, List of medical professional types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 12, Non-Billable Services, List of non-billable services for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 7, Prefix, List of prefix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 11, Professional Contact Type, List of professional contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 22, Professional Relation, List of professional relation options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 23, Race, List of race options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 6, Religion, List of religion options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 24, Staff Position, List of staff position options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 8, Suffix, List of suffix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 25, To/From Type, List of to/from types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 27, Upload Category, List of upload categories options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 2, Authorization Request Status, List of authorization request status options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 13, Authorization Type, List of authorization types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 14, Cash Receipt Type, List of cash receipt types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 1, Citizenship, List of citizenship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 3, Contact Relationships, List of contact relationship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 15, Contact Type, List of contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 16, Department, List of department options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 41, Diet Supplements, List of diet supplements for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 26, Disposition, List of disposition options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 4, Education, List of education options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 17, Ethnicity, List of ethnicities for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 18, External Facility Type, List of external facility types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 5, Facility Reporting Group, List of facility reporting group options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 9, Insurance Contact Type, List of insurance contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 10, Insurance Plan Type, List of insurance plan types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 19, Language, List of languages for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 20, Marital Status, List of marital statuses for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 21, Medical Professional Type, List of medical professional types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 12, Non-Billable Services, List of non-billable services for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 7, Prefix, List of prefix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 11, Professional Contact Type, List of professional contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 22, Professional Relation, List of professional relation options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 23, Race, List of race options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 6, Religion, List of religion options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 24, Staff Position, List of staff position options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 8, Suffix, List of suffix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 25, To/From Type, List of to/from types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 27, Upload Category, List of upload categories options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 2, Authorization Request Status, List of authorization request status options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 13, Authorization Type, List of authorization types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 14, Cash Receipt Type, List of cash receipt types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 1, Citizenship, List of citizenship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 3, Contact Relationships, List of contact relationship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 15, Contact Type, List of contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 16, Department, List of department options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 41, Diet Supplements, List of diet supplements for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 26, Disposition, List of disposition options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 4, Education, List of education options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 17, Ethnicity, List of ethnicities for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 18, External Facility Type, List of external facility types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 5, Facility Reporting Group, List of facility reporting group options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 9, Insurance Contact Type, List of insurance contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 10, Insurance Plan Type, List of insurance plan types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 19, Language, List of languages for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 20, Marital Status, List of marital statuses for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 21, Medical Professional Type, List of medical professional types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 12, Non-Billable Services, List of non-billable services for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 7, Prefix, List of prefix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 11, Professional Contact Type, List of professional contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 22, Professional Relation, List of professional relation options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 23, Race, List of race options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 6, Religion, List of religion options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 24, Staff Position, List of staff position options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 8, Suffix, List of suffix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 25, To/From Type, List of to/from types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 27, Upload Category, List of upload categories options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 2, Authorization Request Status, List of authorization request status options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 13, Authorization Type, List of authorization types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 14, Cash Receipt Type, List of cash receipt types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 1, Citizenship, List of citizenship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 3, Contact Relationships, List of contact relationship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 15, Contact Type, List of contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 16, Department, List of department options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 41, Diet Supplements, List of diet supplements for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 26, Disposition, List of disposition options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 4, Education, List of education options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 17, Ethnicity, List of ethnicities for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 18, External Facility Type, List of external facility types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 5, Facility Reporting Group, List of facility reporting group options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 9, Insurance Contact Type, List of insurance contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 10, Insurance Plan Type, List of insurance plan types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 19, Language, List of languages for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 20, Marital Status, List of marital statuses for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 21, Medical Professional Type, List of medical professional types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 12, Non-Billable Services, List of non-billable services for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 7, Prefix, List of prefix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 11, Professional Contact Type, List of professional contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 22, Professional Relation, List of professional relation options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 23, Race, List of race options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 6, Religion, List of religion options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 24, Staff Position, List of staff position options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 8, Suffix, List of suffix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 25, To/From Type, List of to/from types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 27, Upload Category, List of upload categories options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 2, Authorization Request Status, List of authorization request status options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 13, Authorization Type, List of authorization types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 14, Cash Receipt Type, List of cash receipt types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 1, Citizenship, List of citizenship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 3, Contact Relationships, List of contact relationship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 15, Contact Type, List of contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 16, Department, List of department options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 41, Diet Supplements, List of diet supplements for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 26, Disposition, List of disposition options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 4, Education, List of education options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 17, Ethnicity, List of ethnicities for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 18, External Facility Type, List of external facility types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 5, Facility Reporting Group, List of facility reporting group options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 9, Insurance Contact Type, List of insurance contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 10, Insurance Plan Type, List of insurance plan types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 19, Language, List of languages for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 20, Marital Status, List of marital statuses for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 21, Medical Professional Type, List of medical professional types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 12, Non-Billable Services, List of non-billable services for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 7, Prefix, List of prefix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 11, Professional Contact Type, List of professional contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 22, Professional Relation, List of professional relation options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 23, Race, List of race options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 6, Religion, List of religion options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 24, Staff Position, List of staff position options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 8, Suffix, List of suffix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 25, To/From Type, List of to/from types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 27, Upload Category, List of upload categories options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 2, Authorization Request Status, List of authorization request status options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 13, Authorization Type, List of authorization types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 14, Cash Receipt Type, List of cash receipt types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 1, Citizenship, List of citizenship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 3, Contact Relationships, List of contact relationship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 15, Contact Type, List of contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 16, Department, List of department options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 41, Diet Supplements, List of diet supplements for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 26, Disposition, List of disposition options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 4, Education, List of education options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 17, Ethnicity, List of ethnicities for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 18, External Facility Type, List of external facility types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 5, Facility Reporting Group, List of facility reporting group options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 9, Insurance Contact Type, List of insurance contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 10, Insurance Plan Type, List of insurance plan types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 19, Language, List of languages for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 20, Marital Status, List of marital statuses for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 21, Medical Professional Type, List of medical professional types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 12, Non-Billable Services, List of non-billable services for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 7, Prefix, List of prefix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 11, Professional Contact Type, List of professional contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 22, Professional Relation, List of professional relation options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 23, Race, List of race options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 6, Religion, List of religion options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 24, Staff Position, List of staff position options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 8, Suffix, List of suffix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 25, To/From Type, List of to/from types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 27, Upload Category, List of upload categories options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 2, Authorization Request Status, List of authorization request status options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 13, Authorization Type, List of authorization types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 14, Cash Receipt Type, List of cash receipt types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 1, Citizenship, List of citizenship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 3, Contact Relationships, List of contact relationship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 15, Contact Type, List of contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 16, Department, List of department options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 41, Diet Supplements, List of diet supplements for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 26, Disposition, List of disposition options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 4, Education, List of education options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 17, Ethnicity, List of ethnicities for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 18, External Facility Type, List of external facility types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 5, Facility Reporting Group, List of facility reporting group options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 9, Insurance Contact Type, List of insurance contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 10, Insurance Plan Type, List of insurance plan types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 19, Language, List of languages for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 20, Marital Status, List of marital statuses for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 21, Medical Professional Type, List of medical professional types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 12, Non-Billable Services, List of non-billable services for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 7, Prefix, List of prefix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 11, Professional Contact Type, List of professional contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 22, Professional Relation, List of professional relation options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 23, Race, List of race options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 6, Religion, List of religion options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 24, Staff Position, List of staff position options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 8, Suffix, List of suffix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 25, To/From Type, List of to/from types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 27, Upload Category, List of upload categories options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 2, Authorization Request Status, List of authorization request status options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 13, Authorization Type, List of authorization types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 14, Cash Receipt Type, List of cash receipt types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 1, Citizenship, List of citizenship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 3, Contact Relationships, List of contact relationship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 15, Contact Type, List of contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 16, Department, List of department options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 41, Diet Supplements, List of diet supplements for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 26, Disposition, List of disposition options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 4, Education, List of education options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 17, Ethnicity, List of ethnicities for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 18, External Facility Type, List of external facility types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 5, Facility Reporting Group, List of facility reporting group options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 9, Insurance Contact Type, List of insurance contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 10, Insurance Plan Type, List of insurance plan types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 19, Language, List of languages for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 20, Marital Status, List of marital statuses for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 21, Medical Professional Type, List of medical professional types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 12, Non-Billable Services, List of non-billable services for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 7, Prefix, List of prefix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 11, Professional Contact Type, List of professional contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 22, Professional Relation, List of professional relation options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 23, Race, List of race options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 6, Religion, List of religion options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 24, Staff Position, List of staff position options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 8, Suffix, List of suffix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 25, To/From Type, List of to/from types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 27, Upload Category, List of upload categories options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 2, Authorization Request Status, List of authorization request status options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 13, Authorization Type, List of authorization types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 14, Cash Receipt Type, List of cash receipt types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 1, Citizenship, List of citizenship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 3, Contact Relationships, List of contact relationship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 15, Contact Type, List of contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 16, Department, List of department options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 41, Diet Supplements, List of diet supplements for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 26, Disposition, List of disposition options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 4, Education, List of education options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 17, Ethnicity, List of ethnicities for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 18, External Facility Type, List of external facility types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 5, Facility Reporting Group, List of facility reporting group options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 9, Insurance Contact Type, List of insurance contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 10, Insurance Plan Type, List of insurance plan types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 19, Language, List of languages for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 20, Marital Status, List of marital statuses for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 21, Medical Professional Type, List of medical professional types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 12, Non-Billable Services, List of non-billable services for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 7, Prefix, List of prefix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 11, Professional Contact Type, List of professional contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 22, Professional Relation, List of professional relation options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 23, Race, List of race options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 6, Religion, List of religion options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 24, Staff Position, List of staff position options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 8, Suffix, List of suffix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 25, To/From Type, List of to/from types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 27, Upload Category, List of upload categories options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 2, Authorization Request Status, List of authorization request status options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 13, Authorization Type, List of authorization types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 14, Cash Receipt Type, List of cash receipt types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 1, Citizenship, List of citizenship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 3, Contact Relationships, List of contact relationship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 15, Contact Type, List of contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 16, Department, List of department options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 41, Diet Supplements, List of diet supplements for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 26, Disposition, List of disposition options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 4, Education, List of education options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 17, Ethnicity, List of ethnicities for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 18, External Facility Type, List of external facility types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 5, Facility Reporting Group, List of facility reporting group options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 9, Insurance Contact Type, List of insurance contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 10, Insurance Plan Type, List of insurance plan types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 19, Language, List of languages for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 20, Marital Status, List of marital statuses for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 21, Medical Professional Type, List of medical professional types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 12, Non-Billable Services, List of non-billable services for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 7, Prefix, List of prefix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 11, Professional Contact Type, List of professional contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 22, Professional Relation, List of professional relation options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 23, Race, List of race options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 6, Religion, List of religion options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 24, Staff Position, List of staff position options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 8, Suffix, List of suffix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 25, To/From Type, List of to/from types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 27, Upload Category, List of upload categories options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 2, Authorization Request Status, List of authorization request status options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 13, Authorization Type, List of authorization types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 14, Cash Receipt Type, List of cash receipt types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 1, Citizenship, List of citizenship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 3, Contact Relationships, List of contact relationship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 15, Contact Type, List of contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 16, Department, List of department options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 41, Diet Supplements, List of diet supplements for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 26, Disposition, List of disposition options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 4, Education, List of education options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 17, Ethnicity, List of ethnicities for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 18, External Facility Type, List of external facility types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 5, Facility Reporting Group, List of facility reporting group options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 9, Insurance Contact Type, List of insurance contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 10, Insurance Plan Type, List of insurance plan types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 19, Language, List of languages for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 20, Marital Status, List of marital statuses for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 21, Medical Professional Type, List of medical professional types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 12, Non-Billable Services, List of non-billable services for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 7, Prefix, List of prefix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 11, Professional Contact Type, List of professional contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 22, Professional Relation, List of professional relation options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 23, Race, List of race options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 6, Religion, List of religion options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 24, Staff Position, List of staff position options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 8, Suffix, List of suffix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 25, To/From Type, List of to/from types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 27, Upload Category, List of upload categories options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 2, Authorization Request Status, List of authorization request status options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 13, Authorization Type, List of authorization types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 14, Cash Receipt Type, List of cash receipt types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 1, Citizenship, List of citizenship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 3, Contact Relationships, List of contact relationship options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 15, Contact Type, List of contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 16, Department, List of department options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 41, Diet Supplements, List of diet supplements for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 26, Disposition, List of disposition options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 4, Education, List of education options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 17, Ethnicity, List of ethnicities for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 18, External Facility Type, List of external facility types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 5, Facility Reporting Group, List of facility reporting group options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 9, Insurance Contact Type, List of insurance contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 10, Insurance Plan Type, List of insurance plan types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 19, Language, List of languages for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 20, Marital Status, List of marital statuses for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 21, Medical Professional Type, List of medical professional types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 12, Non-Billable Services, List of non-billable services for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 7, Prefix, List of prefix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 11, Professional Contact Type, List of professional contact types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 22, Professional Relation, List of professional relation options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 23, Race, List of race options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 6, Religion, List of religion options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 24, Staff Position, List of staff position options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 8, Suffix, List of suffix options for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 25, To/From Type, List of to/from types for a facility within an organization.
+58C5322A-BC7A-40D1-BF2B-FC2F28C14BD4, 1, 27, Upload Category, List of upload categories options for a facility within an organization.
