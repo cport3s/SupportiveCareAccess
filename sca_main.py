@@ -125,6 +125,14 @@ main_app.layout = html.Div(
                                 'height': 'auto'
                             }
                         ),
+                        html.H3('PCC Patients'),
+                        dash_table.DataTable(
+                            id = 'fac_pcc_patients_table',
+                            style_data={
+                                'whiteSpace': 'normal',
+                                'height': 'auto'
+                            }
+                        ),
                         html.H3('Notes'),
                         dash_table.DataTable(
                             id = 'fac_notes_table',
@@ -478,6 +486,8 @@ def populate_fac_dropdown(pathname):
         [
             Output('fac_pcc_status_table', 'columns'),
             Output('fac_pcc_status_table', 'data'),
+            Output('fac_pcc_patients_table', 'columns'),
+            Output('fac_pcc_patients_table', 'data'),
             Output('fac_prov_table', 'columns'),
             Output('fac_prov_table', 'data'),
             Output('fac_notes_table', 'columns'),
@@ -488,8 +498,8 @@ def populate_fac_dropdown(pathname):
 )
 def query_fac_info(fac_dropdown_value):
     if fac_dropdown_value:
-        pcc_status_df, pcc_prov_df, pcc_notes_df = sca_functions.query_fac_info_sub(fac_dropdown_value)
-        return [{'name':i, 'id':i} for i in pcc_status_df.columns], pcc_status_df.to_dict('records'), [{'name':i, 'id':i} for i in pcc_prov_df.columns], pcc_prov_df.to_dict('records'), [{'name':i, 'id':i} for i in pcc_notes_df.columns], pcc_notes_df.to_dict('records')
+        pcc_status_df, pcc_patients_df ,pcc_prov_df, pcc_notes_df = sca_functions.query_fac_info_sub(fac_dropdown_value)
+        return [{'name':i, 'id':i} for i in pcc_status_df.columns], pcc_status_df.to_dict('records'), [{'name':i, 'id':i} for i in pcc_patients_df.columns], pcc_patients_df.to_dict('records'), [{'name':i, 'id':i} for i in pcc_prov_df.columns], pcc_prov_df.to_dict('records'), [{'name':i, 'id':i} for i in pcc_notes_df.columns], pcc_notes_df.to_dict('records')
     else:
         raise PreventUpdate
 

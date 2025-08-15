@@ -2,6 +2,9 @@ from flask import Flask
 from dash import dash
 import sqlalchemy
 import pandas as pd
+import base64
+import json
+from datetime import datetime, timedelta
 
 # Classes
 class server_class():
@@ -64,3 +67,35 @@ class dbCredentials():
     #driver = 'ODBC Driver 17 for SQL Server'
     #hostname = 'WEBSVR'
     db_address = 'mssql+pyodbc://sqlsvr:61433/{}?trusted_connection=yes&driver=' + driver
+
+class pcc_class:
+    auth_client_id = 'LxGhD5OHvAS2bSjCOh9lN5AoFBoVJYf7'
+    auth_password = 'uA8wTxiroRNmYXG5'
+    access_token = {}
+    pcc_url_base = 'https://connect.pointclickcare.com/api'
+    pcc_api_url = 'https://connect.pointclickcare.com/api/public/preview1/applications/supportivecarebridge/activations?pageSize=200'
+    access_token_url = 'https://connect.pointclickcare.com/auth/token'
+
+    # Method to encode the client ID and client secret
+    def encode_auth_code(self):
+        plain_txt_auth = self.auth_client_id + ":" + self.auth_password
+        encoded_auth = plain_txt_auth.encode('ASCII')
+        base64_string = base64.b64encode(encoded_auth).decode('ASCII')
+        return base64_string
+    
+    # Check if token exists and is valid
+    def check_auth_token(self):
+        # Open JSON file
+        with open('pcc_access_token.json', 'r') as json_file:
+            current_auth_token = json.load(json_file)
+            # Get token date and parse into datetime format
+            auth_token_date = datetime.strptime(current_auth_token['token_date'], '%Y-%m-%d %H:%M:%S')
+            # Check auth_token_date vs current time
+            time_delta = datetime.now() - timedelta(hours=1)
+            # If auth_token_date is within the hour of current time, then assign current access token an return True
+            if auth_token_date > time_delta:
+                # Get current access token from json file
+                self.access_token = {'access_token': current_auth_token['access_token'], 'expires_in': current_auth_token['expires_in']}
+                return True
+            else:
+                return False
