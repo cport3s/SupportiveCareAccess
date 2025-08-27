@@ -149,7 +149,7 @@ def request_pcc_patients(activation_df, connection):
                     else:
                         page = 0
     # Save file into WebAccess's folder
-    csv_file_name = 'C:\\Code\\SupportiveCareAccess\\pcc_patients\\pcc_patients_{}_{}.csv'.format(ptnt_status, datetime.now().strftime('%Y%m%d%H%M%S'))
+    csv_file_name = 'C:\\Code\\SupportiveCareAccess\\pcc_patients\\pcc_patients_{}_{}.csv'.format(pcc_ptnt_req['data'], datetime.now().strftime('%Y%m%d%H%M%S'))
     bad_request_file_name = 'C:\\Code\\SupportiveCareAccess\\pcc_patients\\pcc_bad_requests_{}.csv'.format(datetime.now().strftime('%Y%m%d%H%M%S'))
     # Write patient_df to CSV file
     patient_df.to_csv(csv_file_name, index=False)
