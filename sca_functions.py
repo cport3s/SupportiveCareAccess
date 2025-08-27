@@ -1,7 +1,7 @@
-from dash import html, dcc
+from dash import html
 from dash_styles import SuppCareBanner
-from classes import schemaList, dbCredentials, pcc_class
-from dash_styles import nav_bar, content
+from classes import schemaList, dbCredentials
+from dash_styles import content
 import pandas as pd
 import plotly.graph_objects as go
 import plotly.express as px
@@ -215,8 +215,6 @@ def populate_fac_info_dropdown(pathname):
 
 # Query facility info in facility info page 
 def query_fac_info_sub(fac_dropdown_value):
-    pcc_connection_data = pcc_class()
-    get_pcc_access_token(pcc_connection_data)
     state = fac_dropdown_value.split('|')[1].strip()
     fac_id = fac_dropdown_value.split('|')[0].strip()
     # Connect to DB
@@ -245,12 +243,6 @@ def query_fac_info_sub(fac_dropdown_value):
     '''.format(fac_id)
     # Execute query
     pcc_status_df = pd.read_sql(query, db_conn)
-    # Get PCC Patients
-    if pcc_status_df['PCC ID'].notnull().any():
-        activation_df = pd.DataFrame({'facId':[pcc_status_df['PCC ID'][0]], 'orgUuid':[pcc_status_df['Org ID'][0]], 'activationDate':['2020-02-02'], 'scope':['1']})
-        pcc_patient_df = request_pcc_patients(activation_df, pcc_connection_data)
-    else:
-        pcc_patient_df = pd.DataFrame()
     # Get all facility providers
     query = '''
         SELECT       
@@ -306,7 +298,7 @@ def query_fac_info_sub(fac_dropdown_value):
     pcc_notes_df = pd.read_sql(query, db_conn)
     # Close db connection
     db_conn.close()
-    return pcc_status_df, pcc_patient_df, pcc_prov_df, pcc_notes_df
+    return pcc_status_df, pcc_prov_df, pcc_notes_df
 
 def global_fac_statistics_sub():
     all_sts_dataframe = pd.DataFrame()

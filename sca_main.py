@@ -1,8 +1,8 @@
-from dash import Dash, html, dcc, dash_table, Input, Output, State
+from dash import Dash, html, dcc, dash_table, Input, Output, State, ctx
 from dash.exceptions import PreventUpdate
 import dash_bootstrap_components as dbc
 import pandas as pd
-from dash_styles import nav_bar, content
+from dash_styles import accordion_bar, content
 import sca_functions
 from classes import schemaList, dbCredentials
 from dash_styles import searchBarStyles
@@ -18,18 +18,31 @@ main_app.layout = html.Div(
         # Works in conjunction with "active=exact" in the navlink item. Marks active items in the nav menu
         dcc.Location(id='current_url'),
         sca_functions.suppcare_header(),
-        dbc.Nav(
-            id='nav_menu_container',
+        dbc.Accordion(
+            id='accordion_menu_container',
             children=[
-                dbc.NavLink('Patient Info', href='/patients_info', active='exact'),
-                dbc.NavLink('Patient Matching', href='/patient_match', active='exact'),
-                dbc.NavLink('Provider Info', href='/prov_info', active='exact'),
-                dbc.NavLink('Facility Info', href='/fac_info', active='exact'),
-                dbc.NavLink('Facility Statistics', href='/fac_stats', active='exact')
+                dbc.AccordionItem(
+                    [
+                        dbc.NavLink('Patient Info', href='/patients_info', active='exact'),
+                        dbc.NavLink('Patient Matching', href='/patient_match', active='exact')
+                    ],
+                    title='Patients'
+                ),
+                dbc.AccordionItem(
+                    [
+                        dbc.NavLink('Provider Info', href='/prov_info', active='exact')
+                    ],
+                    title='Providers'
+                ),
+                dbc.AccordionItem(
+                    [
+                        dbc.NavLink('Facility Info', href='/fac_info', active='exact'),
+                        dbc.NavLink('Facility Statistics', href='/fac_stats', active='exact')
+                    ],
+                    title='Facilities'
+                )
             ],
-            vertical=True,
-            pills=True,
-            style=nav_bar.SIDEBAR_STYLE
+            style=accordion_bar.SIDEBAR_STYLE,
         ),
         # App container, will be displayed based on url
         # Facility stats
@@ -120,14 +133,6 @@ main_app.layout = html.Div(
                         html.H3('PCC Bridge Status'),
                         dash_table.DataTable(
                             id = 'fac_pcc_status_table',
-                            style_data={
-                                'whiteSpace': 'normal',
-                                'height': 'auto'
-                            }
-                        ),
-                        html.H3('PCC Patients'),
-                        dash_table.DataTable(
-                            id = 'fac_pcc_patients_table',
                             style_data={
                                 'whiteSpace': 'normal',
                                 'height': 'auto'
@@ -391,6 +396,7 @@ main_app.layout = html.Div(
 )
 
 #-------------------------------------------CALLBACKS
+# Toggle General display content
 @main_app.callback(
     [
         Output('fac_stats_container', 'style'),
@@ -406,10 +412,12 @@ def render_container(pathname):
     fac_stats_style_dic, fac_qry_style_dic, patient_style_dic, fac_map_style_dic, prov_qry_style_dic = sca_functions.render_container_sub(pathname)
     return fac_stats_style_dic, fac_qry_style_dic, patient_style_dic, fac_map_style_dic, prov_qry_style_dic
 
-# Callback to populate the state dropdown
+
+# Populate state dropdown in Facility Info section
 @main_app.callback(
     Output('state_dropdown', 'options'),
-    Input('current_url', 'pathname')
+    Input('current_url', 'pathname'),
+    prevent_initial_call=True
     )
 def populate_facility_dropdown(pathname):
     return_dict = sca_functions.populate_facility_dropdown_sub(pathname)
@@ -417,8 +425,8 @@ def populate_facility_dropdown(pathname):
         return return_dict
     else:
         raise PreventUpdate
-    
-# Callback to populate the "Facility" dropdown menu with all facilty names
+
+# Populate the "Facility" dropdown menu with all facility names in Facility Info Section
 @main_app.callback(
     [
         Output('facility_dropdown', 'options'),
@@ -454,7 +462,8 @@ def generate_fac_graph(local_fac_id, date_range, state):
 # Callback to generate global upload statistics
 @main_app.callback(
     Output('global_facility_upload_log_graph', 'figure'),
-    Input('update_interval', 'n_intervals')
+    Input('update_interval', 'n_intervals'),
+    prevent_initial_call=True
 )
 def global_fac_statistics(n_intervals):
     global_fac_log_graph = sca_functions.global_fac_statistics_sub()
@@ -463,7 +472,8 @@ def global_fac_statistics(n_intervals):
 # Callback to generate pending logs sunburst chart
 @main_app.callback(
     Output('pending_logs_sunburst_chart', 'figure'),
-    Input('update_interval', 'n_intervals')
+    Input('update_interval', 'n_intervals'),
+    prevent_initial_call=True
 )
 def pending_logs_chart(n_intervals):
     pending_logs_pie = sca_functions.pending_logs_chart_sub()
@@ -472,7 +482,8 @@ def pending_logs_chart(n_intervals):
 # Populate Facility Dropdown
 @main_app.callback(
     Output('fac_dropdown', 'options'),
-    Input('current_url', 'pathname')
+    Input('current_url', 'pathname'),
+    prevent_initial_call=True
 )
 def populate_fac_dropdown(pathname):
     fac_info_dict = sca_functions.populate_fac_info_dropdown(pathname)
@@ -486,8 +497,6 @@ def populate_fac_dropdown(pathname):
         [
             Output('fac_pcc_status_table', 'columns'),
             Output('fac_pcc_status_table', 'data'),
-            Output('fac_pcc_patients_table', 'columns'),
-            Output('fac_pcc_patients_table', 'data'),
             Output('fac_prov_table', 'columns'),
             Output('fac_prov_table', 'data'),
             Output('fac_notes_table', 'columns'),
@@ -498,16 +507,17 @@ def populate_fac_dropdown(pathname):
 )
 def query_fac_info(fac_dropdown_value):
     if fac_dropdown_value:
-        pcc_status_df, pcc_patients_df ,pcc_prov_df, pcc_notes_df = sca_functions.query_fac_info_sub(fac_dropdown_value)
-        return [{'name':i, 'id':i} for i in pcc_status_df.columns], pcc_status_df.to_dict('records'), [{'name':i, 'id':i} for i in pcc_patients_df.columns], pcc_patients_df.to_dict('records'), [{'name':i, 'id':i} for i in pcc_prov_df.columns], pcc_prov_df.to_dict('records'), [{'name':i, 'id':i} for i in pcc_notes_df.columns], pcc_notes_df.to_dict('records')
+        pcc_status_df, pcc_prov_df, pcc_notes_df = sca_functions.query_fac_info_sub(fac_dropdown_value)
+        return [{'name':i, 'id':i} for i in pcc_status_df.columns], pcc_status_df.to_dict('records'), [{'name':i, 'id':i} for i in pcc_prov_df.columns], pcc_prov_df.to_dict('records'), [{'name':i, 'id':i} for i in pcc_notes_df.columns], pcc_notes_df.to_dict('records')
     else:
         raise PreventUpdate
 
 # Callback to populate provider dropdown
 @main_app.callback(
     Output('prov_dropdown', 'options'),
-    Input('current_url', 'pathname')
-    )
+    Input('current_url', 'pathname'),
+    prevent_initial_call=True
+)
 def populate_prov_dropdown(pathname):
     if pathname == '/prov_info':
         return_dict = sca_functions.populate_prov_dropdown_sub(pathname)
@@ -539,8 +549,9 @@ def query_prov_info(prov_info):
 # Poplate patient state list
 @main_app.callback(
     Output('ptnt_state_dropdown', 'options'),
-    Input('current_url', 'pathname')
-    )
+    Input('current_url', 'pathname'),
+    prevent_initial_call=True
+)
 def populate_ptnt_st_dropdown(pathname):
     if pathname == '/patients_info':
         return_dict = sca_functions.populate_ptnt_st_dropdown_sub()
@@ -557,7 +568,7 @@ def populate_ptnt_st_dropdown(pathname):
     ],
     Input('ptnt_state_dropdown', 'value'),
     prevent_initial_call=True
-    )
+)
 def populate_ptnt_dropdown(state):
     return_dict = sca_functions.populate_ptnt_dropdown_sub(state)
     return return_dict, False, 'Select Patient'
@@ -664,7 +675,7 @@ def query_ptnt_info(ptnt_id, state):
     db_conn.close()
     return ptnt_info_df['FirstName'][0], ptnt_info_df['LastName'][0], ptnt_info_df['ClientID'][0], ptnt_info_df['DateOfBirth'][0], ptnt_info_df['facility_name'][0], 'PCC ID '+str(ptnt_info_df['matched'][0]) if ptnt_info_df['matched'][0] != None else 'No', ptnt_info_df['pcc_fac_id'], ptnt_notes_columns, ptnt_notes_data, [{'name':i, 'id':i} for i in ptnt_prov_df.columns], ptnt_prov_df.to_dict('records')
 
-# Callback to query facilities address and generate map
+# Query Patient Matching search results
 @main_app.callback(
     [
         Output('ptnt_match_result_table', 'columns'),
@@ -676,7 +687,8 @@ def query_ptnt_info(ptnt_id, state):
         Input('current_url', 'pathname'),
         Input('ptnt_last_name_input', 'value'),
         Input('ptnt_first_name_input', 'value')
-    ]
+    ],
+    prevent_initial_call=True
 )
 def generate_fac_map(pathname, last_name, first_name):
     if pathname == '/patient_match':

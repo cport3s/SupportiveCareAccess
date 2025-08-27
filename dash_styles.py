@@ -75,7 +75,7 @@ class SuppCareBanner():
         'text-decoration': 'none'
     }
 
-class nav_bar():
+class accordion_bar():
     SIDEBAR_STYLE = {
         "position": "fixed",
         "top": '3rem',
