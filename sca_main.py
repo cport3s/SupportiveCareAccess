@@ -23,21 +23,21 @@ main_app.layout = html.Div(
             children=[
                 dbc.AccordionItem(
                     [
-                        dbc.NavLink('Patient Info', href='/patients_info', active='exact'),
-                        dbc.NavLink('Patient Matching', href='/patient_match', active='exact')
+                        dbc.NavLink('Info', href='/patients_info', active='exact'),
+                        dbc.NavLink('Matching', href='/patient_match', active='exact')
                     ],
                     title='Patients'
                 ),
                 dbc.AccordionItem(
                     [
-                        dbc.NavLink('Provider Info', href='/prov_info', active='exact')
+                        dbc.NavLink('Info', href='/prov_info', active='exact')
                     ],
                     title='Providers'
                 ),
                 dbc.AccordionItem(
                     [
-                        dbc.NavLink('Facility Info', href='/fac_info', active='exact'),
-                        dbc.NavLink('Facility Statistics', href='/fac_stats', active='exact')
+                        dbc.NavLink('Info', href='/fac_info', active='exact'),
+                        dbc.NavLink('Statistics', href='/fac_stats', active='exact')
                     ],
                     title='Facilities'
                 )
@@ -146,7 +146,8 @@ main_app.layout = html.Div(
                                 'height': 'auto'
                             },
                             page_size=5,
-                            filter_action='native'
+                            filter_action='native',
+                            sort_action='native'
                         ),
                         html.H3('Providers'),
                         dash_table.DataTable(
@@ -156,7 +157,8 @@ main_app.layout = html.Div(
                                 'height': 'auto'
                             },
                             page_size=5,
-                            filter_action='native'
+                            filter_action='native',
+                            sort_action='native'
                         )
                     ]
                 )
@@ -171,11 +173,13 @@ main_app.layout = html.Div(
                     id='ptnt_last_name_input',
                     type='text',
                     placeholder='Type Patient\'s Last Name',
+                    style=content.PATIENT_MATCH_SEARCH_BOX
                 ),
                 dcc.Input(
                     id='ptnt_first_name_input',
                     type='text',
                     placeholder='Type Patient\'s First Name',
+                    style=content.PATIENT_MATCH_SEARCH_BOX
                 ),
                 html.H3('PCC Client Table'),
                 dash_table.DataTable(
@@ -185,7 +189,8 @@ main_app.layout = html.Div(
                                 'height': 'auto'
                     },
                     page_size=5,
-                    filter_action='native'
+                    filter_action='native',
+                    sort_action='native'
                 ),
                 html.H3('Local Client Table'),
                 dash_table.DataTable(
@@ -195,7 +200,8 @@ main_app.layout = html.Div(
                                 'height': 'auto'
                     },
                     page_size=5,
-                    filter_action='native'
+                    filter_action='native',
+                    sort_action='native',
                 ),
             ]
         ),
@@ -299,8 +305,9 @@ main_app.layout = html.Div(
                                 'whiteSpace': 'normal',
                                 'height': 'auto'
                             },
-                            page_size=10,
-                            filter_action='native'
+                            page_size=5,
+                            filter_action='native',
+                            sort_action='native',
                         ),
                         html.H3('Assigned Providers'),
                         dash_table.DataTable(
@@ -309,8 +316,9 @@ main_app.layout = html.Div(
                                 'whiteSpace': 'normal',
                                 'height': 'auto'
                             },
-                            page_size=10,
-                            filter_action='native'
+                            page_size=5,
+                            filter_action='native',
+                            sort_action='native',
                         )
                     ]
                 )
@@ -350,8 +358,9 @@ main_app.layout = html.Div(
                                 'whiteSpace': 'normal',
                                 'height': 'auto'
                             },
-                            page_size=10,
-                            filter_action='native'
+                            page_size=5,
+                            filter_action='native',
+                            sort_action='native'
                         ),
                         html.H3('Notes'),
                         dash_table.DataTable(
@@ -360,8 +369,9 @@ main_app.layout = html.Div(
                                 'whiteSpace': 'normal',
                                 'height': 'auto'
                             },
-                            page_size=10,
-                            filter_action='native'
+                            page_size=5,
+                            filter_action='native',
+                            sort_action='native'
                         ),
                         html.H3('Patients'),
                         dash_table.DataTable(
@@ -370,8 +380,9 @@ main_app.layout = html.Div(
                                 'whiteSpace': 'normal',
                                 'height': 'auto'
                             },
-                            page_size=10,
-                            filter_action='native'
+                            page_size=5,
+                            filter_action='native',
+                            sort_action='native'
                         ),
                         html.H3('Paystub'),
                         dash_table.DataTable(
@@ -380,8 +391,9 @@ main_app.layout = html.Div(
                                 'whiteSpace': 'normal',
                                 'height': 'auto'
                             },
-                            page_size=10,
-                            filter_action='native'
+                            page_size=5,
+                            filter_action='native',
+                            sort_action='native'
                         )
                     ]
                 )
@@ -593,86 +605,7 @@ def populate_ptnt_dropdown(state):
     prevent_initial_call=True
 )
 def query_ptnt_info(ptnt_id, state):
-    # Connect to State DB
-    db_conn = schemaList.db_connect(dbCredentials.db_address, state)
-    query = '''
-        SELECT        
-        	clientinfo.ClientID AS ClientID, 
-        	clientinfo.LastName AS LastName, 
-        	clientinfo.FirstName AS FirstName, 
-        	FORMAT(clientinfo.DateOfBirth, 'yyyy-MM-dd') AS DateOfBirth, 
-        	localfac.facility_name AS facility_name,
-            pccfac.fac_id AS pcc_fac_id,
-        	pccclientinfo.pcc_id AS matched
-        FROM            
-        	dbo.ClientInfoTable clientinfo
-        INNER JOIN
-        	dbo.tbl_facility localfac ON clientinfo.facility_id = localfac.facility_id
-        FULL OUTER JOIN
-            dbo.tbl_pcc_fac pccfac ON clientinfo.facility_id = pccfac.fac_id
-        FULL OUTER JOIN
-        	dbo.tbl_pcc_patients_client pccclientinfo ON clientinfo.ClientID = pccclientinfo.cl_id
-        WHERE
-        	ClientID = {}
-    '''.format(ptnt_id)
-    ptnt_info_df=pd.read_sql(query, db_conn)
-    # Query patient's providers
-    query  = '''
-        SELECT
-        	prov_table.ProviderName,
-        	prov_table.ProviderEmail, 
-        	FORMAT(prov_roster.roster_st_date, 'yyyy-MM-dd') AS 'Start Date',
-        	FORMAT(prov_roster.roster_end_date, 'yyyy-MM-dd') AS 'End Date',
-        	prov_roster.roster_not_covered, 
-        	service_type.svce_type
-        FROM
-        	dbo.tbl_roster prov_roster
-        INNER JOIN
-        	dbo.ProviderTable prov_table ON prov_table.ProviderID = prov_roster.prov_id
-        INNER JOIN
-        	dbo.tbl_svce_type service_type ON service_type.svce_type_id = prov_roster.svce_type_id
-        WHERE
-        	prov_roster.cl_id = {}
-        ORDER BY prov_table.ProviderName, prov_roster.roster_st_date;
-    '''.format(ptnt_id)
-    ptnt_prov_df = pd.read_sql(query, db_conn)
-    # Close DB connection
-    db_conn.close()
-    # Connect to Provider_App DB
-    db_conn = schemaList.db_connect(dbCredentials.db_address, 'Provider_App')
-    # Get state ID
-    query = '''SELECT st_id FROM dbo.tbl_state WHERE st_state = '{}';'''.format(state[-2:])
-    state_id = pd.read_sql(query, db_conn)['st_id'][0]
-    # Query patient's notes
-    query = '''
-        SELECT
-        	notes_log.note_id AS 'Note ID', 
-        	notes_log.note_tbl_name AS 'State Table', 
-            notes_log.prov_nme AS Provider, 
-        	notes_log.svce_type AS 'Service Type', 
-        	notes_log.note_type AS 'Note Type', 
-        	notes_log.cpt_code AS 'CPT Code', 
-        	FORMAT(notes_log.note_dte, 'yyyy-MM-dd')  AS 'Service Date', 
-        	notes_log.note_del AS 'Delete Flag', 
-        	FORMAT(notes_log.create_dte, 'yyyy-MM-dd hh:mm') AS 'Create Date', 
-        	FORMAT(notes_log.mod_dte, 'yyyy-MM-dd hh:mm') AS 'Modify Date', 
-        	FORMAT(notes_log.prov_sig_dte, 'yyyy-MM-dd hh:mm') AS 'Signature Date', 
-        	FORMAT(pcc_log.cr_dte, 'yyyy-MM-dd hh:mm') AS 'Log Create Date',
-        	FORMAT(pcc_log.done_dte, 'yyyy-MM-dd hh:mm') AS 'Log Done Date'
-        FROM
-        	Provider_App.dbo.tbl_notes_log notes_log
-        FULL JOIN
-        	{}.dbo.tbl_pcc_upl_log pcc_log ON pcc_log.uniqueID = notes_log.note_id
-        WHERE
-        	notes_log.cl_id = {} AND notes_log.st_id = {}
-        ORDER BY notes_log.note_dte DESC
-    '''.format(state, ptnt_id, state_id)
-    ptnt_notes_df = pd.read_sql(query, db_conn)
-    # Format patient's notes df for dash datatable
-    ptnt_notes_columns = [{'name':i, 'id':i} for i in ptnt_notes_df.columns]
-    ptnt_notes_data = ptnt_notes_df.to_dict('records')
-    # Close DB connection
-    db_conn.close()
+    ptnt_info_df, ptnt_notes_columns, ptnt_notes_data, ptnt_prov_df = sca_functions.query_ptnt_info_sub(ptnt_id, state)
     return ptnt_info_df['FirstName'][0], ptnt_info_df['LastName'][0], ptnt_info_df['ClientID'][0], ptnt_info_df['DateOfBirth'][0], ptnt_info_df['facility_name'][0], 'PCC ID '+str(ptnt_info_df['matched'][0]) if ptnt_info_df['matched'][0] != None else 'No', ptnt_info_df['pcc_fac_id'], ptnt_notes_columns, ptnt_notes_data, [{'name':i, 'id':i} for i in ptnt_prov_df.columns], ptnt_prov_df.to_dict('records')
 
 # Query Patient Matching search results

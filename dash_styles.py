@@ -235,6 +235,10 @@ class content():
         'display': 'hidden'
     }
 
+    PATIENT_MATCH_SEARCH_BOX = {
+        'width' :'50%'
+    }
+
     PROV_QRY_STYLE = {
         "margin-left": "18rem",
         "margin-right": "2rem",
