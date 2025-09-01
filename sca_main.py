@@ -147,6 +147,7 @@ main_app.layout = html.Div(
                             },
                             page_size=5,
                             filter_action='native',
+                            filter_options = {'case' : 'insensitive'},
                             sort_action='native'
                         ),
                         html.H3('Providers'),
@@ -158,6 +159,7 @@ main_app.layout = html.Div(
                             },
                             page_size=5,
                             filter_action='native',
+                            filter_options = {'case' : 'insensitive'},
                             sort_action='native'
                         )
                     ]
@@ -190,6 +192,7 @@ main_app.layout = html.Div(
                     },
                     page_size=5,
                     filter_action='native',
+                    filter_options = {'case' : 'insensitive'},
                     sort_action='native'
                 ),
                 html.H3('Local Client Table'),
@@ -201,6 +204,7 @@ main_app.layout = html.Div(
                     },
                     page_size=5,
                     filter_action='native',
+                    filter_options = {'case' : 'insensitive'},
                     sort_action='native',
                 ),
             ]
@@ -307,6 +311,7 @@ main_app.layout = html.Div(
                             },
                             page_size=5,
                             filter_action='native',
+                            filter_options = {'case' : 'insensitive'},
                             sort_action='native',
                         ),
                         html.H3('Assigned Providers'),
@@ -318,6 +323,7 @@ main_app.layout = html.Div(
                             },
                             page_size=5,
                             filter_action='native',
+                            filter_options = {'case' : 'insensitive'},
                             sort_action='native',
                         )
                     ]
@@ -360,6 +366,7 @@ main_app.layout = html.Div(
                             },
                             page_size=5,
                             filter_action='native',
+                            filter_options = {'case' : 'insensitive'},
                             sort_action='native'
                         ),
                         html.H3('Notes'),
@@ -371,6 +378,7 @@ main_app.layout = html.Div(
                             },
                             page_size=5,
                             filter_action='native',
+                            filter_options = {'case' : 'insensitive'},
                             sort_action='native'
                         ),
                         html.H3('Patients'),
@@ -382,6 +390,7 @@ main_app.layout = html.Div(
                             },
                             page_size=5,
                             filter_action='native',
+                            filter_options = {'case' : 'insensitive'},
                             sort_action='native'
                         ),
                         html.H3('Paystub'),
@@ -393,6 +402,7 @@ main_app.layout = html.Div(
                             },
                             page_size=5,
                             filter_action='native',
+                            filter_options = {'case' : 'insensitive'},
                             sort_action='native'
                         )
                     ]
