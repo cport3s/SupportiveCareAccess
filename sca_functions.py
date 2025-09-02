@@ -500,12 +500,29 @@ def query_prov_info_sub(prov_info):
         	roster.prov_id = '{}'
     '''.format(prov_id)
     prov_ptnt_df = pd.read_sql(query, db_conn)
-    # Query provider's paystub
     # Select table depending on provider type
     if prov_info_df['Type'][0] == 'Psychology':
         curr_table = 'tbl_app_Timesheets_raw_2'
     else:
         curr_table = 'tbl_app_Timesheets_psych_raw_3'
+    # Query provider's draft notes
+    query = '''
+        SELECT
+            ts_table.UniqueID AS 'Note ID',
+            ts_table.cl_id AS 'Client ID',
+            ts_table.Client_Name AS 'Client Name',
+            FORMAT(ts_table.enter_date, 'yyyy-MM-dd hh:mm') AS 'Enter Date',
+            FORMAT(ts_table.ses_date, 'yyyy-MM-dd') AS 'Session Date',
+            ts_table.facility_id AS 'Facility ID'
+        FROM            
+        	dbo.{curr_table} ts_table
+        WHERE
+            ts_table.prov_sig is NULL
+        ORDER BY
+            ts_table.enter_date DESC;
+    '''.format(curr_table=curr_table)
+    prov_draft_notes_df = pd.read_sql(query, db_conn)
+    # Query provider's paystub
     query = '''
         SELECT
         	dbo.{table}.Client_Name AS 'Patient', 
@@ -565,7 +582,7 @@ def query_prov_info_sub(prov_info):
     prov_notes_df = pd.read_sql(query, db_conn)
     # Close db connection
     db_conn.close()
-    return prov_info_df, prov_fac_df, prov_ptnt_df, prov_notes_df, prov_paystub_df
+    return prov_info_df, prov_fac_df, prov_ptnt_df, prov_notes_df, prov_draft_notes_df, prov_paystub_df
 
 def populate_ptnt_dropdown_sub(state):
     ptnt_info_df = pd.DataFrame()
@@ -721,8 +738,6 @@ def query_ptnt_info_sub(ptnt_id, state):
         	FORMAT(notes_log.note_dte, 'yyyy-MM-dd')  AS 'Service Date', 
         	notes_log.note_del AS 'Delete Flag', 
         	FORMAT(notes_log.create_dte, 'yyyy-MM-dd hh:mm') AS 'Create Date', 
-        	FORMAT(notes_log.mod_dte, 'yyyy-MM-dd hh:mm') AS 'Modify Date', 
-        	FORMAT(notes_log.prov_sig_dte, 'yyyy-MM-dd hh:mm') AS 'Signature Date', 
         	FORMAT(pcc_log.cr_dte, 'yyyy-MM-dd hh:mm') AS 'Log Create Date',
         	FORMAT(pcc_log.done_dte, 'yyyy-MM-dd hh:mm') AS 'Log Done Date'
         FROM
