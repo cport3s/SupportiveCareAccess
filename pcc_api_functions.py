@@ -58,7 +58,7 @@ def request_pcc_activation_requests(connection):
             tmp_dataframe['activationDate'] = 'N/A'
             # Append tmp_dataframe to final df
             pcc_fac_req_df.loc[len(pcc_fac_req_df)] = tmp_dataframe
-    pcc_fac_req_df.to_excel('./pcc_act_req/activation_requests_' + datetime.now().strftime('%Y%m%d_%H%M%S') + '.xlsx')
+    #pcc_fac_req_df.to_excel('./pcc_act_req/activation_requests_' + datetime.now().strftime('%Y%m%d_%H%M%S') + '.xlsx')
     return pcc_fac_req_df
 
 def check_orguid_facility(activation_df, connection):

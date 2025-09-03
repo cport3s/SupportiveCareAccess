@@ -430,7 +430,21 @@ main_app.layout = html.Div(
         ),
         html.Div(
             id = 'integration_requests',
-            style = content.INTEGRATION_REQUESTS_STYLE
+            style = content.INTEGRATION_REQUESTS_STYLE,
+            children = [
+                html.H3('Active PCC Integration Requests'),
+                dash_table.DataTable(
+                    id = 'integration_requests_table',
+                    style_data={
+                        'whiteSpace': 'normal',
+                        'height': 'auto'
+                    },
+                    page_size=20,
+                    filter_action='native',
+                    filter_options = {'case' : 'insensitive'},
+                    sort_action='native'
+                )
+            ]
         ),
         html.Div(
             id = 'patient_requests',
@@ -668,6 +682,24 @@ def generate_fac_map(pathname, last_name, first_name):
     if pathname == '/patient_match':
         ptnt_match_df, local_client_match_df = sca_functions.ptnt_match_query(last_name, first_name)
         return [{'name':i, 'id':i} for i in ptnt_match_df.columns], ptnt_match_df.to_dict('records'), [{'name':i, 'id':i} for i in local_client_match_df.columns], local_client_match_df.to_dict('records')
+    else:
+        raise PreventUpdate
+
+# Query PCC Facility Integration Requests
+@main_app.callback(
+    [
+        Output('integration_requests_table', 'columns'),
+        Output('integration_requests_table', 'data')
+    ],
+    [
+        Input('current_url', 'pathname'),
+    ],
+    prevent_initial_call=True
+)
+def query_integration_requests(pathname):
+    if pathname == '/pcc_fac_integration':
+        integration_requests_df = sca_functions.query_integration_requests_sub()
+        return [{'name': i, 'id': i} for i in integration_requests_df.columns], integration_requests_df.to_dict('records')
     else:
         raise PreventUpdate
 

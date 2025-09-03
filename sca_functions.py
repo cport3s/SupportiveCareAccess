@@ -1,6 +1,6 @@
 from dash import html
 from dash_styles import SuppCareBanner
-from classes import schemaList, dbCredentials
+from classes import schemaList, dbCredentials, pcc_class
 from dash_styles import content
 import pandas as pd
 import plotly.graph_objects as go
@@ -785,3 +785,32 @@ def query_ptnt_info_sub(ptnt_id, state):
     # Close DB connection
     db_conn.close()
     return ptnt_info_df, ptnt_notes_columns, ptnt_notes_data, ptnt_prov_df
+
+# Function to query all PCC integration requests
+def query_integration_requests_sub():
+    pcc_conn_data = pcc_class()
+    # Generate PCC Connection token
+    get_pcc_access_token(pcc_conn_data)
+    activations_df = request_pcc_activation_requests(pcc_conn_data)
+    # Sort activations_df by activationDate
+    activations_df = activations_df.sort_values(by='activationDate', ascending=False)
+    # Connect to db and get all facilities
+    query = '''
+        SELECT
+        	local_fac.facility_id AS 'Local ID',
+        	local_fac.facility_name AS 'Name',
+        	pcc_fac.pcc_orgUid AS 'OrgUuid',
+        	pcc_fac.pcc_facid AS 'PCC ID'
+        FROM 
+        	dbo.tbl_facility local_fac
+        FULL JOIN
+        	dbo.tbl_pcc_fac pcc_fac ON local_fac.facility_id = pcc_fac.fac_id
+    '''
+    local_fac_df = schemaList.run_query_all_states(query)
+    # Merge both dataframes to get facility name
+    activations_df = activations_df.merge(local_fac_df, left_on=['orgUuid', 'facId'], right_on=['OrgUuid', 'PCC ID'], how='left')
+    # Drop some columns
+    activations_df = activations_df.drop(columns=['scope', 'OrgUuid', 'PCC ID'], errors='ignore')
+    # Rearrangle column orders
+    activations_df = activations_df[['Local ID', 'Name', 'facId', 'orgUuid', 'activationDate']]
+    return activations_df
