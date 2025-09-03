@@ -40,7 +40,14 @@ main_app.layout = html.Div(
                         dbc.NavLink('Statistics', href='/fac_stats', active='exact')
                     ],
                     title='Facilities'
-                )
+                ),
+                dbc.AccordionItem(
+                    [
+                        dbc.NavLink('Facility Integration', href='/pcc_fac_integration', active='exact'),
+                        dbc.NavLink('Patient Request', href='/pcc_ptnt_req', active='exact')
+                    ],
+                    title='PCC'
+                ),
             ],
             style=accordion_bar.SIDEBAR_STYLE,
         ),
@@ -421,6 +428,14 @@ main_app.layout = html.Div(
                 )
             ]
         ),
+        html.Div(
+            id = 'integration_requests',
+            style = content.INTEGRATION_REQUESTS_STYLE
+        ),
+        html.Div(
+            id = 'patient_requests',
+            style = content.PATIENT_REQUESTS_STYLE
+        ),
         dcc.Interval(
             id = 'update_interval',
             interval = 3000*1000,
@@ -437,14 +452,16 @@ main_app.layout = html.Div(
         Output('fac_qry_container', 'style'),
         Output('patient_container', 'style'),
         Output('patient_match_container', 'style'),
-        Output('provider_container', 'style')
+        Output('provider_container', 'style'),
+        Output('integration_requests', 'style'),
+        Output('patient_requests', 'style')
     ],
     Input('current_url', 'pathname')
 )
 def render_container(pathname):
     # Change containers display properties depending on URL
-    fac_stats_style_dic, fac_qry_style_dic, patient_style_dic, fac_map_style_dic, prov_qry_style_dic = sca_functions.render_container_sub(pathname)
-    return fac_stats_style_dic, fac_qry_style_dic, patient_style_dic, fac_map_style_dic, prov_qry_style_dic
+    fac_stats_style_dic, fac_qry_style_dic, patient_style_dic, fac_map_style_dic, prov_qry_style_dic, integration_requests_style_dic, patient_requests_style_dic = sca_functions.render_container_sub(pathname)
+    return fac_stats_style_dic, fac_qry_style_dic, patient_style_dic, fac_map_style_dic, prov_qry_style_dic, integration_requests_style_dic, patient_requests_style_dic
 
 
 # Populate state dropdown in Facility Info section
