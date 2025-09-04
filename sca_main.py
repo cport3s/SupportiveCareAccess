@@ -1,10 +1,9 @@
 from dash import Dash, html, dcc, dash_table, Input, Output, State, ctx
 from dash.exceptions import PreventUpdate
 import dash_bootstrap_components as dbc
-import pandas as pd
 from dash_styles import accordion_bar, content
 import sca_functions
-from classes import schemaList, dbCredentials
+from classes import dbCredentials
 from dash_styles import searchBarStyles
 
 db_address = dbCredentials.db_address
@@ -439,7 +438,7 @@ main_app.layout = html.Div(
                         'whiteSpace': 'normal',
                         'height': 'auto'
                     },
-                    page_size=20,
+                    page_size=15,
                     filter_action='native',
                     filter_options = {'case' : 'insensitive'},
                     sort_action='native'

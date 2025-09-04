@@ -7,7 +7,7 @@ import plotly.graph_objects as go
 import plotly.express as px
 from plotly.subplots import make_subplots
 from datetime import datetime, timedelta
-from pcc_api_functions import get_pcc_access_token, request_pcc_activation_requests, check_orguid_facility, request_pcc_patients, get_doc_id, get_picklist_id
+from pcc_api_functions import get_pcc_access_token, get_pcc_act_requests, request_pcc_patients, get_doc_id, get_picklist_id
 
 db_address = dbCredentials.db_address
 
@@ -791,7 +791,7 @@ def query_integration_requests_sub():
     pcc_conn_data = pcc_class()
     # Generate PCC Connection token
     get_pcc_access_token(pcc_conn_data)
-    activations_df = request_pcc_activation_requests(pcc_conn_data)
+    activations_df = get_pcc_act_requests(pcc_conn_data)
     # Sort activations_df by activationDate
     activations_df = activations_df.sort_values(by='activationDate', ascending=False)
     # Connect to db and get all facilities
@@ -810,7 +810,13 @@ def query_integration_requests_sub():
     # Merge both dataframes to get facility name
     activations_df = activations_df.merge(local_fac_df, left_on=['orgUuid', 'facId'], right_on=['OrgUuid', 'PCC ID'], how='left')
     # Drop some columns
-    activations_df = activations_df.drop(columns=['scope', 'OrgUuid', 'PCC ID'], errors='ignore')
+    activations_df = activations_df.drop(columns=['OrgUuid', 'PCC ID'], errors='ignore')
+    # Rename some columns
+    activations_df = activations_df.rename(columns={
+        'facId': 'PCC Facility ID', 
+        'orgUuid': 'Organization ID', 
+        'fac_name': 'PCC Facility Name', 
+        'activationDate': 'Activation Date'})
     # Rearrangle column orders
-    activations_df = activations_df[['Local ID', 'Name', 'facId', 'orgUuid', 'activationDate']]
+    activations_df = activations_df[['Local ID', 'Name', 'PCC Facility ID', 'Organization ID', 'PCC Facility Name', 'Activation Date']]
     return activations_df

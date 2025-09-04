@@ -27,7 +27,7 @@ def get_pcc_access_token(connection):
         with open('pcc_access_token.json', 'w') as json_file:
             json.dump(json_dict, json_file)
 
-def request_pcc_activation_requests(connection):
+def get_pcc_act_requests(connection):
     # Function connects to PCC API and retrieves activation requests
     access_tokn = connection.access_token['access_token']
     # Setup header
@@ -37,57 +37,74 @@ def request_pcc_activation_requests(connection):
         'authorization': 'Bearer ' + access_tokn
     }
     # Make API call
-    pcc_fac_req = requests.get(connection.pcc_api_url, headers=headers_dict).json()
+    api_url_call = 'https://connect.pointclickcare.com/api/public/preview1/applications/supportivecarebridge/activations?pageSize=200'
+    pcc_fac_req = requests.get(api_url_call, headers=headers_dict).json()
     # Initialize empty dataframe to store pcc_fac_req data, organized
-    pcc_fac_req_df = pd.DataFrame(columns = ['facId', 'orgUuid', 'activationDate', 'scope'])
+    pcc_fac_req_df = pd.DataFrame(columns = ['facId', 'orgUuid', 'activationDate', 'fac_name'])
     # Loop through the "Data" key (whose value is a list)
     for data_row in pcc_fac_req['data']:
         # Create temporary dictionary to add row at the end of pcc_fac_req_df
-        tmp_dataframe = {'facId':'', 'orgUuid':'', 'activationDate':'', 'scope':''}
+        tmp_dataframe = {'facId':'', 'orgUuid':'', 'activationDate':'', 'fac_name':''}
         tmp_dataframe['orgUuid'] = data_row['orgUuid']
-        tmp_dataframe['scope'] = data_row['scope']
         # facilityInfo does not exists if pcc request is for deactivation
         if 'facilityInfo' in data_row:
             for facility in data_row['facilityInfo']:
                 tmp_dataframe['facId'] = facility['facId']
                 tmp_dataframe['activationDate'] = facility['activationDate']
+                tmp_dataframe['fac_name'] = ''
                 # Append tmp_dataframe to final df
                 pcc_fac_req_df.loc[len(pcc_fac_req_df)] = tmp_dataframe
         else:
             tmp_dataframe['facId'] = 'N/A'
             tmp_dataframe['activationDate'] = 'N/A'
+            tmp_dataframe['fac_name'] = 'N/A'
             # Append tmp_dataframe to final df
             pcc_fac_req_df.loc[len(pcc_fac_req_df)] = tmp_dataframe
-    #pcc_fac_req_df.to_excel('./pcc_act_req/activation_requests_' + datetime.now().strftime('%Y%m%d_%H%M%S') + '.xlsx')
+    # Now we search for each facility name
+    # Make API call
+    api_url_call = 'https://connect.pointclickcare.com/api/public/preview1/orgs/{}/facs/{}'
+    for i in range(len(pcc_fac_req_df['orgUuid'])):
+        orguid = pcc_fac_req_df['orgUuid'][i]
+        facid = pcc_fac_req_df['facId'][i]
+        # Make API call
+        pcc_fac_req = requests.get(api_url_call.format(orguid, facid), headers=headers_dict)
+        # Check token validity
+        if pcc_fac_req.status_code != 200:
+            get_pcc_access_token(connection)
+        else:
+            pcc_fac_req = pcc_fac_req.json()
+            pcc_fac_req_df['fac_name'][i] = pcc_fac_req['facilityName']
     return pcc_fac_req_df
 
-def check_orguid_facility(activation_df, connection):
+def get_fac_name(activation_df, connection):
     # Setup header
     headers_dict = { 
         'content-type': 'application/json', 
         # authorization key must be sent encoded
         'authorization': 'Bearer ' + connection.access_token['access_token']
     }
+    # Empty dataframe to store data
+    fac_info_df = pd.DataFrame(columns=['orgUuid', 'facId', 'facilityName', 'orgName'])
     # Make API call
     api_url_call = 'https://connect.pointclickcare.com/api/public/preview1/orgs/{}/facs'
-    # Save file into WebAccess's folder
-    csv_file_name = 'C:\\Code\\SupportiveCareAccess\\pcc_activations\\pcc_activations_{}.csv'.format(datetime.now().strftime('%Y%m%d%H%M%S'))
-    with open(csv_file_name, 'a') as csv_file:
-        # Write header to CSV file
-        csv_file.write("orgUuid, facId, facilityName, active, healthType\n")
-        for orguid in activation_df['orgUuid'].unique():
-            # Make API call
-            pcc_fac_req = requests.get(api_url_call.format(orguid), headers=headers_dict).json()
-            if 'data' in pcc_fac_req.keys():
-                for facility in pcc_fac_req['data']:
-                    facility['facilityName'] = facility['facilityName'].replace(',', '')
-                    facility['orgName'] = facility['orgName'].replace(',', '')
-                    #print("Org UUID: {}, Facility ID: {}, Facility Name: {}".format(facility['orgUuid'], facility['facId'], facility['facilityName']))
-                    # Write all into a CSV file
-                    csv_file.write("{}, {}, {}, {}, {}\n".format(facility['facilityName'], facility['orgUuid'], facility['facId'], facility['orgName'], facility['state'], facility['healthType']))
-            # Check token validity
-            if pcc_fac_req.status_code != 200:
-                get_pcc_access_token(connection)
+    for orguid in activation_df['orgUuid'].unique():
+        # Make API call
+        pcc_fac_req = requests.get(api_url_call.format(orguid), headers=headers_dict).json()
+        if 'data' in pcc_fac_req.keys():
+            for facility in pcc_fac_req['data']:
+                # Store facilityname, orgname and facid in a dataframe
+                fac_info_df.loc[len(fac_info_df)] = {
+                    'orgUuid': orguid,
+                    'facId': facility['facId'],
+                    'facilityName': facility['facilityName'],
+                    'orgName': facility['orgName']
+                }
+                #facility['facilityName'] = facility['facilityName'].replace(',', '')
+                #facility['orgName'] = facility['orgName'].replace(',', '')
+        # Check token validity
+        if pcc_fac_req.status_code != 200:
+            get_pcc_access_token(connection)
+    return fac_info_df
 
 def request_pcc_patients(activation_df, connection):
     # Setup header
